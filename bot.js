@@ -325,15 +325,15 @@ ${chalk.blue.italic('👩‍🦰 Connecting to WhatsApp...')}`);
                         Lang.UPDATE, MessageType.text
                     );    
                 } else {
-                    var TEENU = Lang.NEW_UPDATE;
+                    var XCRIPT = Lang.NEW_UPDATE;
                     commits['all'].map(
                         (commit) => {
-                            TEENU += '🔸 [' + commit.date.substring(0, 10) + ']: ' + commit.message + ' ◁' + commit.author_name + '▷\n';
+                            XCRIPT += '🔸 [' + commit.date.substring(0, 10) + ']: ' + commit.message + ' ◁' + commit.author_name + '▷\n';
                         }
                     );
                     await conn.sendMessage(
                         conn.user.jid,
-                        '```🛡️යතාවත්කාලීන කිරීමට``` *.up now* ```භාවිතා කරන්න.```\n\n' + TEENU + '```', MessageType.text
+                        '```🛡️යතාවත්කාලීන කිරීමට``` *.up now* ```භාවිතා කරන්න.```\n\n' + XCRIPT + '```', MessageType.text
                     ); 
                 }
             }
@@ -351,16 +351,16 @@ ${chalk.blue.italic('👩‍🦰 Connecting to WhatsApp...')}`);
                         Lang.UPDATE, MessageType.text
                     );    
                 } else {
-                    var TEENU = Lang.NEW_UPDATE;
+                    var XCRIPT = Lang.NEW_UPDATE;
                     commits['all'].map(
                         (commit) => {
-                            TEENU += '🔸 [' + commit.date.substring(0, 10) + ']: ' + commit.message + ' ◁' + commit.author_name + '▷\n';
+                            XCRIPT += '🔸 [' + commit.date.substring(0, 10) + ']: ' + commit.message + ' ◁' + commit.author_name + '▷\n';
                         }
                     );
         
                     await conn.sendMessage(
                         conn.user.jid,
-                        '```🛡️Type``` *.update now* ```for update.```\n\n' + TEENU + '```', MessageType.text
+                        '```🛡️Type``` *.update now* ```for update.```\n\n' + XCRIPT + '```', MessageType.text
                     ); 
                 }
             }
@@ -380,15 +380,15 @@ ${chalk.blue.italic('👩‍🦰 Connecting to WhatsApp...')}`);
                         Lang.UPDATE, MessageType.text
                     );    
                 } else {
-                    var TEENU = Lang.NEW_UPDATE;
+                    var XCRIPT = Lang.NEW_UPDATE;
                     commits['all'].map(
                         (commit) => {
-                            TEENU += '🔸 [' + commit.date.substring(0, 10) + ']: ' + commit.message + ' ◁' + commit.author_name + '▷\n';
+                            XCRIPT += '🔸 [' + commit.date.substring(0, 10) + ']: ' + commit.message + ' ◁' + commit.author_name + '▷\n';
                         }
                     );
                     await conn.sendMessage(
                         conn.user.jid,
-                        '```යතාවත්කාලීන කිරීමට``` *.up now* ```භාවිතා කරන්න.```\n\n' + TEENU + '```', MessageType.text
+                        '```යතාවත්කාලීන කිරීමට``` *.up now* ```භාවිතා කරන්න.```\n\n' + XCRIPT + '```', MessageType.text
                     ); 
                 }
             }
@@ -406,15 +406,15 @@ ${chalk.blue.italic('👩‍🦰 Connecting to WhatsApp...')}`);
                         Lang.UPDATE, MessageType.text
                     );    
                 } else {
-                    var TEENU = Lang.NEW_UPDATE;
+                    var XCRIPT = Lang.NEW_UPDATE;
                     commits['all'].map(
                         (commit) => {
-                            TEENU += '🔸 [' + commit.date.substring(0, 10) + ']: ' + commit.message + ' ◁' + commit.author_name + '▷\n';
+                            XCRIPT += '🔸 [' + commit.date.substring(0, 10) + ']: ' + commit.message + ' ◁' + commit.author_name + '▷\n';
                         }
                     );
                     await conn.sendMessage(
                         conn.user.jid,
-                        '```🛡️යාවත්කාලීන කිරීමට``` *.update now* ````යොදන්න.```\n\n' + TEENU + '```', MessageType.text
+                        '```🛡️යාවත්කාලීන කිරීමට``` *.update now* ````යොදන්න.```\n\n' + XCRIPT + '```', MessageType.text
                     ); 
                 }
             }
