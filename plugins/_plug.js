@@ -56,7 +56,7 @@ Asena.addCommand({pattern: 'pkg ?(.*)', fromMe: true, desc: ALang.PKG, warn: Lan
         try {
             require('./' + plugin_name);
         } catch (e) {
-            fs.unlinkSync('/root/amazonex/plugins/' + plugin_name + '.js')
+            fs.unlinkSync('/root/Test/plugins/' + plugin_name + '.js')
             return await message.sendMessage(Lang.INVALID_PLUGIN + ' ```' + e + '```');
         }
 
