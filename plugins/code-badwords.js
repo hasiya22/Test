@@ -1,6 +1,6 @@
 
 
-const Teenu = require('../events');
+const XcriptX = require('../events');
 const {MessageType} = require('@adiwajshing/baileys');
 const exec = require('child_process').exec;
 const os = require("os");
@@ -42,7 +42,7 @@ antlch()
 var ldc = ''
 if (Config.LANG == 'EN') ldc = '*This Group Protected From Bad words then minde your words!*'
 if (Config.LANG == 'SI') ldc = '*සමුහය අසබ්ය වචන වලින් ආරක්ෂා කර ඇත  ඔබගේ වචන පිළිබද සැලකිලිමත් වන්න!*'
-Teenu.addCommand({on: 'text', fromMe: false, deleteCommand: false}, (async (message, match) => {
+XcriptX.addCommand({on: 'text', fromMe: false, deleteCommand: false}, (async (message, match) => {
     if (antibad_var == 'true') {
         let Xbad1 = new RegExp('fuck')
         let Xbad2 = new RegExp('f u c k')

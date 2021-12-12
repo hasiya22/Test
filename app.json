@@ -8,7 +8,7 @@
     "success_url": "xtroid.ml",
     "stack": "container",
     "env": {
-        "NEUTRO_SESSION": {
+        "A_XCRIPT_SESSION": {
             "description": "Paste your QR session.",
             "required": true
         },

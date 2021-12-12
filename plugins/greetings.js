@@ -1,15 +1,16 @@
 /* X-Script  */
 
-const Amozon  = require('../events');
+const XcriptX = require('../events');
 const {MessageType} = require('@adiwajshing/baileys');
 const sql = require('./sql/greetings');
 const Config = require('../config');
 const Language = require('../language');
 const Lang = Language.getString('greetings');
 
+
 if (Config.WORKTYPE == 'private') {
 
-Amozon.addCommand({pattern: 'welcome$', fromMe: true, desc: Lang.WELCOME_DESC}, (async (message, match) => {
+XcriptX.addCommand({pattern: 'welcome$', fromMe: true, desc: Lang.WELCOME_DESC}, (async (message, match) => {
     var hg = await sql.getMessage(message.jid);
     if (hg === false) {
         await message.client.sendMessage(message.jid,Lang.NOT_SET_WELCOME,MessageType.text);
@@ -18,7 +19,7 @@ Amozon.addCommand({pattern: 'welcome$', fromMe: true, desc: Lang.WELCOME_DESC}, 
     }
 }));
 
-Amozon.addCommand({pattern: 'welcome (.*)', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
+XcriptX.addCommand({pattern: 'welcome (.*)', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
     if (match[1] === '') {
         return await message.client.sendMessage(message.jid,Lang.NEED_WELCOME_TEXT);
     } else {
@@ -28,7 +29,7 @@ Amozon.addCommand({pattern: 'welcome (.*)', fromMe: true, dontAddCommandList: tr
     }
 }));
 
-Amozon.addCommand({pattern: 'goodbye$', fromMe: true, desc: Lang.GOODBYE_DESC}, (async (message, match) => {
+XcriptX.addCommand({pattern: 'goodbye$', fromMe: true, desc: Lang.GOODBYE_DESC}, (async (message, match) => {
     var hg = await sql.getMessage(message.jid, 'goodbye');
     if (hg === false) {
         await message.client.sendMessage(message.jid,Lang.NOT_SET_GOODBYE,MessageType.text)
@@ -37,7 +38,7 @@ Amozon.addCommand({pattern: 'goodbye$', fromMe: true, desc: Lang.GOODBYE_DESC}, 
     }
 }));
 
-Amozon.addCommand({pattern: 'goodbye (.*)', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
+XcriptX.addCommand({pattern: 'goodbye (.*)', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
     if (match[1] === '') {
         return await message.client.sendMessage(message.jid,Lang.NEED_GOODBYE_TEXT,MessageType.text);
     } else {
@@ -51,7 +52,7 @@ Amozon.addCommand({pattern: 'goodbye (.*)', fromMe: true, dontAddCommandList: tr
 else if (Config.WORKTYPE == 'public') {
 
 
-Amozon.addCommand({pattern: 'welcome$', fromMe: true, desc: Lang.WELCOME_DESC}, (async (message, match) => {
+XcriptX.addCommand({pattern: 'welcome$', fromMe: true, desc: Lang.WELCOME_DESC}, (async (message, match) => {
     var hg = await sql.getMessage(message.jid);
     if (hg === false) {
         await message.client.sendMessage(message.jid,Lang.NOT_SET_WELCOME,MessageType.text);
@@ -60,7 +61,7 @@ Amozon.addCommand({pattern: 'welcome$', fromMe: true, desc: Lang.WELCOME_DESC}, 
     }
 }));
 
-Amozon.addCommand({pattern: 'welcome (.*)', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
+XcriptX.addCommand({pattern: 'welcome (.*)', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
     if (match[1] === '') {
         return await message.client.sendMessage(message.jid,Lang.NEED_WELCOME_TEXT);
     } else {
@@ -70,7 +71,7 @@ Amozon.addCommand({pattern: 'welcome (.*)', fromMe: true, dontAddCommandList: tr
     }
 }));
 
-Amozon.addCommand({pattern: 'goodbye$', fromMe: true, desc: Lang.GOODBYE_DESC}, (async (message, match) => {
+XcriptX.addCommand({pattern: 'goodbye$', fromMe: true, desc: Lang.GOODBYE_DESC}, (async (message, match) => {
     var hg = await sql.getMessage(message.jid, 'goodbye');
     if (hg === false) {
         await message.client.sendMessage(message.jid,Lang.NOT_SET_GOODBYE,MessageType.text)
@@ -79,7 +80,7 @@ Amozon.addCommand({pattern: 'goodbye$', fromMe: true, desc: Lang.GOODBYE_DESC}, 
     }
 }));
 
-Amozon.addCommand({pattern: 'goodbye (.*)', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
+XcriptX.addCommand({pattern: 'goodbye (.*)', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
     if (match[1] === '') {
         return await message.client.sendMessage(message.jid,Lang.NEED_GOODBYE_TEXT,MessageType.text);
     } else {
@@ -93,7 +94,7 @@ Amozon.addCommand({pattern: 'goodbye (.*)', fromMe: true, dontAddCommandList: tr
 else if (Config.WORKTYPE == 'public') {
 
 
-Amozon.addCommand({pattern: 'welcome$', fromMe: true, desc: Lang.WELCOME_DESC}, (async (message, match) => {
+XcriptX.addCommand({pattern: 'welcome$', fromMe: true, desc: Lang.WELCOME_DESC}, (async (message, match) => {
     var hg = await sql.getMessage(message.jid);
     if (hg === false) {
         await message.client.sendMessage(message.jid,Lang.NOT_SET_WELCOME,MessageType.text);
@@ -102,7 +103,7 @@ Amozon.addCommand({pattern: 'welcome$', fromMe: true, desc: Lang.WELCOME_DESC}, 
     }
 }));
 
-Amozon.addCommand({pattern: 'welcome (.*)', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
+XcriptX.addCommand({pattern: 'welcome (.*)', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
     if (match[1] === '') {
         return await message.client.sendMessage(message.jid,Lang.NEED_WELCOME_TEXT);
     } else {
@@ -112,7 +113,7 @@ Amozon.addCommand({pattern: 'welcome (.*)', fromMe: true, dontAddCommandList: tr
     }
 }));
 
-Amozon.addCommand({pattern: 'goodbye$', fromMe: true, desc: Lang.GOODBYE_DESC}, (async (message, match) => {
+XcriptX.addCommand({pattern: 'goodbye$', fromMe: true, desc: Lang.GOODBYE_DESC}, (async (message, match) => {
     var hg = await sql.getMessage(message.jid, 'goodbye');
     if (hg === false) {
         await message.client.sendMessage(message.jid,Lang.NOT_SET_GOODBYE,MessageType.text)
@@ -121,7 +122,7 @@ Amozon.addCommand({pattern: 'goodbye$', fromMe: true, desc: Lang.GOODBYE_DESC}, 
     }
 }));
 
-Amozon.addCommand({pattern: 'goodbye (.*)', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
+XcriptX.addCommand({pattern: 'goodbye (.*)', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
     if (match[1] === '') {
         return await message.client.sendMessage(message.jid,Lang.NEED_GOODBYE_TEXT,MessageType.text);
     } else {
@@ -149,7 +150,7 @@ async function checkImAdmin(message, user = message.client.user.jid) {
     return sonuc.includes(true);
 }
 
-    Amozon.addCommand({pattern: 'welcome$', fromMe: false, desc: Lang.WELCOME_DESC}, (async (message, match) => {
+    XcriptX.addCommand({pattern: 'welcome$', fromMe: false, desc: Lang.WELCOME_DESC}, (async (message, match) => {
     var us = await checkUsAdmin(message);
     if (!us) return await message.client.sendMessage(message.jid,Lang.PLKADMIN ,MessageType.text ,{quoted: message.data });
     var hg = await sql.getMessage(message.jid);
@@ -160,7 +161,7 @@ async function checkImAdmin(message, user = message.client.user.jid) {
     }
 }));
 
-Amozon.addCommand({pattern: 'welcome (.*)', fromMe: false, dontAddCommandList: true}, (async (message, match) => {
+XcriptX.addCommand({pattern: 'welcome (.*)', fromMe: false, dontAddCommandList: true}, (async (message, match) => {
     var us = await checkUsAdmin(message);
     if (!us) return await message.client.sendMessage(message.jid,Lang.PLKADMIN,MessageType.text ,{quoted: message.data });
     if (match[1] === '') {
@@ -172,7 +173,7 @@ Amozon.addCommand({pattern: 'welcome (.*)', fromMe: false, dontAddCommandList: t
     }
 }));
 
-Amozon.addCommand({pattern: 'goodbye$', fromMe: false, desc: Lang.GOODBYE_DESC}, (async (message, match) => {
+XcriptX.addCommand({pattern: 'goodbye$', fromMe: false, desc: Lang.GOODBYE_DESC}, (async (message, match) => {
     var us = await checkUsAdmin(message);
     if (!us) return await message.client.sendMessage(message.jid,Lang.PLKADMIN,MessageType.text ,{quoted: message.data });
     var hg = await sql.getMessage(message.jid, 'goodbye');
@@ -183,7 +184,7 @@ Amozon.addCommand({pattern: 'goodbye$', fromMe: false, desc: Lang.GOODBYE_DESC},
     }
 }));
 
-Amozon.addCommand({pattern: 'goodbye (.*)', fromMe: false, dontAddCommandList: true}, (async (message, match) => {
+XcriptX.addCommand({pattern: 'goodbye (.*)', fromMe: false, dontAddCommandList: true}, (async (message, match) => {
     var us = await checkUsAdmin(message);
     if (!us) return await message.client.sendMessage(message.jid,Lang.PLKADMIN,MessageType.text ,{quoted: message.data });
     if (match[1] === '') {

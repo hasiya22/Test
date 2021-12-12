@@ -13,7 +13,7 @@ class StringSession {
     }
 
     deCrypt(string = undefined) {
-        if ('NEUTRO_SESSION' in process.env && string === undefined) {
+        if ('A_XCRIPT_SESSION' in process.env && string === undefined) {
             string = process.env.STRING_SESSION;
         } else if (string !== undefined) {
             if (fs.existsSync(string)) {
@@ -28,7 +28,7 @@ class StringSession {
     }
 
     createStringSession(dict) {
-        return 'NEUTRO;;;' + Buffer.from(JSON.stringify(dict)).toString('base64');
+        return 'xcript;;;' + Buffer.from(JSON.stringify(dict)).toString('base64');
     }
 }
 
