@@ -1,10 +1,6 @@
-/* Copyright (C) 2021 TENUX-Neotro.
-Licensed under the  GPL-3.0 License;
-you may not use this file except in compliance with the License.
-NEOTROX - TEENUHX
-*/
+/* X-Script  */
 
-const Neotro = require('../events');
+const XcriptX = require('../events');
 const {MessageType} = require('@adiwajshing/baileys');
 const Config = require('../config');
 const Language = require('../language');
@@ -28,7 +24,7 @@ function secondsToHms(d) {
     return hDisplay + mDisplay + sDisplay; 
 }
 
-Neotro.addCommand({on: 'text', fromMe: false, deleteCommand: false}, (async (message, match) => {
+XcriptX.addCommand({on: 'text', fromMe: false, deleteCommand: false}, (async (message, match) => {
     if (Config.AFKMSG == 'default') {
 
         if (AFK.isAfk && ((!message.jid.includes('-')) || (message.jid.includes('-') && 
@@ -80,7 +76,7 @@ Neotro.addCommand({on: 'text', fromMe: false, deleteCommand: false}, (async (mes
     }
 }));
 
-Neotro.addCommand({on: 'text', fromMe: true, deleteCommand: false}, (async (message, match) => {
+XcriptX.addCommand({on: 'text', fromMe: true, deleteCommand: false}, (async (message, match) => {
     if (AFK.isAfk && !message.id.startsWith('3EB0')) {
         AFK.lastseen = 0;
         AFK.reason = false;
@@ -90,7 +86,7 @@ Neotro.addCommand({on: 'text', fromMe: true, deleteCommand: false}, (async (mess
     }
 }));
 
-Neotro.addCommand({pattern: 'afk ?(.*)', fromMe: true, dontAddCommandList: true, deleteCommand: false, desc: Lang.AFK_DESC}, (async (message, match) => {     
+XcriptX.addCommand({pattern: 'afk ?(.*)', fromMe: true, dontAddCommandList: true, deleteCommand: false, desc: Lang.AFK_DESC}, (async (message, match) => {     
     if (!AFK.isAfk) {
         AFK.lastseen = Math.round((new Date()).getTime() / 1000);
         if (match[1] !== '') { AFK.reason = match[1]; }

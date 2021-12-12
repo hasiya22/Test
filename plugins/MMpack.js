@@ -1,10 +1,6 @@
-/* Copyright (C) 2021 TENUX-Neotro.
-Licensed under the  GPL-3.0 License;
-you may not use this file except in compliance with the License.
-NEOTROX - TEENUHX
-*/
+/* X-Script  */
 
-const Neotro = require('../events');
+const XcriptX = require('../events');
 const { MessageType, MessageOptions, Mimetype } = require('@adiwajshing/baileys');
 const fs = require('fs');
 const axios = require('axios');
@@ -16,7 +12,7 @@ const Ln = "*▷🎭ɴᴇᴏᴛʀᴏ-𝙭🪐මීම් ලැයිස්ත�
 const code = "*╔═════◉ᴀᴍᴀᴢᴏɴᴇ◉═════╗*\n           👩‍🦰ᴀᴍᴀᴢᴏɴᴇ-x🪐\n*❖═මීම් ලැයිස්තුව 👩‍🦰 Meme Pack═❖*\n\n*💠.yasai       ❴your text❵*\n*💠.uddika    ❴your text❵*\n*💠.aah          ❴your text❵*\n*💠.sir            ❴your text❵*\n*💠.my3         ❴your text❵*\n*💠.fuck         ❴your text❵*\n*💠.hii             ❴your text❵*\n*💠.asai          ❴your text❵*\n*💠.hapoi       ❴your text❵*\n*💠.anura       ❴your text❵*\n*💠.gemba       ❴your text❵*\n*💠.wow       ❴your text❵*\n*💠.hapo       ❴your text❵*\n*💠.babah       ❴your text❵*\n*💠.mcn       ❴your text❵*\n*💠.nah       ❴your text❵*\n*╚═══❖══▣══▣══❖═══╝*\n\n*▷Template Credit: එ.මි.ස ¡v**"
 let td = Config.WORKTYPE == 'public' ? false : true
     
-      Neotro.addCommand({pattern: 'mmpack', fromMe: td, desc: Lang.MMPACK,}, (async (message, match) => {
+      XcriptX.addCommand({pattern: 'mmpack', fromMe: td, desc: Lang.MMPACK,}, (async (message, match) => {
 
     await message.client.sendMessage(
   
@@ -24,7 +20,7 @@ let td = Config.WORKTYPE == 'public' ? false : true
   
   }));
 
-    Neotro.addCommand({ pattern: 'my3 ?(.*)', fromMe: td, dontAddCommandList: true }, (async (message, match) => {
+    XcriptX.addCommand({ pattern: 'my3 ?(.*)', fromMe: td, dontAddCommandList: true }, (async (message, match) => {
 
         if (match[1] === '') return await message.sendMessage(ll);
 
@@ -34,7 +30,7 @@ let td = Config.WORKTYPE == 'public' ? false : true
 
     }));
 
-    Neotro.addCommand({ pattern: 'fuck ?(.*)', fromMe: td, dontAddCommandList: true }, (async (message, match) => {
+    XcriptX.addCommand({ pattern: 'fuck ?(.*)', fromMe: td, dontAddCommandList: true }, (async (message, match) => {
 
         if (match[1] === '') return await message.sendMessage(ll);
 
@@ -44,7 +40,7 @@ let td = Config.WORKTYPE == 'public' ? false : true
 
     }));
 
-    Neotro.addCommand({ pattern: 'hii ?(.*)', fromMe: td, dontAddCommandList: true }, (async (message, match) => {
+    XcriptX.addCommand({ pattern: 'hii ?(.*)', fromMe: td, dontAddCommandList: true }, (async (message, match) => {
 
         if (match[1] === '') return await message.sendMessage(ll);
 
@@ -54,7 +50,7 @@ let td = Config.WORKTYPE == 'public' ? false : true
 
     }));
 
-     Neotro.addCommand({ pattern: 'sir ?(.*)', fromMe: td, dontAddCommandList: true }, (async (message, match) => {
+     XcriptX.addCommand({ pattern: 'sir ?(.*)', fromMe: td, dontAddCommandList: true }, (async (message, match) => {
 
         if (match[1] === '') return await message.sendMessage(ll);
 
@@ -64,7 +60,7 @@ let td = Config.WORKTYPE == 'public' ? false : true
 
     }));
 
-    Neotro.addCommand({ pattern: 'yasai ?(.*)', fromMe: td, dontAddCommandList: true }, (async (message, match) => {
+    XcriptX.addCommand({ pattern: 'yasai ?(.*)', fromMe: td, dontAddCommandList: true }, (async (message, match) => {
 
         if (match[1] === '') return await message.sendMessage(ll);
 
@@ -74,7 +70,7 @@ let td = Config.WORKTYPE == 'public' ? false : true
 
     }));
 
-     Neotro.addCommand({ pattern: 'hapoi ?(.*)', fromMe: td, dontAddCommandList: true }, (async (message, match) => {
+     XcriptX.addCommand({ pattern: 'hapoi ?(.*)', fromMe: td, dontAddCommandList: true }, (async (message, match) => {
 
         if (match[1] === '') return await message.sendMessage(ll);
 
@@ -84,7 +80,7 @@ let td = Config.WORKTYPE == 'public' ? false : true
 
     }));
 
-      Neotro.addCommand({ pattern: 'uddika ?(.*)', fromMe: td, dontAddCommandList: true }, (async (message, match) => {
+      XcriptX.addCommand({ pattern: 'uddika ?(.*)', fromMe: td, dontAddCommandList: true }, (async (message, match) => {
 
         if (match[1] === '') return await message.sendMessage(ll);
 
@@ -94,7 +90,7 @@ let td = Config.WORKTYPE == 'public' ? false : true
 
     }));
 
-      Neotro.addCommand({ pattern: 'aah ?(.*)', fromMe: td, dontAddCommandList: true }, (async (message, match) => {
+      XcriptX.addCommand({ pattern: 'aah ?(.*)', fromMe: td, dontAddCommandList: true }, (async (message, match) => {
 
         if (match[1] === '') return await message.sendMessage(ll);
 
@@ -104,7 +100,7 @@ let td = Config.WORKTYPE == 'public' ? false : true
 
     }));
 
-     Neotro.addCommand({ pattern: 'asai ?(.*)', fromMe: td, dontAddCommandList: true }, (async (message, match) => {
+     XcriptX.addCommand({ pattern: 'asai ?(.*)', fromMe: td, dontAddCommandList: true }, (async (message, match) => {
 
         if (match[1] === '') return await message.sendMessage(ll);
 
@@ -114,7 +110,7 @@ let td = Config.WORKTYPE == 'public' ? false : true
 
     }));
     
-   Neotro.addCommand({ pattern: 'wow ?(.*)', fromMe: td, dontAddCommandList: true }, (async (message, match) => {
+   XcriptX.addCommand({ pattern: 'wow ?(.*)', fromMe: td, dontAddCommandList: true }, (async (message, match) => {
 
         if (match[1] === '') return await message.sendMessage(ll);
 
@@ -124,7 +120,7 @@ let td = Config.WORKTYPE == 'public' ? false : true
 
     }));
    
-   Neotro.addCommand({ pattern: 'hapo ?(.*)', fromMe: td, dontAddCommandList: true }, (async (message, match) => {
+   XcriptX.addCommand({ pattern: 'hapo ?(.*)', fromMe: td, dontAddCommandList: true }, (async (message, match) => {
 
         if (match[1] === '') return await message.sendMessage(ll);
 
@@ -134,7 +130,7 @@ let td = Config.WORKTYPE == 'public' ? false : true
 
     }));
   
-     Neotro.addCommand({ pattern: 'anura ?(.*)', fromMe: td, dontAddCommandList: true }, (async (message, match) => {
+     XcriptX.addCommand({ pattern: 'anura ?(.*)', fromMe: td, dontAddCommandList: true }, (async (message, match) => {
 
         if (match[1] === '') return await message.sendMessage(ll);
 
@@ -144,7 +140,7 @@ let td = Config.WORKTYPE == 'public' ? false : true
 
     }));
 
-     Neotro.addCommand({ pattern: 'macn ?(.*)', fromMe: td, dontAddCommandList: true }, (async (message, match) => {
+     XcriptX.addCommand({ pattern: 'macn ?(.*)', fromMe: td, dontAddCommandList: true }, (async (message, match) => {
 
         if (match[1] === '') return await message.sendMessage(ll);
 
@@ -154,7 +150,7 @@ let td = Config.WORKTYPE == 'public' ? false : true
 
     }));
 
-     Neotro.addCommand({ pattern: 'babah ?(.*)', fromMe: td, dontAddCommandList: true }, (async (message, match) => {
+     XcriptX.addCommand({ pattern: 'babah ?(.*)', fromMe: td, dontAddCommandList: true }, (async (message, match) => {
 
         if (match[1] === '') return await message.sendMessage(ll);
 
@@ -164,7 +160,7 @@ let td = Config.WORKTYPE == 'public' ? false : true
 
     }));
 
-Neotro.addCommand({ pattern: 'gemba ?(.*)', fromMe: td, dontAddCommandList: true }, (async (message, match) => {
+XcriptX.addCommand({ pattern: 'gemba ?(.*)', fromMe: td, dontAddCommandList: true }, (async (message, match) => {
 
         if (match[1] === '') return await message.sendMessage(ll);
 
@@ -174,7 +170,7 @@ Neotro.addCommand({ pattern: 'gemba ?(.*)', fromMe: td, dontAddCommandList: true
 
     }));
 
-Neotro.addCommand({ pattern: 'nah ?(.*)', fromMe: td, dontAddCommandList: true }, (async (message, match) => {
+XcriptX.addCommand({ pattern: 'nah ?(.*)', fromMe: td, dontAddCommandList: true }, (async (message, match) => {
 
         if (match[1] === '') return await message.sendMessage(ll);
 
@@ -184,7 +180,7 @@ Neotro.addCommand({ pattern: 'nah ?(.*)', fromMe: td, dontAddCommandList: true }
 
     }));
 
-Neotro.addCommand({ pattern: 'kaluhutta ?(.*)', fromMe: td, dontAddCommandList: true }, (async (message, match) => {
+XcriptX.addCommand({ pattern: 'kaluhutta ?(.*)', fromMe: td, dontAddCommandList: true }, (async (message, match) => {
 
         if (match[1] === '') return await message.sendMessage(ll);
 

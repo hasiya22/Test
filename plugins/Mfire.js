@@ -1,4 +1,4 @@
-const Neotro = require('../events');
+const XcriptX = require('../events');
 const {MessageType, MessageOptions, Mimetype} = require('@adiwajshing/baileys');
 const axios = require('axios');
 const { errorMessage, infoMessage } = require('../helpers');
@@ -12,12 +12,12 @@ const M_UP = "*Uploading...🛸*"
 const NO_RESULT = "*⚙️can't Find Anything...*"
 let tn = Config.WORKTYPE == 'public' ? false : true
 
-Neotro.addCommand({pattern: 'mediafire', fromMe: tn, desc: MMM}, (async (message, match) => {
+XcriptX.addCommand({pattern: 'mediafire', fromMe: tn, desc: MMM}, (async (message, match) => {
   await message.sendMessage('*╭─「 AMAZONE MEDIAFIRE DOWNLOADER 」*\n│ ╰────\n╭─「 COMMANDS」\n│ \n│ • afire <your mediafire APK Link >\n│ • pfire <your mediafire PDF link>\n「 ©️Amazone-teenuhx」');
   
 }));
 
- Neotro.addCommand({ pattern: 'pfire ?(.*)', fromMe: tn, dontAddCommandList:true,  deleteCommand: false}, async (message, match) => {
+ XcriptX.addCommand({ pattern: 'pfire ?(.*)', fromMe: tn, dontAddCommandList:true,  deleteCommand: false}, async (message, match) => {
 
         const link = match[1]
     
@@ -42,7 +42,7 @@ Neotro.addCommand({pattern: 'mediafire', fromMe: tn, desc: MMM}, (async (message
     )
 
 
-Neotro.addCommand({ pattern: 'afire ?(.*)', fromMe: tn, dontAddCommandList:true,  deleteCommand: false}, async (message, match) => {
+XcriptX.addCommand({ pattern: 'afire ?(.*)', fromMe: tn, dontAddCommandList:true,  deleteCommand: false}, async (message, match) => {
 
         const link = match[1]
     

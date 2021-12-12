@@ -1,4 +1,4 @@
-const Neotro = require('../events');
+const XcriptX = require('../events');
 const {MessageType, MessageOptions, Mimetype} = require('@adiwajshing/baileys');
 const {spawnSync} = require('child_process');
 const Config = require('../config');
@@ -9,7 +9,7 @@ const Lang = Language.getString('system_stats');
 
 if (Config.LANG == 'EN') {
 
-    Neotro.addCommand({pattern: 'basichelp', fromMe: true, dontaddCommandList:true}, (async (message, match) => {
+    XcriptX.addCommand({pattern: 'basichelp', fromMe: true, dontaddCommandList:true}, (async (message, match) => {
             
             var image = await axios.get (Config.MENU_LOGO, {responseType: 'arraybuffer'})
        

@@ -1,10 +1,6 @@
-/* Copyright (C) 2021 TENUX-Neotro.
-Licensed under the  GPL-3.0 License;
-you may not use this file except in compliance with the License.
-NEOTROX - TEENUHX
-*/
+/* X-Script  */
 
-const Neotro = require('../events');
+const XcriptX = require('../events');
 const {MessageType} = require('@adiwajshing/baileys');
 const Config = require('../config');
 let tn = Config.WORKTYPE == 'public' ? false : true
@@ -12,7 +8,7 @@ const Language = require('../language');
 const Lang = Language.getString('tagall');
 const SLang = Language.getString('scrapers');
 
-Neotro.addCommand({pattern: 'tagall ?(.*)', fromMe: true, desc: Lang.TAGALL_DESC }, (async (message, match) => {
+XcriptX.addCommand({pattern: 'tagall ?(.*)', fromMe: true, desc: Lang.TAGALL_DESC }, (async (message, match) => {
    
     if (!message.reply_message) {
         if (match[1] !== '') {

@@ -1,10 +1,6 @@
-/* Copyright (C) 2021 TENUX-Neotro.
-Licensed under the  GPL-3.0 License;
-you may not use this file except in compliance with the License.
-NEOTROX - TEENUHX
-*/
+/* X-Script  */
 
-const Neotro = require('../events');
+const XcriptX = require('../events');
 const config = require('../config');
 const Heroku = require('heroku-client');
 const heroku = new Heroku({
@@ -41,7 +37,7 @@ let baseURI = '/apps/' + config.HEROKU.APP_NAME;
         THERI_off = '*👩‍🦰* \n\n'
     }
    
-    Neotro.addCommand({pattern: 'safemode ?(.*)', fromMe: true, desc: l_dsc, usage: '.safemode on / off' }, (async (message, match) => {
+    XcriptX.addCommand({pattern: 'safemode ?(.*)', fromMe: true, desc: l_dsc, usage: '.safemode on / off' }, (async (message, match) => {
         if (match[1] == 'off') {
                 await heroku.patch(baseURI + '/config-vars', { 
                     body: { 

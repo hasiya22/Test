@@ -1,10 +1,6 @@
-/* Copyright (C) 2021 TENUX-Neotro.
-Licensed under the  GPL-3.0 License;
-you may not use this file except in compliance with the License.
-NEOTROX - TEENUHX
-*/
+/* X-Script  */
 
-const Neotro = require('../events');
+const XcriptX = require('../events');
 const {MessageType} = require('@adiwajshing/baileys');
 const axios = require ('axios')
 const LOAD_ING = "*👩‍🦰Searching details*"
@@ -13,7 +9,7 @@ const Language = require('../language');
 const Lang = Language.getString('XcriptX');
 let tn = Config.WORKTYPE == 'public' ? false : true
 
-Neotro.addCommand({pattern: 'device ?(.*)', fromMe: tn, desc: Lang.DEVICE , dontAddCommandList: false}, async (message, match) => {
+XcriptX.addCommand({pattern: 'device ?(.*)', fromMe: tn, desc: Lang.DEVICE , dontAddCommandList: false}, async (message, match) => {
     
 const {data} = await axios(`https://zenzapi.xyz/api/gsmarena?query=${match[1]}&apikey=a9a05974d30e`)
 const { status, result } = data
@@ -37,7 +33,7 @@ msg += '```'
  return await message.client.sendMessage(message.jid, msg, MessageType.text, { quoted: message.data });
 });
 
-    Neotro.addCommand({pattern: 'device ?(.*)', fromMe: true, dontAddCommandList: true, dontAddCommandList: false}, async (message, match) => {
+    XcriptX.addCommand({pattern: 'device ?(.*)', fromMe: true, dontAddCommandList: true, dontAddCommandList: false}, async (message, match) => {
     
         const {data} = await axios(`https://zenzapi.xyz/api/gsmarena?query=${match[1]}&apikey=a9a05974d30e`)
         const { status, result } = data

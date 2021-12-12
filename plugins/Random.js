@@ -1,4 +1,4 @@
-const Neotro = require('../events');
+const XcriptX = require('../events');
 const { MessageType, MessageOptions, Mimetype } = require('@adiwajshing/baileys');
 const fs = require('fs');
 const Config = require('../config');
@@ -6,7 +6,7 @@ const axios = require('axios');
 const NEED_WORD = "*Must Enter some Words*"
 let td = Config.WORKTYPE == 'public' ? false : true
 
-Neotro.addCommand({ pattern: 'random ?(.*)', fromMe: td, desc: 'Random word image' }, (async (message, match) => {
+XcriptX.addCommand({ pattern: 'random ?(.*)', fromMe: td, desc: 'Random word image' }, (async (message, match) => {
 
     var r_text = new Array ();
 

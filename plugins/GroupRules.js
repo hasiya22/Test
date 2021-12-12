@@ -4,7 +4,7 @@ you may not use this file except in compliance with the License.
 ALEXA TEAM - RAMIYA
 */
 
-const Neotro = require('../events');
+const XcriptX = require('../events');
 const {MessageType} = require('@adiwajshing/baileys');
 const sql = require('./sql/greetings');
 const Language = require('../language');
@@ -12,7 +12,7 @@ const Lang = Language.getString('greetings');
 const hd = "*◄ ●●● Group Rules ●●●►* \n\n"
 const pw = "◄●👩‍🦰 *ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴀʟᴇxᴀ* ●►"
 
-Neotro.addCommand({pattern: 'rules', fromMe: true, desc: Lang.RULE_DESC}, (async (message, match) => {
+XcriptX.addCommand({pattern: 'rules', fromMe: true, desc: Lang.RULE_DESC}, (async (message, match) => {
     var rg = await sql.getMessage(message.jid, 'rule');
     if (rg === false) {
         await message.client.sendMessage(message.jid,Lang.NOT_SET_RULE,MessageType.text)
@@ -21,7 +21,7 @@ Neotro.addCommand({pattern: 'rules', fromMe: true, desc: Lang.RULE_DESC}, (async
     }
 }));
 
-Neotro.addCommand({pattern: 'setrules (.*)', fromMe: true, desc: Lang.SETRULE_DESC}, (async (message, match) => {
+XcriptX.addCommand({pattern: 'setrules (.*)', fromMe: true, desc: Lang.SETRULE_DESC}, (async (message, match) => {
     if (match[1] === '') {
         return await message.client.sendMessage(message.jid,Lang.NEED_RULE_TEXT,MessageType.text);
     } else {
@@ -31,7 +31,7 @@ Neotro.addCommand({pattern: 'setrules (.*)', fromMe: true, desc: Lang.SETRULE_DE
     }
 }));
 
-Neotro.addCommand({pattern: 'rules', fromMe: false, dontAddCommandList: true}, (async (message, match) => {
+XcriptX.addCommand({pattern: 'rules', fromMe: false, dontAddCommandList: true}, (async (message, match) => {
     var rg = await sql.getMessage(message.jid, 'rule');
     if (rg === false) {
         await message.client.sendMessage(message.jid,Lang.NOT_SET_RULE,MessageType.text)
@@ -40,6 +40,6 @@ Neotro.addCommand({pattern: 'rules', fromMe: false, dontAddCommandList: true}, (
     }
 }));
 
-Neotro.addCommand({pattern: 'setrules (.*)', fromMe: false, dontAddCommandList: true}, (async (message, match) => {
+XcriptX.addCommand({pattern: 'setrules (.*)', fromMe: false, dontAddCommandList: true}, (async (message, match) => {
 	await message.sendMessage("Only Admins can Set Rules in this Group.")
 }));

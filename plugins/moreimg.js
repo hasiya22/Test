@@ -1,10 +1,6 @@
-/* Copyright (C) 2021 TENUX-Neotro.
-Licensed under the  GPL-3.0 License;
-you may not use this file except in compliance with the License.
-NEOTROX - TEENUHX
-*/
+/* X-Script  */
 
-const Neotro = require('../events');
+const XcriptX = require('../events');
 const {WAConnection, MessageOptions, MessageType, Mimetype, Presence} = require('@adiwajshing/baileys');
 const fs = require('fs');
 const axios = require('axios');
@@ -12,7 +8,7 @@ const Config = require('../config');
 let td = Config.WORKTYPE == 'public' ? false : true
 let am = Config.WORKTYPE == 'public' ? false : true
 
-Neotro.addCommand({pattern: 'break ?(.*)', fromMe: am, dontAddCommandList: true}, (async (message, match) => {
+XcriptX.addCommand({pattern: 'break ?(.*)', fromMe: am, dontAddCommandList: true}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.NEED_WORD);
 
@@ -22,7 +18,7 @@ Neotro.addCommand({pattern: 'break ?(.*)', fromMe: am, dontAddCommandList: true}
 
 }));
 
-Neotro.addCommand({ pattern: 'pubg ?(.*)', fromMe: am,dontAddCommandList: true }, (async (message, match) => {
+XcriptX.addCommand({ pattern: 'pubg ?(.*)', fromMe: am,dontAddCommandList: true }, (async (message, match) => {
 
   if (match[1] === '') return await message.sendMessage(need);
     var topText, bottomText;
@@ -38,7 +34,7 @@ if (match[1].includes(';')) {
 
 }));
   
-  Neotro.addCommand({pattern: 'phub ?(.*)', fromMe: am, dontAddCommandList: true}, (async (message, match) => {
+  XcriptX.addCommand({pattern: 'phub ?(.*)', fromMe: am, dontAddCommandList: true}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
   
@@ -55,7 +51,7 @@ if (match[1].includes(';')) {
 
     }));
   
-   Neotro.addCommand({pattern: 'blood ?(.*)', fromMe: am, dontAddCommandList: true}, (async (message, match) => {
+   XcriptX.addCommand({pattern: 'blood ?(.*)', fromMe: am, dontAddCommandList: true}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
 
@@ -65,7 +61,7 @@ if (match[1].includes(';')) {
 
     }));
 
-    Neotro.addCommand({pattern: '2glitch  ?(.*)', fromMe: am, dontAddCommandList: true}, (async (message, match) => {
+    XcriptX.addCommand({pattern: '2glitch  ?(.*)', fromMe: am, dontAddCommandList: true}, (async (message, match) => {
 
       if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
   
@@ -76,7 +72,7 @@ if (match[1].includes(';')) {
       }));
 
     
-      Neotro.addCommand({pattern: 'battle  ?(.*)', fromMe: am, dontAddCommandList: true}, (async (message, match) => {
+      XcriptX.addCommand({pattern: 'battle  ?(.*)', fromMe: am, dontAddCommandList: true}, (async (message, match) => {
 
         if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
     
@@ -86,7 +82,7 @@ if (match[1].includes(';')) {
     
         }));
   
-  Neotro.addCommand({pattern: '1917 ?(.*)', fromMe: am, dontAddCommandList: true}, (async (message, match) => {
+  XcriptX.addCommand({pattern: '1917 ?(.*)', fromMe: am, dontAddCommandList: true}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
 
@@ -96,7 +92,7 @@ if (match[1].includes(';')) {
 
     }));
   
-   Neotro.addCommand({ pattern: 'maskman?(.*)', fromMe: am,dontAddCommandList: true }, (async (message, match) => {
+   XcriptX.addCommand({ pattern: 'maskman?(.*)', fromMe: am,dontAddCommandList: true }, (async (message, match) => {
 
         if (match[1] === '') return await message.sendMessage(need);
 
@@ -107,7 +103,7 @@ if (match[1].includes(';')) {
     }));
   
    
-         Neotro.addCommand({pattern: 'boxed ?(.*)', fromMe: am, dontAddCommandList: true}, (async (message, match) => {
+         XcriptX.addCommand({pattern: 'boxed ?(.*)', fromMe: am, dontAddCommandList: true}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
 
@@ -117,7 +113,7 @@ if (match[1].includes(';')) {
 
 }));
   
-  Neotro.addCommand({pattern: 'ffire ?(.*)', fromMe: am, dontAddCommandList: false, desc: 'add your text to random freefire logo'}, (async (message, match) => {
+  XcriptX.addCommand({pattern: 'ffire ?(.*)', fromMe: am, dontAddCommandList: false, desc: 'add your text to random freefire logo'}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
 
@@ -127,7 +123,7 @@ if (match[1].includes(';')) {
 
 }));
   
-  Neotro.addCommand({pattern: 'window ?(.*)', fromMe: am, dontAddCommandList: true}, (async (message, match) => {
+  XcriptX.addCommand({pattern: 'window ?(.*)', fromMe: am, dontAddCommandList: true}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
   
@@ -137,7 +133,7 @@ if (match[1].includes(';')) {
 
     }));
   
-   Neotro.addCommand({pattern: 'skywal ?(.*)', fromMe: am, dontAddCommandList: true}, (async (message, match) => {
+   XcriptX.addCommand({pattern: 'skywal ?(.*)', fromMe: am, dontAddCommandList: true}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.NEED_WORD);
 
@@ -147,7 +143,7 @@ if (match[1].includes(';')) {
 
 }));
   
-   Neotro.addCommand({pattern: 'holo ?(.*)', fromMe: am, dontAddCommandList: true}, (async (message, match) => {
+   XcriptX.addCommand({pattern: 'holo ?(.*)', fromMe: am, dontAddCommandList: true}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
 
@@ -157,7 +153,7 @@ if (match[1].includes(';')) {
 
     }));
 
-    Neotro.addCommand({pattern: '2ninja ?(.*)', fromMe: am, dontAddCommandList: true}, (async (message, match) => {
+    XcriptX.addCommand({pattern: '2ninja ?(.*)', fromMe: am, dontAddCommandList: true}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.NEED_WORD);
 
@@ -167,7 +163,7 @@ if (match[1].includes(';')) {
 
    }));
   
-   Neotro.addCommand({pattern: 'drop ?(.*)', fromMe: am, dontAddCommandList: true}, (async (message, match) => {
+   XcriptX.addCommand({pattern: 'drop ?(.*)', fromMe: am, dontAddCommandList: true}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
 
@@ -176,7 +172,7 @@ if (match[1].includes(';')) {
     await message.client.sendMessage(message.jid,Buffer.from(webimage.data), MessageType.image, {mimetype: Mimetype.jpg, caption: Config.CAPTIONS})
     }));
 
-   Neotro.addCommand({pattern: 'cloud ?(.*)', fromMe: am, dontAddCommandList: true}, (async (message, match) => {
+   XcriptX.addCommand({pattern: 'cloud ?(.*)', fromMe: am, dontAddCommandList: true}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
 
@@ -186,7 +182,7 @@ if (match[1].includes(';')) {
 
     }));
 
- Neotro.addCommand({pattern: 'emo ?(.*)', fromMe: am, desc: 'emogi to png'}, (async (message, match) => {
+ XcriptX.addCommand({pattern: 'emo ?(.*)', fromMe: am, desc: 'emogi to png'}, (async (message, match) => {
 
       if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.NEED_WORD, MessageType.text);
         
@@ -199,7 +195,7 @@ if (match[1].includes(';')) {
   
     }));
 
-    Neotro.addCommand({pattern: 'flame ?(.*)', fromMe: am, dontAddCommandList: true}, (async (message, match) => {
+    XcriptX.addCommand({pattern: 'flame ?(.*)', fromMe: am, dontAddCommandList: true}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
 
@@ -209,7 +205,7 @@ if (match[1].includes(';')) {
 
     }));
 
-    Neotro.addCommand({pattern: 'vtext ?(.*)', fromMe: am, dontAddCommandList: true}, (async (message, match) => {
+    XcriptX.addCommand({pattern: 'vtext ?(.*)', fromMe: am, dontAddCommandList: true}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
 
@@ -219,7 +215,7 @@ if (match[1].includes(';')) {
 
     }));
 
-    Neotro.addCommand({pattern: 'ptext ?(.*)', fromMe: am, dontAddCommandList: true}, (async (message, match) => {
+    XcriptX.addCommand({pattern: 'ptext ?(.*)', fromMe: am, dontAddCommandList: true}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
 
@@ -229,7 +225,7 @@ if (match[1].includes(';')) {
 
     }));
 
-    Neotro.addCommand({pattern: 'colortext ?(.*)', fromMe: am, dontAddCommandList: true}, (async (message, match) => {
+    XcriptX.addCommand({pattern: 'colortext ?(.*)', fromMe: am, dontAddCommandList: true}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
 
@@ -239,7 +235,7 @@ if (match[1].includes(';')) {
 
     }));
   
-   Neotro.addCommand({pattern: 'scary ?(.*)', fromMe: am, dontAddCommandList: true}, (async (message, match) => {
+   XcriptX.addCommand({pattern: 'scary ?(.*)', fromMe: am, dontAddCommandList: true}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
 
@@ -249,7 +245,7 @@ if (match[1].includes(';')) {
 
     }));
 
-Neotro.addCommand({pattern: 'glitch ?(.*)', fromMe: am, dontAddCommandList: true}, (async (message, match) => {
+XcriptX.addCommand({pattern: 'glitch ?(.*)', fromMe: am, dontAddCommandList: true}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
   
@@ -266,7 +262,7 @@ Neotro.addCommand({pattern: 'glitch ?(.*)', fromMe: am, dontAddCommandList: true
 
     }));
 
- Neotro.addCommand({pattern: 'freefire ?(.*)', fromMe: am, dontAddCommandList: true}, (async (message, match) => {
+ XcriptX.addCommand({pattern: 'freefire ?(.*)', fromMe: am, dontAddCommandList: true}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
 
@@ -276,7 +272,7 @@ Neotro.addCommand({pattern: 'glitch ?(.*)', fromMe: am, dontAddCommandList: true
 
     }));
 
-Neotro.addCommand({pattern: 'cfire ?(.*)', fromMe: am, dontAddCommandList: true}, (async (message, match) => {
+XcriptX.addCommand({pattern: 'cfire ?(.*)', fromMe: am, dontAddCommandList: true}, (async (message, match) => {
 
       if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
   
@@ -286,7 +282,7 @@ Neotro.addCommand({pattern: 'cfire ?(.*)', fromMe: am, dontAddCommandList: true}
   
       }));
 
-Neotro.addCommand({pattern: 'light ?(.*)', fromMe: am, dontAddCommandList: true}, (async (message, match) => {
+XcriptX.addCommand({pattern: 'light ?(.*)', fromMe: am, dontAddCommandList: true}, (async (message, match) => {
 
         if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
     
@@ -296,7 +292,7 @@ Neotro.addCommand({pattern: 'light ?(.*)', fromMe: am, dontAddCommandList: true}
     
     }));
 
-Neotro.addCommand({pattern: 'cslogo ?(.*)', fromMe: am, dontAddCommandList: true}, (async (message, match) => {
+XcriptX.addCommand({pattern: 'cslogo ?(.*)', fromMe: am, dontAddCommandList: true}, (async (message, match) => {
 
       if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
   
@@ -306,7 +302,7 @@ Neotro.addCommand({pattern: 'cslogo ?(.*)', fromMe: am, dontAddCommandList: true
   
     }));
 
-Neotro.addCommand({pattern: 's3d ?(.*)', fromMe: am, dontAddCommandList: true}, (async (message, match) => {
+XcriptX.addCommand({pattern: 's3d ?(.*)', fromMe: am, dontAddCommandList: true}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
 
@@ -316,7 +312,7 @@ Neotro.addCommand({pattern: 's3d ?(.*)', fromMe: am, dontAddCommandList: true}, 
 
     }));
 
-Neotro.addCommand({ pattern: 'nlogo ?(.*)', fromMe: am,dontAddCommandList: true }, (async (message, match) => {
+XcriptX.addCommand({ pattern: 'nlogo ?(.*)', fromMe: am,dontAddCommandList: true }, (async (message, match) => {
 
         if (match[1] === '') return await message.sendMessage(Lang.NEED_WORD);
 
@@ -326,7 +322,7 @@ Neotro.addCommand({ pattern: 'nlogo ?(.*)', fromMe: am,dontAddCommandList: true 
 
     }));
 
-Neotro.addCommand({pattern: 'blackpink ?(.*)', fromMe: am, dontAddCommandList: true}, (async (message, match) => {
+XcriptX.addCommand({pattern: 'blackpink ?(.*)', fromMe: am, dontAddCommandList: true}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
 
@@ -336,7 +332,7 @@ Neotro.addCommand({pattern: 'blackpink ?(.*)', fromMe: am, dontAddCommandList: t
 
     }));
 
-Neotro.addCommand({pattern: 'neonlight ?(.*)', fromMe: am, dontAddCommandList: true}, (async (message, match) => {
+XcriptX.addCommand({pattern: 'neonlight ?(.*)', fromMe: am, dontAddCommandList: true}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
 
@@ -346,7 +342,7 @@ Neotro.addCommand({pattern: 'neonlight ?(.*)', fromMe: am, dontAddCommandList: t
 
     }));
 
-Neotro.addCommand({pattern: 'pornhub ?(.*)', fromMe: am, dontAddCommandList: true}, (async (message, match) => {
+XcriptX.addCommand({pattern: 'pornhub ?(.*)', fromMe: am, dontAddCommandList: true}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
   
@@ -363,7 +359,7 @@ Neotro.addCommand({pattern: 'pornhub ?(.*)', fromMe: am, dontAddCommandList: tru
 
     }));
 
-Neotro.addCommand({pattern: 'bld ?(.*)', fromMe: am, dontAddCommandList: true}, (async (message, match) => {
+XcriptX.addCommand({pattern: 'bld ?(.*)', fromMe: am, dontAddCommandList: true}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
 
@@ -373,7 +369,7 @@ Neotro.addCommand({pattern: 'bld ?(.*)', fromMe: am, dontAddCommandList: true}, 
 
     }));
 
-Neotro.addCommand({pattern: '3dtext ?(.*)', fromMe: am, dontAddCommandList: true}, (async (message, match) => {
+XcriptX.addCommand({pattern: '3dtext ?(.*)', fromMe: am, dontAddCommandList: true}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
 
@@ -383,7 +379,7 @@ Neotro.addCommand({pattern: '3dtext ?(.*)', fromMe: am, dontAddCommandList: true
 
    }));
 
-Neotro.addCommand({pattern: 'nfire ?(.*)', fromMe: am, dontAddCommandList: true}, (async (message, match) => {
+XcriptX.addCommand({pattern: 'nfire ?(.*)', fromMe: am, dontAddCommandList: true}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
 
@@ -393,7 +389,7 @@ Neotro.addCommand({pattern: 'nfire ?(.*)', fromMe: am, dontAddCommandList: true}
 
     }));
 
-Neotro.addCommand({pattern: 'ninjalogo ?(.*)', fromMe: am, dontAddCommandList: true}, (async (message, match) => {
+XcriptX.addCommand({pattern: 'ninjalogo ?(.*)', fromMe: am, dontAddCommandList: true}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.NEED_WORD);
 
@@ -403,7 +399,7 @@ Neotro.addCommand({pattern: 'ninjalogo ?(.*)', fromMe: am, dontAddCommandList: t
 
     }));
 
-Neotro.addCommand({pattern: 'nglow ?(.*)', fromMe: am, dontAddCommandList: true}, (async (message, match) => {
+XcriptX.addCommand({pattern: 'nglow ?(.*)', fromMe: am, dontAddCommandList: true}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
 
@@ -413,7 +409,7 @@ Neotro.addCommand({pattern: 'nglow ?(.*)', fromMe: am, dontAddCommandList: true}
 
     }));
 
-Neotro.addCommand({pattern: 'nleaves ?(.*)', fromMe: am, dontAddCommandList: true}, (async (message, match) => {
+XcriptX.addCommand({pattern: 'nleaves ?(.*)', fromMe: am, dontAddCommandList: true}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
 
@@ -423,7 +419,7 @@ Neotro.addCommand({pattern: 'nleaves ?(.*)', fromMe: am, dontAddCommandList: tru
 
     }));
 
-Neotro.addCommand({pattern: 'nsky ?(.*)', fromMe: am, dontAddCommandList: true}, (async (message, match) => {
+XcriptX.addCommand({pattern: 'nsky ?(.*)', fromMe: am, dontAddCommandList: true}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
 
@@ -433,7 +429,7 @@ Neotro.addCommand({pattern: 'nsky ?(.*)', fromMe: am, dontAddCommandList: true},
 
     }));
 
-Neotro.addCommand({pattern: 'buttonyt ?(.*)', fromMe: am, dontAddCommandList: true}, (async (message, match) => {
+XcriptX.addCommand({pattern: 'buttonyt ?(.*)', fromMe: am, dontAddCommandList: true}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
 
@@ -443,7 +439,7 @@ Neotro.addCommand({pattern: 'buttonyt ?(.*)', fromMe: am, dontAddCommandList: tr
 
     }));
 
-Neotro.addCommand({pattern: 'bcwall ?(.*)', fromMe: am, dontAddCommandList: true}, (async (message, match) => {
+XcriptX.addCommand({pattern: 'bcwall ?(.*)', fromMe: am, dontAddCommandList: true}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
 

@@ -1,10 +1,6 @@
-/* Copyright (C) 2021 TENUX-Neotro.
-Licensed under the  GPL-3.0 License;
-you may not use this file except in compliance with the License.
-NEOTROX - TEENUHX
-*/
+/* X-Script  */
 
-const Neotro = require('../events');
+const XcriptX = require('../events');
 const {MessageType, Mimetype} = require('@adiwajshing/baileys');
 const fs = require('fs');
 const ffmpeg = require('fluent-ffmpeg');
@@ -15,7 +11,7 @@ const Language = require('../language');
 const Lang = Language.getString('sticker');
 
 if (Config.WORKTYPE == 'private') {
-    Neotro.addCommand({pattern: 'sticker$', fromMe: true, deleteCommand: false,  desc: Lang.STICKER_DESC}, (async (message, match) => {    
+    XcriptX.addCommand({pattern: 'sticker$', fromMe: true, deleteCommand: false,  desc: Lang.STICKER_DESC}, (async (message, match) => {    
 
         if (message.reply_message === false) return await message.client.sendMessage(message.jid,Lang.NEED_REPLY, MessageType.text);
         var downloading = await message.client.sendMessage(message.jid,Lang.DOWNLOADING,MessageType.text);
@@ -50,7 +46,7 @@ if (Config.WORKTYPE == 'private') {
     }));
 }
 else if (Config.WORKTYPE == 'public') {
-    Neotro.addCommand({pattern: 'sticker$', fromMe: false, deleteCommand: false, desc: Lang.STICKER_DESC}, (async (message, match) => {    
+    XcriptX.addCommand({pattern: 'sticker$', fromMe: false, deleteCommand: false, desc: Lang.STICKER_DESC}, (async (message, match) => {    
 
         if (message.reply_message === false) return await message.client.sendMessage(message.jid,Lang.NEED_REPLY, MessageType.text);
         var downloading = await message.client.sendMessage(message.jid,Lang.DOWNLOADING,MessageType.text);
@@ -84,7 +80,7 @@ else if (Config.WORKTYPE == 'public') {
             });
         return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid,contextInfo: { forwardingScore: 2, isForwarded: false }, fromMe: true})
     }));
-Neotro.addCommand({pattern: 'sticker$', fromMe: true, deleteCommand: false, dontAddCommandList: true}, (async (message, match) => {    
+XcriptX.addCommand({pattern: 'sticker$', fromMe: true, deleteCommand: false, dontAddCommandList: true}, (async (message, match) => {    
 
         if (message.reply_message === false) return await message.client.sendMessage(message.jid,Lang.NEED_REPLY, MessageType.text);
         var downloading = await message.client.sendMessage(message.jid,Lang.DOWNLOADING,MessageType.text);

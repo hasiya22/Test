@@ -10,7 +10,7 @@ NEOTROX - RAMIYA-YT
 // උස්සන්න එපා 😕
 // උස්සන්න එපා 😕
 
-const Asena = require('../events');
+const XcriptX = require('../events');
 const { MessageType, MessageOptions, Mimetype } = require('@adiwajshing/baileys');
 const axios = require('axios');
 
@@ -30,7 +30,7 @@ const DOWNMSG = "🧛‍♂️ *DOWNLOADING PINTEREST IMG...* 🤍"
 // ${Alexa.L001}
 
 //-------IMG-----------------------------------------------------------------	
-Asena.addCommand({ pattern: 'pimg ?(.*)', fromMe: typea, desc: Lang.PIMG_DESC}, (async (message, match) => {
+XcriptX.addCommand({ pattern: 'pimg ?(.*)', fromMe: typea, desc: Lang.PIMG_DESC}, (async (message, match) => {
 	// උස්සන්න එපා 😕
     const input = match[1]
 
@@ -59,7 +59,7 @@ Asena.addCommand({ pattern: 'pimg ?(.*)', fromMe: typea, desc: Lang.PIMG_DESC}, 
 })); // IMG close
 
 //-------PINTEREST Downloader-----------------------------------------------------------------	
-Asena.addCommand({ pattern: 'pindown ?(.*)', fromMe: typea, desc: ALang.PTDOWN}, (async (message, match) => {
+XcriptX.addCommand({ pattern: 'pindown ?(.*)', fromMe: typea, desc: ALang.PTDOWN}, (async (message, match) => {
 // උස්සන්න එපා 😕
     const input = match[1]
 
@@ -85,7 +85,7 @@ Asena.addCommand({ pattern: 'pindown ?(.*)', fromMe: typea, desc: ALang.PTDOWN},
 })); // PINTEREST close
 
 //-------IMG-----------------------------------------------------------------	
-Asena.addCommand({ pattern: 'pimg ?(.*)', fromMe: typeb, dontAddCommandList: true}, (async (message, match) => {
+XcriptX.addCommand({ pattern: 'pimg ?(.*)', fromMe: typeb, dontAddCommandList: true}, (async (message, match) => {
 	// උස්සන්න එපා 😕
     const input = match[1]
 
@@ -114,7 +114,7 @@ Asena.addCommand({ pattern: 'pimg ?(.*)', fromMe: typeb, dontAddCommandList: tru
 })); // IMG close
 
 //-------PINTEREST Downloader-----------------------------------------------------------------	
-Asena.addCommand({ pattern: 'pindown ?(.*)', fromMe: typeb, dontAddCommandList: true}, (async (message, match) => {
+XcriptX.addCommand({ pattern: 'pindown ?(.*)', fromMe: typeb, dontAddCommandList: true}, (async (message, match) => {
 // උස්සන්න එපා 😕
     const input = match[1]
 

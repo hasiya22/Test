@@ -1,11 +1,7 @@
-/* Copyright (C) 2021 TENUX-Neotro.
-Licensed under the  GPL-3.0 License;
-you may not use this file except in compliance with the License.
-NEOTROX - TEENUHX
-*/
+/* X-Script  */
 
 
-const Neotro = require('../events');
+const XcriptX = require('../events');
 const {MessageType, MessageOptions, Mimetype} = require('@adiwajshing/baileys');
 const axios = require('axios');
 const Config = require('../config');
@@ -14,7 +10,7 @@ const Lang = Language.getString('XcriptX');
 let tk = Config.WORKTYPE == 'public' ? false: true
 
 
-    Neotro.addCommand({pattern: 'anime', fromMe: tk, desc: Lang.ANIM_DESC}, (async (message, match) => {
+    XcriptX.addCommand({pattern: 'anime', fromMe: tk, desc: Lang.ANIM_DESC}, (async (message, match) => {
 
     var r_text = new Array ();
 
@@ -106,7 +102,7 @@ let tk = Config.WORKTYPE == 'public' ? false: true
 
     }));
 
-    Neotro.addCommand({pattern: 'anime', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
+    XcriptX.addCommand({pattern: 'anime', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
 
     var r_text = new Array ();
 

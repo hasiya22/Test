@@ -1,4 +1,4 @@
-const Neotro = require('../events');
+const XcriptX = require('../events');
 const {MessageType} = require('@adiwajshing/baileys');
 const axios = require('axios');
 const Config = require('../config');
@@ -6,7 +6,7 @@ const Language = require('../language');
 const Lang = Language.getString('XcriptX');
 let tk = Config.WORKTYPE == 'public' ? false : true
 
-Neotro.addCommand({ pattern: 'ftext ?(.*)', desc: Lang.FRANCY, fromMe: tk }, async (message, match) => {
+XcriptX.addCommand({ pattern: 'ftext ?(.*)', desc: Lang.FRANCY, fromMe: tk }, async (message, match) => {
 
 const word = match[1]
 if (!word) return await message.sendMessage(" *Please Input Word* ")
@@ -32,7 +32,7 @@ await axios
 })
  
 	
-	Neotro.addCommand({ pattern: 'ftext ?(.*)', dontAddCommandList: true, fromMe: true }, async (message, match) => {
+	XcriptX.addCommand({ pattern: 'ftext ?(.*)', dontAddCommandList: true, fromMe: true }, async (message, match) => {
 
 const word = match[1]
 if (!word) return await message.sendMessage(" *Please Input Word* ")

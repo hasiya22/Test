@@ -17,7 +17,7 @@ Wa.me/+94766598862
 //==============================
 //==============================
 
-const Neotro = require('../events');
+const XcriptX = require('../events');
 const ffmpeg = require('fluent-ffmpeg');
 const fs = require('fs');
 const https = require('https');
@@ -66,7 +66,7 @@ const convertToWav = file => {
         .save('output.wav')
 }
  if (Config.FULL_ALEXA == 'true') {
-Neotro.addCommand({on: 'text', fromMe: false, dontAdCommandList: true, deleteCommand: false}, (async (message, match) => {
+XcriptX.addCommand({on: 'text', fromMe: false, dontAdCommandList: true, deleteCommand: false}, (async (message, match) => {
     if (message.message.startsWith('alexa') && conf.FULLALEXA !== 'true') {        
         var unique_ident = message.client.user.jid.split('@')[0]
         var finm = message.message.replace('', 'Alexa').replace(' ', 'alexa')   
@@ -93,7 +93,7 @@ Neotro.addCommand({on: 'text', fromMe: false, dontAdCommandList: true, deleteCom
         })
     }
 }));
-Neotro.addCommand({on: 'text', fromMe: false, deleteCommand: false}, (async (message, match) => {
+XcriptX.addCommand({on: 'text', fromMe: false, deleteCommand: false}, (async (message, match) => {
         if (conf.FULLALEXA == 'true') {
             if (message.jid.includes('-') && (message.mention !== false && message.mention.length !== 0)) {
                 message.mention.map(async (jid) => {
@@ -183,7 +183,7 @@ Neotro.addCommand({on: 'text', fromMe: false, deleteCommand: false}, (async (mes
 //=====================V=========
 //======================V========
 
-Neotro.addCommand({ pattern: 'vtalk$', desc: vtalk_dsc, dontAddCommandList: true, fromMe: wk }, (async (message, match) => {
+XcriptX.addCommand({ pattern: 'vtalk$', desc: vtalk_dsc, dontAddCommandList: true, fromMe: wk }, (async (message, match) => {
     if (!message.reply_message) return await message.client.sendMessage(message.jid,reply_tenu, MessageType.text, { quoted: message.data }) 
     try {
         const file = await message.client.downloadAndSaveMediaMessage({
@@ -237,7 +237,7 @@ Neotro.addCommand({ pattern: 'vtalk$', desc: vtalk_dsc, dontAddCommandList: true
 //===============N===============
 //===============U===============
 
-Neotro.addCommand({ pattern: 'alexai ?(.*)', desc: 'ai ALEXA chat bot on off command' , fromMe: true, usage: '.alexi on / off' }, (async (message, match) => {
+XcriptX.addCommand({ pattern: 'alexai ?(.*)', desc: 'ai ALEXA chat bot on off command' , fromMe: true, usage: '.alexi on / off' }, (async (message, match) => {
     var eva_status = `${conf.FULL_ALEXA}`
     if (match[1] == 'on') {
         if (eva_status == 'true') {

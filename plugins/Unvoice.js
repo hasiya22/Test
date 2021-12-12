@@ -1,10 +1,6 @@
-/* Copyright (C) 2021 TENUX-Neotro.
-Licensed under the  GPL-3.0 License;
-you may not use this file except in compliance with the License.
-NEOTROX - TEENUHX
-*/
+/* X-Script  */
 
-const Neotro = require('../events');
+const XcriptX = require('../events');
 const {MessageType,Mimetype} = require('@adiwajshing/baileys');
 const fs = require('fs');
 const ffmpeg = require('fluent-ffmpeg');
@@ -16,7 +12,7 @@ const Lang = Language.getString('unvoice');
 let tn = Config.WORKTYPE == 'public' ? false : true
 
 
-  Neotro.addCommand({pattern: 'unvoice ?(.*)', fromMe: tn, desc: Lang.UV_DESC}, (async (message, match) => {    
+  XcriptX.addCommand({pattern: 'unvoice ?(.*)', fromMe: tn, desc: Lang.UV_DESC}, (async (message, match) => {    
     if (message.reply_message === false);
     var location = await message.client.downloadAndSaveMediaMessage({
         key: {
@@ -33,7 +29,7 @@ let id = match[1];
             await message.client.sendMessage(id, fs.readFileSync('output.mp3'), MessageType.audio, {mimetype: Mimetype.mp4Audio, ptt: true});
 });}));
 
-Neotro.addCommand({pattern: 'unvoice', fromMe: true, dontAddCommandList: true}, (async (message, match) => {    
+XcriptX.addCommand({pattern: 'unvoice', fromMe: true, dontAddCommandList: true}, (async (message, match) => {    
     if (message.reply_message === false);
     var location = await message.client.downloadAndSaveMediaMessage({
         key: {

@@ -1,10 +1,6 @@
-/* Copyright (C) 2021 TENUX-Neotro.
-Licensed under the  GPL-3.0 License;
-you may not use this file except in compliance with the License.
-NEOTROX - TEENUHX
-*/
+/* X-Script  */
 
-const Neotro = require('../events');
+const XcriptX = require('../events');
 const {MessageType} = require('@adiwajshing/baileys');
 const axios = require('axios');
 const config = require('../config');
@@ -13,7 +9,7 @@ const Lang = Language.getString('XcriptX');
 const { errorMessage, infoMessage } = require('../helpers');
 let td = config.WORKTYPE == 'public' ? false : true
 
-Neotro.addCommand({ pattern: 'twt ?(.*)', fromMe: td, desc: Lang.TWT}, async (message, match) => {
+XcriptX.addCommand({ pattern: 'twt ?(.*)', fromMe: td, desc: Lang.TWT}, async (message, match) => {
 
     const userName = match[1]
 
@@ -49,7 +45,7 @@ Neotro.addCommand({ pattern: 'twt ?(.*)', fromMe: td, desc: Lang.TWT}, async (me
   },
 )
 
-Neotro.addCommand({ pattern: 'show ?(.*)', fromMe: td , desc: Lang.SHOW}, async (message, match) => {
+XcriptX.addCommand({ pattern: 'show ?(.*)', fromMe: td , desc: Lang.SHOW}, async (message, match) => {
 
     const userName = match[1]
 
@@ -82,7 +78,7 @@ Neotro.addCommand({ pattern: 'show ?(.*)', fromMe: td , desc: Lang.SHOW}, async 
 
 //================
 
-Neotro.addCommand({ pattern: 'twt ?(.*)', fromMe: true, dontAdCommandList: true}, async (message, match) => {
+XcriptX.addCommand({ pattern: 'twt ?(.*)', fromMe: true, dontAdCommandList: true}, async (message, match) => {
 
     const userName = match[1]
 
@@ -118,7 +114,7 @@ Neotro.addCommand({ pattern: 'twt ?(.*)', fromMe: true, dontAdCommandList: true}
   },
 )
 
-Neotro.addCommand({ pattern: 'show ?(.*)', fromMe: true , dontAdCommandList: true}, async (message, match) => {
+XcriptX.addCommand({ pattern: 'show ?(.*)', fromMe: true , dontAdCommandList: true}, async (message, match) => {
 
     const userName = match[1]
 

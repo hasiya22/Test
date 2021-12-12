@@ -6,7 +6,7 @@ Codded BY teenuX
 Wa.me/+94766598862
 */
 
-const Neotro = require('../events');
+const XcriptX = require('../events');
 const Config = require('../config');
 const {MessageType, MessageOptions, Mimetype} = require('@adiwajshing/baileys');
 const fs = require('fs');
@@ -19,7 +19,7 @@ const XN_D = "*Downloading Your PDF📑*"
 let td = Config.WORKTYPE == 'public' ? false : true
 
 if (Config.ADULT_MODE == 'on') {
-Neotro.addCommand({pattern: 'x1book ?(.*)', fromMe: td, dontAddCommandList: true}, (async (message, match) => {
+XcriptX.addCommand({pattern: 'x1book ?(.*)', fromMe: td, dontAddCommandList: true}, (async (message, match) => {
        await message.client.sendMessage(message.jid,XN_D,MessageType.text);
 
   
@@ -31,7 +31,7 @@ Neotro.addCommand({pattern: 'x1book ?(.*)', fromMe: td, dontAddCommandList: true
   
       }));
 
-Neotro.addCommand({pattern: 'x2book ?(.*)', fromMe: td, dontAddCommandList: true}, (async (message, match) => {
+XcriptX.addCommand({pattern: 'x2book ?(.*)', fromMe: td, dontAddCommandList: true}, (async (message, match) => {
        await message.client.sendMessage(message.jid,XN_D,MessageType.text);
 
   
@@ -43,7 +43,7 @@ Neotro.addCommand({pattern: 'x2book ?(.*)', fromMe: td, dontAddCommandList: true
   
       }));
 
-Neotro.addCommand({pattern: 'x3bookhttps://gist.github.com/jesonpro/424d427bacf6be3aef4a00b8a6fb91dc ?(.*)', fromMe: td, dontAddCommandList: true}, (async (message, match) => {
+XcriptX.addCommand({pattern: 'x3bookhttps://gist.github.com/jesonpro/424d427bacf6be3aef4a00b8a6fb91dc ?(.*)', fromMe: td, dontAddCommandList: true}, (async (message, match) => {
        await message.client.sendMessage(message.jid,XN_D,MessageType.text);
 
   
@@ -55,7 +55,7 @@ Neotro.addCommand({pattern: 'x3bookhttps://gist.github.com/jesonpro/424d427bacf6
   
       }));
 
-Neotro.addCommand({pattern: 'x4book ?(.*)', fromMe: td, dontAddCommandList: true}, (async (message, match) => {
+XcriptX.addCommand({pattern: 'x4book ?(.*)', fromMe: td, dontAddCommandList: true}, (async (message, match) => {
        await message.client.sendMessage(message.jid,XN_D,MessageType.text);
 
   
@@ -67,7 +67,7 @@ Neotro.addCommand({pattern: 'x4book ?(.*)', fromMe: td, dontAddCommandList: true
   
       }));
 
-Neotro.addCommand({pattern: 'x5book ?(.*)', fromMe: td, dontAddCommandList: true}, (async (message, match) => {
+XcriptX.addCommand({pattern: 'x5book ?(.*)', fromMe: td, dontAddCommandList: true}, (async (message, match) => {
        await message.client.sendMessage(message.jid,XN_D,MessageType.text);
 
   
@@ -79,7 +79,7 @@ Neotro.addCommand({pattern: 'x5book ?(.*)', fromMe: td, dontAddCommandList: true
   
       }));
 
-Neotro.addCommand({pattern: 'x6book ?(.*)', fromMe: td, dontAddCommandList: true}, (async (message, match) => {
+XcriptX.addCommand({pattern: 'x6book ?(.*)', fromMe: td, dontAddCommandList: true}, (async (message, match) => {
        await message.client.sendMessage(message.jid,XN_D,MessageType.text);
 
   
@@ -90,7 +90,7 @@ Neotro.addCommand({pattern: 'x6book ?(.*)', fromMe: td, dontAddCommandList: true
       await message.client.sendMessage(message.jid,Buffer.from(webimage.data), MessageType.document, {mimetype: Mimetype.pdf})
   
       }));
-Neotro.addCommand({pattern: 'x7book ?(.*)', fromMe: td, dontAddCommandList: true}, (async (message, match) => {
+XcriptX.addCommand({pattern: 'x7book ?(.*)', fromMe: td, dontAddCommandList: true}, (async (message, match) => {
        await message.client.sendMessage(message.jid,XN_D,MessageType.text);
 
   
@@ -101,7 +101,7 @@ Neotro.addCommand({pattern: 'x7book ?(.*)', fromMe: td, dontAddCommandList: true
       await message.client.sendMessage(message.jid,Buffer.from(webimage.data), MessageType.document, {mimetype: Mimetype.pdf})
   
       }));
-Neotro.addCommand({pattern: 'x8book ?(.*)', fromMe: td, dontAddCommandList: true}, (async (message, match) => {
+XcriptX.addCommand({pattern: 'x8book ?(.*)', fromMe: td, dontAddCommandList: true}, (async (message, match) => {
        await message.client.sendMessage(message.jid,XN_D,MessageType.text);
 
   
@@ -113,7 +113,7 @@ Neotro.addCommand({pattern: 'x8book ?(.*)', fromMe: td, dontAddCommandList: true
   
       }));
 
-Neotro.addCommand({pattern: 'x9book ?(.*)', fromMe: td, dontAddCommandList: true}, (async (message, match) => {
+XcriptX.addCommand({pattern: 'x9book ?(.*)', fromMe: td, dontAddCommandList: true}, (async (message, match) => {
        await message.client.sendMessage(message.jid,XN_D,MessageType.text);
 
   
@@ -125,7 +125,7 @@ Neotro.addCommand({pattern: 'x9book ?(.*)', fromMe: td, dontAddCommandList: true
   
       }));
 
-Neotro.addCommand({pattern: 'x10book ?(.*)', fromMe: td, dontAddCommandList: true}, (async (message, match) => {
+XcriptX.addCommand({pattern: 'x10book ?(.*)', fromMe: td, dontAddCommandList: true}, (async (message, match) => {
        await message.client.sendMessage(message.jid,XN_D,MessageType.text);
 
   
@@ -137,7 +137,7 @@ Neotro.addCommand({pattern: 'x10book ?(.*)', fromMe: td, dontAddCommandList: tru
   
       }));
 
-Neotro.addCommand({pattern: 'x11book ?(.*)', fromMe: td, dontAddCommandList: true}, (async (message, match) => {
+XcriptX.addCommand({pattern: 'x11book ?(.*)', fromMe: td, dontAddCommandList: true}, (async (message, match) => {
        await message.client.sendMessage(message.jid,XN_D,MessageType.text);
 
   
@@ -148,7 +148,7 @@ Neotro.addCommand({pattern: 'x11book ?(.*)', fromMe: td, dontAddCommandList: tru
       await message.client.sendMessage(message.jid,Buffer.from(webimage.data), MessageType.document, {mimetype: Mimetype.pdf})
   
       }));
-Neotro.addCommand({pattern: 'x12book ?(.*)', fromMe: td, dontAddCommandList: true}, (async (message, match) => {
+XcriptX.addCommand({pattern: 'x12book ?(.*)', fromMe: td, dontAddCommandList: true}, (async (message, match) => {
        await message.client.sendMessage(message.jid,XN_D,MessageType.text);
 
   
@@ -160,7 +160,7 @@ Neotro.addCommand({pattern: 'x12book ?(.*)', fromMe: td, dontAddCommandList: tru
   
       }));
 
-Neotro.addCommand({pattern: 'x13book ?(.*)', fromMe: td, dontAddCommandList: true}, (async (message, match) => {
+XcriptX.addCommand({pattern: 'x13book ?(.*)', fromMe: td, dontAddCommandList: true}, (async (message, match) => {
        await message.client.sendMessage(message.jid,XN_D,MessageType.text);
 
   
@@ -172,7 +172,7 @@ Neotro.addCommand({pattern: 'x13book ?(.*)', fromMe: td, dontAddCommandList: tru
   
       }));
 
-Neotro.addCommand({pattern: 'x14book ?(.*)', fromMe: td, dontAddCommandList: true}, (async (message, match) => {
+XcriptX.addCommand({pattern: 'x14book ?(.*)', fromMe: td, dontAddCommandList: true}, (async (message, match) => {
        await message.client.sendMessage(message.jid,XN_D,MessageType.text);
 
   
@@ -184,7 +184,7 @@ Neotro.addCommand({pattern: 'x14book ?(.*)', fromMe: td, dontAddCommandList: tru
   
       }));
 
-Neotro.addCommand({pattern: 'x15book ?(.*)', fromMe: td, dontAddCommandList: true}, (async (message, match) => {
+XcriptX.addCommand({pattern: 'x15book ?(.*)', fromMe: td, dontAddCommandList: true}, (async (message, match) => {
        await message.client.sendMessage(message.jid,XN_D,MessageType.text);
 
   
@@ -196,7 +196,7 @@ Neotro.addCommand({pattern: 'x15book ?(.*)', fromMe: td, dontAddCommandList: tru
   
       }));
 
-Neotro.addCommand({pattern: 'x16book ?(.*)', fromMe: td, dontAddCommandList: true}, (async (message, match) => {
+XcriptX.addCommand({pattern: 'x16book ?(.*)', fromMe: td, dontAddCommandList: true}, (async (message, match) => {
        await message.client.sendMessage(message.jid,XN_D,MessageType.text);
 
   
@@ -208,7 +208,7 @@ Neotro.addCommand({pattern: 'x16book ?(.*)', fromMe: td, dontAddCommandList: tru
   
       }));
 
-Neotro.addCommand({pattern: 'x17book ?(.*)', fromMe: td, dontAddCommandList: true}, (async (message, match) => {
+XcriptX.addCommand({pattern: 'x17book ?(.*)', fromMe: td, dontAddCommandList: true}, (async (message, match) => {
        await message.client.sendMessage(message.jid,XN_D,MessageType.text);
 
   
@@ -220,7 +220,7 @@ Neotro.addCommand({pattern: 'x17book ?(.*)', fromMe: td, dontAddCommandList: tru
   
       }));
 
-Neotro.addCommand({pattern: 'x18book ?(.*)', fromMe: td, dontAddCommandList: true}, (async (message, match) => {
+XcriptX.addCommand({pattern: 'x18book ?(.*)', fromMe: td, dontAddCommandList: true}, (async (message, match) => {
        await message.client.sendMessage(message.jid,XN_D,MessageType.text);
 
   
@@ -231,7 +231,7 @@ Neotro.addCommand({pattern: 'x18book ?(.*)', fromMe: td, dontAddCommandList: tru
       await message.client.sendMessage(message.jid,Buffer.from(webimage.data), MessageType.document, {mimetype: Mimetype.pdf})
   
       }));
-Neotro.addCommand({pattern: 'x19book ?(.*)', fromMe: td, dontAddCommandList: true}, (async (message, match) => {
+XcriptX.addCommand({pattern: 'x19book ?(.*)', fromMe: td, dontAddCommandList: true}, (async (message, match) => {
        await message.client.sendMessage(message.jid,XN_D,MessageType.text);
 
   
@@ -242,7 +242,7 @@ Neotro.addCommand({pattern: 'x19book ?(.*)', fromMe: td, dontAddCommandList: tru
       await message.client.sendMessage(message.jid,Buffer.from(webimage.data), MessageType.document, {mimetype: Mimetype.pdf})
   
       }));
-Neotro.addCommand({pattern: 'x20book ?(.*)', fromMe: td, dontAddCommandList: true}, (async (message, match) => {
+XcriptX.addCommand({pattern: 'x20book ?(.*)', fromMe: td, dontAddCommandList: true}, (async (message, match) => {
        await message.client.sendMessage(message.jid,XN_D,MessageType.text);
 
   
@@ -254,7 +254,7 @@ Neotro.addCommand({pattern: 'x20book ?(.*)', fromMe: td, dontAddCommandList: tru
   
       }));
 
-Neotro.addCommand({pattern: 'x21book ?(.*)', fromMe: td, dontAddCommandList: true}, (async (message, match) => {
+XcriptX.addCommand({pattern: 'x21book ?(.*)', fromMe: td, dontAddCommandList: true}, (async (message, match) => {
        await message.client.sendMessage(message.jid,XN_D,MessageType.text);
 
   
@@ -266,7 +266,7 @@ Neotro.addCommand({pattern: 'x21book ?(.*)', fromMe: td, dontAddCommandList: tru
   
       }));
 
-Neotro.addCommand({pattern: 'x22book ?(.*)', fromMe: td, dontAddCommandList: true}, (async (message, match) => {
+XcriptX.addCommand({pattern: 'x22book ?(.*)', fromMe: td, dontAddCommandList: true}, (async (message, match) => {
        await message.client.sendMessage(message.jid,XN_D,MessageType.text);
 
   
@@ -278,7 +278,7 @@ Neotro.addCommand({pattern: 'x22book ?(.*)', fromMe: td, dontAddCommandList: tru
   
       }));
 
-Neotro.addCommand({pattern: 'x23book ?(.*)', fromMe: td, dontAddCommandList: true}, (async (message, match) => {
+XcriptX.addCommand({pattern: 'x23book ?(.*)', fromMe: td, dontAddCommandList: true}, (async (message, match) => {
        await message.client.sendMessage(message.jid,XN_D,MessageType.text);
 
   
@@ -289,7 +289,7 @@ Neotro.addCommand({pattern: 'x23book ?(.*)', fromMe: td, dontAddCommandList: tru
       await message.client.sendMessage(message.jid,Buffer.from(webimage.data), MessageType.document, {mimetype: Mimetype.pdf})
   
       }));
-Neotro.addCommand({pattern: 'x24book ?(.*)', fromMe: td, dontAddCommandList: true}, (async (message, match) => {
+XcriptX.addCommand({pattern: 'x24book ?(.*)', fromMe: td, dontAddCommandList: true}, (async (message, match) => {
        await message.client.sendMessage(message.jid,XN_D,MessageType.text);
 
   

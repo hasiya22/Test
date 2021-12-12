@@ -1,11 +1,7 @@
-/* Copyright (C) 2021 TENUX-Neotro.
-Licensed under the  GPL-3.0 License;
-you may not use this file except in compliance with the License.
-NEOTROX - TEENUHX
-*/
+/* X-Script  */
 //උස්සන්නද ආවෙ ඊයා ලැජ්ජා වෙයන් 😂
 
-const Neotro = require('../events');
+const XcriptX = require('../events');
 const {MessageType, Mimetype} = require('@adiwajshing/baileys');
 const fs = require('fs');
 const ffmpeg = require('fluent-ffmpeg');
@@ -17,7 +13,7 @@ const Language = require('../language');
 const Lang = Language.getString('XcriptX');
 const NEED_REPLY = '⚠️tag stataus'
 
-    Neotro.addCommand({pattern: 'download$', fromMe: true, desc: 'Download status to your log'}, (async (message, match) => {    
+    XcriptX.addCommand({pattern: 'download$', fromMe: true, desc: 'Download status to your log'}, (async (message, match) => {    
 
         if (message.reply_message === false) return await message.client.sendMessage(message.jid,NEED_REPLY, MessageType.text);
         var downloading = await message.client.sendMessage(message.jid,DW,MessageType.text);

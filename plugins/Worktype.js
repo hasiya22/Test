@@ -1,10 +1,6 @@
-/* Copyright (C) 2021 TENUX-Neotro.
-Licensed under the  GPL-3.0 License;
-you may not use this file except in compliance with the License.
-NEOTROX - TEENUHX
-*/
+/* X-Script  */
 
-const Neotro = require('../events');
+const XcriptX = require('../events');
 const config = require('../config');
 const Heroku = require('heroku-client');
 const Language = require('../language');
@@ -33,7 +29,7 @@ let baseURI = '/apps/' + config.HEROKU.APP_NAME;
       W_PRI = '👩‍🦰ඔබේ Bot පෞද්ගලික ආකාරයට ක්‍රියාකරයි.'
     }
 
- Neotro.addCommand({pattern: 'work ?(.*)', fromMe: true, dontAddCommandList: false, desc: Lang.WORK}, (async (message, match) => {
+ XcriptX.addCommand({pattern: 'work ?(.*)', fromMe: true, dontAddCommandList: false, desc: Lang.WORK}, (async (message, match) => {
         if (match[1] == 'public') {
                 await heroku.patch(baseURI + '/config-vars', { 
                     body: { 

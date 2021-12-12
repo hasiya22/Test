@@ -4,7 +4,7 @@ you may not use this file except in compliance with the License.
 NEOTROX - RAMIYA-YT
 */
 
-const Asena = require('../events');
+const XcriptX = require('../events');
 const {MessageType,mimetype,Mimetype} = require('@adiwajshing/baileys');
 const axios = require('axios');
 const Alexa = require('../config');
@@ -17,7 +17,7 @@ const capt = "🦹‍♀️ *ALEXA Tiktok Downloader* 🕊\n"
 
  // ===============================================================================================================
  
-  Asena.addCommand({ pattern: 'tiktok ?(.*)', fromMe: typea, dontaddCommandList:false, desc: ALang.TIKTOK}, async (message, match) => {
+  XcriptX.addCommand({ pattern: 'tiktok ?(.*)', fromMe: typea, dontaddCommandList:false, desc: ALang.TIKTOK}, async (message, match) => {
 
     const link = match[1]
 
@@ -50,7 +50,7 @@ const capt = "🦹‍♀️ *ALEXA Tiktok Downloader* 🕊\n"
  
  // ===============================================================================================================
  
- Asena.addCommand({ pattern: 'tiktok ?(.*)', fromMe: typeb, dontaddCommandList:true}, async (message, match) => {
+ XcriptX.addCommand({ pattern: 'tiktok ?(.*)', fromMe: typeb, dontaddCommandList:true}, async (message, match) => {
 
     const link = match[1]
 

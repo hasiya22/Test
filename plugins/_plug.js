@@ -1,10 +1,6 @@
-/* Copyright (C) 2021 TENUX-Neotro.
-Licensed under the  GPL-3.0 License;
-you may not use this file except in compliance with the License.
-NEOTROX - TEENUHX
-*/
+/* X-Script  */
 
-const Asena = require('../events');
+const XcriptX = require('../events');
 const Heroku = require('heroku-client');
 const Config = require('../config');
 const {MessageType} = require('@adiwajshing/baileys');
@@ -27,7 +23,7 @@ const heroku = new Heroku({
 
 let baseURI = '/apps/' + Config.HEROKU.APP_NAME;
 
-Asena.addCommand({pattern: 'pkg ?(.*)', fromMe: true, desc: ALang.PKG, warn: Lang.WARN}, (async (message, match) => {
+XcriptX.addCommand({pattern: 'pkg ?(.*)', fromMe: true, desc: ALang.PKG, warn: Lang.WARN}, (async (message, match) => {
     if (match[1] === '') return await message.sendMessage(Lang.NEED_URL + '.pkg https://paste-bin.xyz/paste.php?raw&id=2416&password')
     try {
         var url = new URL(match[1]);
@@ -69,7 +65,7 @@ Asena.addCommand({pattern: 'pkg ?(.*)', fromMe: true, desc: ALang.PKG, warn: Lan
     }
 }));
 
-Asena.addCommand({pattern: 'plugs', fromMe: true, desc: ALang.PLUG }, (async (message, match) => {
+XcriptX.addCommand({pattern: 'plugs', fromMe: true, desc: ALang.PLUG }, (async (message, match) => {
     var mesaj = Lang.INSTALLED_FROM_REMOTE;
     var plugins = await Db.PluginDB.findAll();
     if (plugins.length < 1) {
@@ -85,7 +81,7 @@ Asena.addCommand({pattern: 'plugs', fromMe: true, desc: ALang.PLUG }, (async (me
     }
 }));
 
-Asena.addCommand({pattern: 'rpkg(?: |$)(.*)', fromMe: true, desc: ALang.REMOVE}, (async (message, match) => {
+XcriptX.addCommand({pattern: 'rpkg(?: |$)(.*)', fromMe: true, desc: ALang.REMOVE}, (async (message, match) => {
     if (match[1] === '') return await message.sendMessage(Lang.NEED_PLUGIN);
     if (!match[1].startsWith('__')) match[1] = '__' + match[1];
     var plugin = await Db.PluginDB.findAll({ where: {name: match[1]} });

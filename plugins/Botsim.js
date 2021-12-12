@@ -1,8 +1,4 @@
-/* Copyright (C) 2021 TENUX-Neotro.
-Licensed under the  GPL-3.0 License;
-you may not use this file except in compliance with the License.
-NEOTROX - TEENUHX
-*/
+/* X-Script  */
 //___________________________________________________
 //________00000000000___________000000000000_________
 //______00000000_____00000___000000_____0000000______
@@ -24,7 +20,7 @@ NEOTROX - TEENUHX
 //______________________00__00_______________________
 //________________________00_________________________
 //___________________________________________________
-const Neotro = require('../events');
+const XcriptX = require('../events');
 const {MessageType} = require('@adiwajshing/baileys');
 const Heroku = require('heroku-client');
 const got = require('got');
@@ -43,7 +39,7 @@ let baseURI = '/apps/' + Config.HEROKU.APP_NAME;
 
 if (Config.AI_BOT == 'true') {
 	if (Config.WORKTYPE == 'private') {
-		Neotro.addCommand({pattern: 'bot ?(.*)', fromMe: true, desc: Lang.BOT_DESC}, async (message, match) => {
+		XcriptX.addCommand({pattern: 'bot ?(.*)', fromMe: true, desc: Lang.BOT_DESC}, async (message, match) => {
   if (match[1] === '') return await message.client.sendMessage(message.jid,"\n"+cmsg+"\n",MessageType.text,{quoted: message.data});
   if (match[1] === 'hi') return await message.client.sendMessage(message.jid,"\n"+cmsg+"\n",MessageType.text,{quoted: message.data});
   if (match[1] === "alexa" || match[1] === "Alexa" || match[1].includes('alexa') || match[1].includes('Alexa') ) {
@@ -62,7 +58,7 @@ if (Config.AI_BOT == 'true') {
 	}
 	
 	else if (Config.WORKTYPE == 'public') {
-		Neotro.addCommand({pattern: 'bot ?(.*)', fromMe: false, desc: Lang.BOT_DESC}, async (message, match) => {
+		XcriptX.addCommand({pattern: 'bot ?(.*)', fromMe: false, desc: Lang.BOT_DESC}, async (message, match) => {
   if (match[1] === '') return await message.client.sendMessage(message.jid,"\n"+cmsg+"\n",MessageType.text,{quoted: message.data});
   if (match[1] === 'hi') return await message.client.sendMessage(message.jid,"\n"+cmsg+"\n",MessageType.text,{quoted: message.data});
   if (match[1] === "alexa" || match[1] === "Alexa" || match[1].includes('alexa') || match[1].includes('Alexa') ) {
@@ -83,7 +79,7 @@ if (Config.AI_BOT == 'true') {
 
 else if (Config.AI_BOT == 'false') {
 	if (Config.WORKTYPE == 'private') {
-		Neotro.addCommand({pattern: 'bot ?(.*)', fromMe: true, desc: Lang.BOT_DESC}, async (message, match) => {
+		XcriptX.addCommand({pattern: 'bot ?(.*)', fromMe: true, desc: Lang.BOT_DESC}, async (message, match) => {
 			if (match[1] === 'xx') return await message.reply(Lang.NEED_LOCATIONA);
 			const url = `https://api.simsimi.net/v2/?text=${match[1]}&lang=si&cf=true`;
 			try {
@@ -97,7 +93,7 @@ else if (Config.AI_BOT == 'false') {
 	}
 	
 	else if (Config.WORKTYPE == 'public') {
-		Neotro.addCommand({pattern: 'bot ?(.*)', fromMe: false, desc: Lang.BOT_DESC}, async (message, match) => {
+		XcriptX.addCommand({pattern: 'bot ?(.*)', fromMe: false, desc: Lang.BOT_DESC}, async (message, match) => {
 			if (match[1] === 'xx') return await message.reply(Lang.NEED_LOCATIONA);
 			const url = `https://api.simsimi.net/v2/?text=${match[1]}&lc=en&cf=true`;
 			try {
@@ -111,7 +107,7 @@ else if (Config.AI_BOT == 'false') {
 	}
 }
 
-Neotro.addCommand({pattern: 'adon ?(.*)', fromMe: true, desc: Lang.ADON_DESC}, (async(message, match) => {
+XcriptX.addCommand({pattern: 'adon ?(.*)', fromMe: true, desc: Lang.ADON_DESC}, (async(message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.ADON_MISSING, MessageType.text);
     if ((varKey = match[1].split(':')[0]) && (varValue = match[1].split(':')[1])) {

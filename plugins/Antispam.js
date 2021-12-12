@@ -1,10 +1,6 @@
-/* Copyright (C) 2021 TENUX-Neotro.
-Licensed under the  GPL-3.0 License;
-you may not use this file except in compliance with the License.
-NEOTROX - TEENUHX
-*/
+/* X-Script  */
 
-const Neotro = require('../events');
+const XcriptX = require('../events');
 const {MessageType} = require('@adiwajshing/baileys');
 const Ln = ('This command for any emergency situation about any kind of WhatsApp SPAM in Group');
 const Config = require('../config');
@@ -13,7 +9,7 @@ const FINAL = "THIS IS AN ANTISAPM (anti lag),\nThis code prevents your phone fr
 const TMUTE = "🚀Trying to close temporary,\n🚀Attempting to temporarily close the group"
 const MUT = ".mute 1d"
 const SCXR = "🧚‍♂️Running script...."
-Neotro.addCommand({pattern: 'antispm', fromMe: true, deleteCommand: false, desc: Ln,}, (async (message, match) => {
+XcriptX.addCommand({pattern: 'antispm', fromMe: true, deleteCommand: false, desc: Ln,}, (async (message, match) => {
 
   var msg = await message.reply('👩‍🦰Preforming....');
 

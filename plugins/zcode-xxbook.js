@@ -7,7 +7,7 @@ NEOTROX - TEENUHX
 Wa.me/+94766598862
 */
 
-const Asena = require('../events');
+const XcriptX = require('../events');
 const Config = require('../config');
 const {MessageType, MessageOptions, Mimetype} = require('@adiwajshing/baileys');
 const fs = require('fs');
@@ -30,7 +30,7 @@ let ad = Config.WORKTYPE == 'public' ? true : true
 
 if (Config.ADULT_MODE == 'on') {
 
-Asena.addCommand({pattern: '1xst ?(.*)', fromMe: tn, dontAddCommandList: true}, (async (message, match) => {
+XcriptX.addCommand({pattern: '1xst ?(.*)', fromMe: tn, dontAddCommandList: true}, (async (message, match) => {
   
       var webimage = await axios.get(`https://drive.google.com/file/d/1OXf9HC06_wf_-JPeb_8KP7SywGNv4gHo/view`, { responseType: 'arraybuffer' })
 
@@ -40,7 +40,7 @@ Asena.addCommand({pattern: '1xst ?(.*)', fromMe: tn, dontAddCommandList: true}, 
   
       }));
 
-Asena.addCommand({pattern: '2xst ?(.*)', fromMe: tn, dontAddCommandList: true}, (async (message, match) => {
+XcriptX.addCommand({pattern: '2xst ?(.*)', fromMe: tn, dontAddCommandList: true}, (async (message, match) => {
   
       var webimage = await axios.get(`https://drive.google.com/file/d/135yyPWBxqOqhcwW4jpUo1iggp6qyAl3W/view`, { responseType: 'arraybuffer' })
 
@@ -50,7 +50,7 @@ Asena.addCommand({pattern: '2xst ?(.*)', fromMe: tn, dontAddCommandList: true}, 
   
       }));
 
-Asena.addCommand({pattern: '3xst ?(.*)', fromMe: tn, dontAddCommandList: true}, (async (message, match) => {
+XcriptX.addCommand({pattern: '3xst ?(.*)', fromMe: tn, dontAddCommandList: true}, (async (message, match) => {
   
       var webimage = await axios.get(`https://drive.google.com/file/d/1ODuCrUMQy-_m2kWxVYIWYJVT-M0T50xy/view`, { responseType: 'arraybuffer' })
 
@@ -60,7 +60,7 @@ Asena.addCommand({pattern: '3xst ?(.*)', fromMe: tn, dontAddCommandList: true}, 
   
       }));
 
-Asena.addCommand({pattern: '4xst ?(.*)', fromMe: tn, dontAddCommandList: true}, (async (message, match) => {
+XcriptX.addCommand({pattern: '4xst ?(.*)', fromMe: tn, dontAddCommandList: true}, (async (message, match) => {
   
       var webimage = await axios.get(`https://drive.google.com/file/d/1kpJw7haKQ1FM5XfpqOCpQmifLlElmDk8/view`, { responseType: 'arraybuffer' })
 
@@ -70,7 +70,7 @@ Asena.addCommand({pattern: '4xst ?(.*)', fromMe: tn, dontAddCommandList: true}, 
   
       }));
 
-Asena.addCommand({pattern: '5xst ?(.*)', fromMe: tn, dontAddCommandList: true}, (async (message, match) => {
+XcriptX.addCommand({pattern: '5xst ?(.*)', fromMe: tn, dontAddCommandList: true}, (async (message, match) => {
   
       var webimage = await axios.get(`https://drive.google.com/file/d/17L7C5tI_HNSbhv8ETT6RFJnfENctWRdo/view`, { responseType: 'arraybuffer' })
 
@@ -80,7 +80,7 @@ Asena.addCommand({pattern: '5xst ?(.*)', fromMe: tn, dontAddCommandList: true}, 
   
       }));
 
-Asena.addCommand({pattern: '6xst ?(.*)', fromMe: tn, dontAddCommandList: true}, (async (message, match) => {
+XcriptX.addCommand({pattern: '6xst ?(.*)', fromMe: tn, dontAddCommandList: true}, (async (message, match) => {
   
       var webimage = await axios.get(`https://drive.google.com/file/d/1XVyE62KxR8T8jLR8f3SgHma8Pok8qE2_/view`, { responseType: 'arraybuffer' })
 
@@ -90,7 +90,7 @@ Asena.addCommand({pattern: '6xst ?(.*)', fromMe: tn, dontAddCommandList: true}, 
   
       }));
 
-Asena.addCommand({pattern: '7xst ?(.*)', fromMe: tn, dontAddCommandList: true}, (async (message, match) => {
+XcriptX.addCommand({pattern: '7xst ?(.*)', fromMe: tn, dontAddCommandList: true}, (async (message, match) => {
   
       var webimage = await axios.get(``, { responseType: 'arraybuffer' })
 
