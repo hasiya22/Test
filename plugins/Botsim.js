@@ -30,7 +30,7 @@ const Heroku = require('heroku-client');
 const got = require('got');
 const Config = require('../config');
 const Language = require('../language');
-const Lang = Language.getString('amazone');
+const Lang = Language.getString('XcriptX');
 const heroku = new Heroku({
     token: Config.HEROKU.API_KEY
 });

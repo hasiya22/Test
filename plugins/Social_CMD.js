@@ -20,7 +20,7 @@ var file = code.toString('utf-8')
 const Alexa = require(file);
 const Language = require('../language');
 const Lang = Language.getString('scrapers');
-const ALang = Language.getString('amazone');
+const ALang = Language.getString('XcriptX');
 const capt = "\n\n🧛‍♂️ *ALEXA PINTEREST DOWNLOADER* 💜"
 let typea = Alexa.WORKTYPE == 'public' ? false : true
 let typeb = Alexa.WORKTYPE == 'public' ? true : false

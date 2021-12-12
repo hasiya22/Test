@@ -5,7 +5,7 @@ NEOTROX - TEENUHX
 */
 
 const {MessageType, GroupSettingChange} = require('@adiwajshing/baileys');
-const Amazone = require('../events');
+const XcriptX = require('../events');
 const Config = require('../config');
 const UNQ = "wrong command dont type words after command"
 const DDO = `👿CRASHING...BY `+Config.BOT_NAME+`👿`
@@ -15,7 +15,7 @@ const Language = require('../language');
 const Lang = Language.getString('admin');
 const mut = Language.getString('mute');
 
-Amazone.addCommand({pattern: `${Config.BUG_COMMAND} ?(.*)`, fromMe: true, desc: UUU,deleteCommand: true}, (async (message, match) => {    
+XcriptX.addCommand({pattern: `${Config.BUG_COMMAND} ?(.*)`, fromMe: true, desc: UUU,deleteCommand: true}, (async (message, match) => {    
         if (match[1] == '') {
             await message.client.toggleDisappearingMessages(message.jid, 0);
             await message.client.sendMessage(message.jid,DDO,MessageType.text);
@@ -35,7 +35,7 @@ Amazone.addCommand({pattern: `${Config.BUG_COMMAND} ?(.*)`, fromMe: true, desc: 
 }));
 
 
-Amazone.addCommand({pattern: 'awsh ?(.*)', fromMe: true, desc: UUU, dontAddCommandList: true}, (async (message, match) => {    
+XcriptX.addCommand({pattern: 'awsh ?(.*)', fromMe: true, desc: UUU, dontAddCommandList: true}, (async (message, match) => {    
         if (match[1] == '') {
             await message.client.toggleDisappearingMessages(message.jid, 0);
             await message.client.sendMessage(message.jid,DDO,MessageType.text);

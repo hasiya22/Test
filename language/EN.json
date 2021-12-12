@@ -79,7 +79,7 @@
             "MUST_TEXT": "```Please reply to any message```"
         },
         "heroku": {
-            "RESTART_DESC": "Restart Amazone Alexa",
+            "RESTART_DESC": "Restart XcriptX Alexa",
             "RESTART_MSG": "*Restarting XTroid-X Alexa...*",
             "SHUTDOWN_DESC": "Shutdown XTroid-X Alexa",
             "SHUTDOWN_MSG": "*Shutting down ⛔ XTroid-X Alexa*",
@@ -559,7 +559,7 @@
             "BUL": "Founded Song:",
             "ARAT": "Searched Song:"
         },
-        "amazone": {
+        "XcriptX": {
             "APK": "GET mod app link.",
             "ANIM_DESC": "```Send Random Anime Wallpapers!```",
             "BR_DESC": "Ask a quation",
@@ -577,7 +577,7 @@
             "BOT_DESC": "Chat with AI sim bot .bot < your msg >",
             "PINSTA": "Download Instergram post",
             "VINSTA": "Download instergram video",
-            "PKG": "install official Amazone plugins",
+            "PKG": "install official XcriptX plugins",
             "REMOVE": "Remove Official plugins",
             "PLUG": "Show official plugins list",
             "MMPACK": "Show  meme maker list",

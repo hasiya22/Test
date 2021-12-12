@@ -6,7 +6,7 @@ const axios = require('axios');
 const Config = require('../config');
 const config = require('../SCript');
 const Language = require('../language');
-const Lang = Language.getString('amazone');
+const Lang = Language.getString('XcriptX');
 let tn = Config.WORKTYPE == 'public' ? false : true
 const NEED_WORD = '🍭Type Word'
 

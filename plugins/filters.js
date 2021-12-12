@@ -5,7 +5,7 @@ NEOTROX - TEENUHX
 */
 
 const fs = require('fs')
-const Amazone = require('../events');
+const XcriptX = require('../events');
 const {MessageType, Mimetype } = require('@adiwajshing/baileys');
 const FilterDb = require('./sql/filters');
 const Config = require('../config')
@@ -15,7 +15,7 @@ const Lang = Language.getString('filters');
 
 if (Config.WORKTYPE == 'private') {
 
-Amazone.addCommand({pattern: 'filter ?(.*)', fromMe: true, desc: Lang.FILTER_DESC, dontAddCommandList: true}, (async (message, match) => {
+XcriptX.addCommand({pattern: 'filter ?(.*)', fromMe: true, desc: Lang.FILTER_DESC, dontAddCommandList: true}, (async (message, match) => {
     match = match[1].match(/[\'\"\“](.*?)[\'\"\“]/gsm);
 
     if (match === null) {
@@ -35,7 +35,7 @@ Amazone.addCommand({pattern: 'filter ?(.*)', fromMe: true, desc: Lang.FILTER_DES
         await message.client.sendMessage(message.jid,Lang.FILTERED.format(match[0].replace(/['"]+/g, '')),MessageType.text);
     }
 }));
-Amazone.addCommand({pattern: 'stop ?(.*)', fromMe: true, desc: Lang.STOP_DESC, dontAddCommandList: true}, (async (message, match) => {
+XcriptX.addCommand({pattern: 'stop ?(.*)', fromMe: true, desc: Lang.STOP_DESC, dontAddCommandList: true}, (async (message, match) => {
     match = match[1].match(/[\'\"\“](.*?)[\'\"\“]/gsm);
     if (match === null) {
         return await message.client.sendMessage(message.jid,Lang.NEED_REPLY + '\n*Example:* ```.stop "hello"```',MessageType.text)
@@ -52,7 +52,7 @@ Amazone.addCommand({pattern: 'stop ?(.*)', fromMe: true, desc: Lang.STOP_DESC, d
 //=========================Private STAT=======================
 //=========================Private START=======================
 
-Amazone.addCommand({on: 'text', fromMe: false }, (async (message, match) => {
+XcriptX.addCommand({on: 'text', fromMe: false }, (async (message, match) => {
     if(Config.BGMFILTER){
         let banned = jid.find( Jid => Jid === message.jid);
         if(banned !== undefined) return
@@ -84,7 +84,7 @@ if(pattern.test(message.message)){
 
 else if (Config.WORKTYPE == 'public') {
 
-Amazone.addCommand({pattern: 'filter ?(.*)', fromMe: true, desc: Lang.FILTER_DESC, dontAddCommandList: true}, (async (message, match) => {
+XcriptX.addCommand({pattern: 'filter ?(.*)', fromMe: true, desc: Lang.FILTER_DESC, dontAddCommandList: true}, (async (message, match) => {
     match = match[1].match(/[\'\"\“](.*?)[\'\"\“]/gsm);
 
     if (match === null) {
@@ -104,7 +104,7 @@ Amazone.addCommand({pattern: 'filter ?(.*)', fromMe: true, desc: Lang.FILTER_DES
         await message.client.sendMessage(message.jid,Lang.FILTERED.format(match[0].replace(/['"]+/g, '')),MessageType.text);
     }
 }));
-Amazone.addCommand({pattern: 'stop ?(.*)', fromMe: true, desc: Lang.STOP_DESC, dontAddCommandList: true}, (async (message, match) => {
+XcriptX.addCommand({pattern: 'stop ?(.*)', fromMe: true, desc: Lang.STOP_DESC, dontAddCommandList: true}, (async (message, match) => {
     match = match[1].match(/[\'\"\“](.*?)[\'\"\“]/gsm);
     if (match === null) {
         return await message.client.sendMessage(message.jid,Lang.NEED_REPLY + '\n*Example:* ```.stop "hello"```',MessageType.text)
@@ -124,7 +124,7 @@ Amazone.addCommand({pattern: 'stop ?(.*)', fromMe: true, desc: Lang.STOP_DESC, d
     
 if (Config.VOICETYPE == 'Angela') {  
     
-Amazone.addCommand({on: 'text', fromMe: false}, (async (message, match) => {
+XcriptX.addCommand({on: 'text', fromMe: false}, (async (message, match) => {
         if(Config.BGMFILTER){
         let banned = jid.find( Jid => Jid === message.jid);
         if(banned !== undefined) return
@@ -158,7 +158,7 @@ if(pattern.test(message.message)){
 
     if (Config.VOICETYPE == 'Tom') {
     
-    Amazone.addCommand({on: 'text', fromMe: false}, (async (message, match) => {   
+    XcriptX.addCommand({on: 'text', fromMe: false}, (async (message, match) => {   
         if(Config.BGMFILTER){
         let banned = jid.find( Jid => Jid === message.jid);
         if(banned !== undefined) return
@@ -194,7 +194,7 @@ if(pattern.test(message.message)){
 //================================================
 //================================================
 
-Amazone.addCommand({on: 'text', fromMe: false}, (async (message, match) => {
+XcriptX.addCommand({on: 'text', fromMe: false}, (async (message, match) => {
     if(Config.AUTOSTICKER){
     let banned = jid.find( Jid => Jid === message.jid);
     if(banned !== undefined) return
@@ -226,12 +226,12 @@ filtreler.map(
 //================================================
 //================================================
 
-Amazone.addCommand({on: 'text', fromMe: false}, (async (message, match) => {   
+XcriptX.addCommand({on: 'text', fromMe: false}, (async (message, match) => {   
         if(Config.BGMFILTER){
         let banned = jid.find( Jid => Jid === message.jid);
         if(banned !== undefined) return
         if (!!message.mention && message.mention[0] == '919778042644@s.whatsapp.net') {
-await message.client.sendMessage(message.jid, fs.readFileSync('./video/amazone.mp4'), MessageType.video, { mimetype: Mimetype.mp4Video, quoted : message.data, ptt: true})
+await message.client.sendMessage(message.jid, fs.readFileSync('./video/XcriptX.mp4'), MessageType.video, { mimetype: Mimetype.mp4Video, quoted : message.data, ptt: true})
         }
 const array = ['Rocky bhai']
 array.map( async (a) => {

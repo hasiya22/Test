@@ -9,7 +9,7 @@ const {MessageType, GroupSettingChange, ChatModification, WAConnectionTest} = re
 const Neotro = require('../events');
 const Config = require('../config');
 const Language = require('../language');
-const Lang = Language.getString('amazone');
+const Lang = Language.getString('XcriptX');
 const mut = Language.getString('mute');
 const END = "clear all messages"
 

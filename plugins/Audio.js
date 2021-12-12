@@ -4,13 +4,13 @@ you may not use this file except in compliance with the License.
 NEOTROX - RAMIYA
 */
 
-const amazone = require('../events');
+const XcriptX = require('../events');
 const {MessageType, MessageOptions, Mimetype} = require('@adiwajshing/baileys');
 const axios = require('axios');
 const { errorMessage, infoMessage } = require('../helpers');
 const Config = require('../config');
 const Language = require('../language');
-const Lang = Language.getString('amazone');
+const Lang = Language.getString('XcriptX');
 const BLang = Language.getString('scrapers');
 const YTV_DESC = "Youtube Audio Downloader V2."
 const YT_NEED = "🌀 *Enter Youtube URL* \nExample:-\n _.audio https://www.youtube.com/watch?v=nYQZ0uXWbP4_"
@@ -20,7 +20,7 @@ const NO_RESULT = "🌀 *Can't Find Anything...*"
 let tk = Config.WORKTYPE == 'public' ? false: true
 let tn = Config.WORKTYPE == 'public' ? false: true
 
-    amazone.addCommand({ pattern: 'audio ?(.*)', fromMe: tk, desc: YTV_DESC,  deleteCommand: false}, async (message, match) => {
+    XcriptX.addCommand({ pattern: 'audio ?(.*)', fromMe: tk, desc: YTV_DESC,  deleteCommand: false}, async (message, match) => {
 
         const link = match[1]
     
@@ -46,7 +46,7 @@ let tn = Config.WORKTYPE == 'public' ? false: true
 
 
 
-    amazone.addCommand({ pattern: 'audio ?(.*)', fromMe: true, dontAddCommandList: true,  deleteCommand: false}, async (message, match) => {
+    XcriptX.addCommand({ pattern: 'audio ?(.*)', fromMe: true, dontAddCommandList: true,  deleteCommand: false}, async (message, match) => {
 
         const link = match[1]
     

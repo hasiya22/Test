@@ -8,7 +8,7 @@ const Neotro = require('../events');
 const {MessageType} = require('@adiwajshing/baileys');
 const Language = require('../language');
 const Config = require('../config');
-const Lang = Language.getString('amazone');
+const Lang = Language.getString('XcriptX');
 let fs = Config.WORKTYPE == 'public' ? false : true
 const TT = 'Show super TTP PACK'
 
@@ -35,7 +35,7 @@ Neotro.addCommand({pattern: 'moretxt', fromMe: fs, desc: 'more text img commands
 }));
 
 Neotro.addCommand({pattern: 'stlist', fromMe: fs, desc: TT}, (async (message, match) => {
-  await message.sendMessage('*╭─「 AMAZONE SUPER TTP 」*\n│ \n│🧚‍♂Amazone Alexa Super TTP pack)\n│ සිංහල Font Support 😍\n╰────\n╭─「 COMMANDS」\n│ \n│ • 1ttp <your Text >\n│ • 2ttp <your Text >\n│ • 3ttp <your Text >\n「 ©️Amazone-teenuhx」');
+  await message.sendMessage('*╭─「 AMAZONE SUPER TTP 」*\n│ \n│🧚‍♂XcriptX Alexa Super TTP pack)\n│ සිංහල Font Support 😍\n╰────\n╭─「 COMMANDS」\n│ \n│ • 1ttp <your Text >\n│ • 2ttp <your Text >\n│ • 3ttp <your Text >\n「 ©️Amazone-teenuhx」');
   
 }));
 
@@ -65,7 +65,7 @@ Neotro.addCommand({pattern: 'moretxt', fromMe: true, dontAddCommandList: true}, 
 }));
 
 Neotro.addCommand({pattern: 'stlist', fromMe: true, desc: TT}, (async (message, match) => {
-  await message.sendMessage('*╭─「 AMAZONE SUPER TTP 」*\n│ \n│🧚‍♂Amazone Alexa Super TTP pack)\n│ සිංහල Font Support 😍\n╰────\n╭─「 COMMANDS」\n│ \n│ • 1ttp <your Text >\n│ • 2ttp <your Text >\n│ • 3ttp <your Text >\n「 ©️Amazone-teenuhx」');
+  await message.sendMessage('*╭─「 AMAZONE SUPER TTP 」*\n│ \n│🧚‍♂XcriptX Alexa Super TTP pack)\n│ සිංහල Font Support 😍\n╰────\n╭─「 COMMANDS」\n│ \n│ • 1ttp <your Text >\n│ • 2ttp <your Text >\n│ • 3ttp <your Text >\n「 ©️Amazone-teenuhx」');
   
 }));
 

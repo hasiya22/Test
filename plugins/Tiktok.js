@@ -10,7 +10,7 @@ const axios = require('axios');
 const Alexa = require('../config');
 const Language = require('../language');
 const Lang = Language.getString('scrapers');
-const ALang = Language.getString('amazone');
+const ALang = Language.getString('XcriptX');
 let typea = Alexa.WORKTYPE == 'public' ? false : true
 let typeb = Alexa.WORKTYPE == 'public' ? true : false
 const capt = "🦹‍♀️ *ALEXA Tiktok Downloader* 🕊\n"

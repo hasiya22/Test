@@ -1,13 +1,13 @@
-const Amazone = require('../events');
+const XcriptX = require('../events');
 const {MessageType, MessageOptions, Mimetype} = require('@adiwajshing/baileys');
 const {spawnSync} = require('child_process');
 const Config = require('../config');
 const chalk = require('chalk');
 const axios = require('axios');
 const Language = require('../language');
-const Lang = Language.getString('amazone');
+const Lang = Language.getString('XcriptX');
 
-    Amazone.addCommand({pattern: 'freedata', fromMe: true, desc: Lang.DATA}, (async (message, match) => {
+    XcriptX.addCommand({pattern: 'freedata', fromMe: true, desc: Lang.DATA}, (async (message, match) => {
        var image = await axios.get (Config.MENU_LOGO, {responseType: 'arraybuffer'})
        await message.sendMessage (Buffer.from (image.data), MessageType.image, {mimetype: Mimetype.png, caption: `*⊰᯽⊱┈──╌❊  ❊╌──┈⊰᯽⊱*
  *🧪EHI  PANEL*

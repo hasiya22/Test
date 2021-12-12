@@ -6,7 +6,7 @@ NEOTROX - TEENUHX
 
 const simpleGit = require('simple-git');
 const git = simpleGit();
-const amazone = require('../events');
+const XcriptX = require('../events');
 const {MessageType,Mimetype} = require('@adiwajshing/baileys');
 const Config = require('../config');
 const exec = require('child_process').exec;
@@ -30,13 +30,13 @@ logoimage[4] = "https://telegra.ph/file/a51a91c22de055d730c6e.jpg";
 
   var uplogonew = logoimage[i]    
 
-amazone.addCommand({pattern: 'update$', fromMe: true,  desc: Lang.UPDATER_DESC}, (async (message, match) => {
+XcriptX.addCommand({pattern: 'update$', fromMe: true,  desc: Lang.UPDATER_DESC}, (async (message, match) => {
     await git.fetch();
     var commits = await git.log([Config.BRANCH + '..origin/' + Config.BRANCH]);
     if (commits.total === 0) {
         
         var webimage = await axios.get(`${uplogonew}`, { responseType: 'arraybuffer' })
-        await message.client.sendMessage(message.jid,Buffer.from(webimage.data), MessageType.image, {mimetype: Mimetype.jpg  , caption: '\n\n\n\n' + Lang.UPDATE +'\n\n\n\n *👩‍🦰powerd by amazone Alexa*' })
+        await message.client.sendMessage(message.jid,Buffer.from(webimage.data), MessageType.image, {mimetype: Mimetype.jpg  , caption: '\n\n\n\n' + Lang.UPDATE +'\n\n\n\n *👩‍🦰powerd by XcriptX Alexa*' })
     
     } else {
         var newzels = Lang.NEW_UPDATE;
@@ -47,14 +47,14 @@ amazone.addCommand({pattern: 'update$', fromMe: true,  desc: Lang.UPDATER_DESC},
         );
         
         var webimage = await axios.get(`${uplogonew}`, { responseType: 'arraybuffer' })
-        await message.client.sendMessage(message.jid,Buffer.from(webimage.data), MessageType.image, {mimetype: Mimetype.jpg  , caption: newzels + '```'+'\n\n *👩‍🦰powerd by amazone Alexa*' })
+        await message.client.sendMessage(message.jid,Buffer.from(webimage.data), MessageType.image, {mimetype: Mimetype.jpg  , caption: newzels + '```'+'\n\n *👩‍🦰powerd by XcriptX Alexa*' })
         
     }
  }));  
 
 
 
-amazone.addCommand({pattern: 'update now$', fromMe: true, desc: Lang.UPDATE_NOW_DESC}, (async (message, match) => {
+XcriptX.addCommand({pattern: 'update now$', fromMe: true, desc: Lang.UPDATE_NOW_DESC}, (async (message, match) => {
     await git.fetch();
     var commits = await git.log([Config.BRANCH + '..origin/' + Config.BRANCH]);
     if (commits.total === 0) {

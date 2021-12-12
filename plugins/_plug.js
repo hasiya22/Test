@@ -15,7 +15,7 @@ const Db = require('./sql/plugin');
 const Language = require('../language');
 const Lang = Language.getString('_plugin');
 const NLang = Language.getString('updater');
-const ALang = Language.getString('amazone');
+const ALang = Language.getString('XcriptX');
 
 let msg = Config.LANG == 'SI' || Config.LANG == 'AZ' ? '*Neotro වෙතින් අනුමත කරන ලද ප්ලගීනයකි.* ✅' : '*Officialy Approved* ✅'
 let inmsg = Config.LANG == 'SI' || Config.LANG == 'AZ' ? '*අනුමත නොකරන ලද ප්ලගීනයකි!* ❌' : '*Not Approved* ❌'

@@ -1,9 +1,9 @@
-const Amazone = require('../events');
+const XcriptX = require('../events');
 const {MessageType} = require('@adiwajshing/baileys');
 const axios = require('axios');
 const Config = require('../config');
 const Language = require('../language');
-const Lang = Language.getString('amazone');
+const Lang = Language.getString('XcriptX');
 
 // පින්වන්තියේ මාගේ මාගේ ප්‍රේම කතාවේ...🌼
 //ඇයිදෝ...මට පෑවෙ මල්මදහාසේ...🌟
@@ -14,7 +14,7 @@ const usage = ".brainly <Question>"
 const butuh = "```Enter the Question!```"
 
 if (Config.WORKTYPE == 'public') {
-Amazone.addCommand({ pattern: 'amazone ?(.*)', fromMe: false, dontAddCommandList:true}, async (message, match) => {
+XcriptX.addCommand({ pattern: 'XcriptX ?(.*)', fromMe: false, dontAddCommandList:true}, async (message, match) => {
 
         const Soal = match[1]
         
@@ -36,7 +36,7 @@ Amazone.addCommand({ pattern: 'amazone ?(.*)', fromMe: false, dontAddCommandList
     )
 }
 
-Amazone.addCommand({ pattern: 'amazone ?(.*)', fromMe: true, desc: Lang.BR_DESC}, async (message, match) => {
+XcriptX.addCommand({ pattern: 'XcriptX ?(.*)', fromMe: true, desc: Lang.BR_DESC}, async (message, match) => {
 
         const Soal = match[1]
         

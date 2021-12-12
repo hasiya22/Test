@@ -1,10 +1,6 @@
-/* Copyright (C) 2021 TENUX-Neotro.
-Licensed under the  GPL-3.0 License;
-you may not use this file except in compliance with the License.
-NEOTROX - TEENUHX API එකක් හරි උස්සලා තිබ්බොත් රෙපෝ එකටම Coppyright ගහනවා
-*/
 
-const Amazone = require('../events');
+
+const XcriptX = require('../events');
 const Config = require('../config');
 const config = require('../SCript');
 const {MessageType, MessageOptions, Mimetype} = require('@adiwajshing/baileys');
@@ -15,7 +11,7 @@ let am = Config.WORKTYPE == 'public' ? false : true
 const EFFECT_DESC = "Text effective රූප බවට පරිවර්තනය කිරීම සඳහා විධාන කට්ටලයක්."
 const NEED_WORD = "*ඔබ වචනයක් ඇතුළත් කළ යුතුය*"
 
-Amazone.addCommand({pattern: 'glitch ?(.*)', fromMe: am, dontAddCommandList: true}, (async (message, match) => {
+XcriptX.addCommand({pattern: 'glitch ?(.*)', fromMe: am, dontAddCommandList: true}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
   
@@ -32,7 +28,7 @@ Amazone.addCommand({pattern: 'glitch ?(.*)', fromMe: am, dontAddCommandList: tru
 
     }));
 
- Amazone.addCommand({pattern: 'freefire ?(.*)', fromMe: am, dontAddCommandList: true}, (async (message, match) => {
+ XcriptX.addCommand({pattern: 'freefire ?(.*)', fromMe: am, dontAddCommandList: true}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
 
@@ -42,7 +38,7 @@ Amazone.addCommand({pattern: 'glitch ?(.*)', fromMe: am, dontAddCommandList: tru
 
     }));
 
-Amazone.addCommand({pattern: 'cfire ?(.*)', fromMe: am, dontAddCommandList: true}, (async (message, match) => {
+XcriptX.addCommand({pattern: 'cfire ?(.*)', fromMe: am, dontAddCommandList: true}, (async (message, match) => {
 
       if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
   
@@ -52,7 +48,7 @@ Amazone.addCommand({pattern: 'cfire ?(.*)', fromMe: am, dontAddCommandList: true
   
       }));
 
-Amazone.addCommand({pattern: 'light ?(.*)', fromMe: am, dontAddCommandList: true}, (async (message, match) => {
+XcriptX.addCommand({pattern: 'light ?(.*)', fromMe: am, dontAddCommandList: true}, (async (message, match) => {
 
         if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
     
@@ -62,7 +58,7 @@ Amazone.addCommand({pattern: 'light ?(.*)', fromMe: am, dontAddCommandList: true
     
     }));
 
-Amazone.addCommand({pattern: 'cslogo ?(.*)', fromMe: am, dontAddCommandList: true}, (async (message, match) => {
+XcriptX.addCommand({pattern: 'cslogo ?(.*)', fromMe: am, dontAddCommandList: true}, (async (message, match) => {
 
       if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
   
@@ -72,7 +68,7 @@ Amazone.addCommand({pattern: 'cslogo ?(.*)', fromMe: am, dontAddCommandList: tru
   
     }));
 
-Amazone.addCommand({pattern: 's3d ?(.*)', fromMe: am, dontAddCommandList: true}, (async (message, match) => {
+XcriptX.addCommand({pattern: 's3d ?(.*)', fromMe: am, dontAddCommandList: true}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
 
@@ -82,7 +78,7 @@ Amazone.addCommand({pattern: 's3d ?(.*)', fromMe: am, dontAddCommandList: true},
 
     }));
 
-Amazone.addCommand({ pattern: 'nlogo ?(.*)', fromMe: am,dontAddCommandList: true }, (async (message, match) => {
+XcriptX.addCommand({ pattern: 'nlogo ?(.*)', fromMe: am,dontAddCommandList: true }, (async (message, match) => {
 
         if (match[1] === '') return await message.sendMessage(Lang.NEED_WORD);
 
@@ -92,7 +88,7 @@ Amazone.addCommand({ pattern: 'nlogo ?(.*)', fromMe: am,dontAddCommandList: true
 
     }));
 
-Amazone.addCommand({pattern: 'blackpink ?(.*)', fromMe: am, dontAddCommandList: true}, (async (message, match) => {
+XcriptX.addCommand({pattern: 'blackpink ?(.*)', fromMe: am, dontAddCommandList: true}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
 
@@ -102,7 +98,7 @@ Amazone.addCommand({pattern: 'blackpink ?(.*)', fromMe: am, dontAddCommandList: 
 
     }));
 
-Amazone.addCommand({pattern: 'neonlight ?(.*)', fromMe: am, dontAddCommandList: true}, (async (message, match) => {
+XcriptX.addCommand({pattern: 'neonlight ?(.*)', fromMe: am, dontAddCommandList: true}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
 
@@ -112,7 +108,7 @@ Amazone.addCommand({pattern: 'neonlight ?(.*)', fromMe: am, dontAddCommandList: 
 
     }));
 
-Amazone.addCommand({pattern: 'pornhub ?(.*)', fromMe: am, dontAddCommandList: true}, (async (message, match) => {
+XcriptX.addCommand({pattern: 'pornhub ?(.*)', fromMe: am, dontAddCommandList: true}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
   
@@ -129,7 +125,7 @@ Amazone.addCommand({pattern: 'pornhub ?(.*)', fromMe: am, dontAddCommandList: tr
 
     }));
 
-Amazone.addCommand({pattern: '3dtext ?(.*)', fromMe: am, dontAddCommandList: true}, (async (message, match) => {
+XcriptX.addCommand({pattern: '3dtext ?(.*)', fromMe: am, dontAddCommandList: true}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
 
@@ -139,7 +135,7 @@ Amazone.addCommand({pattern: '3dtext ?(.*)', fromMe: am, dontAddCommandList: tru
 
    }));
 
-Amazone.addCommand({pattern: 'nfire ?(.*)', fromMe: am, dontAddCommandList: true}, (async (message, match) => {
+XcriptX.addCommand({pattern: 'nfire ?(.*)', fromMe: am, dontAddCommandList: true}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
 
@@ -149,7 +145,7 @@ Amazone.addCommand({pattern: 'nfire ?(.*)', fromMe: am, dontAddCommandList: true
 
     }));
 
-Amazone.addCommand({pattern: 'ninjalogo ?(.*)', fromMe: am, dontAddCommandList: true}, (async (message, match) => {
+XcriptX.addCommand({pattern: 'ninjalogo ?(.*)', fromMe: am, dontAddCommandList: true}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.NEED_WORD);
 
@@ -159,7 +155,7 @@ Amazone.addCommand({pattern: 'ninjalogo ?(.*)', fromMe: am, dontAddCommandList: 
 
     }));
 
-Amazone.addCommand({pattern: 'nglow ?(.*)', fromMe: am, dontAddCommandList: true}, (async (message, match) => {
+XcriptX.addCommand({pattern: 'nglow ?(.*)', fromMe: am, dontAddCommandList: true}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
 
@@ -169,7 +165,7 @@ Amazone.addCommand({pattern: 'nglow ?(.*)', fromMe: am, dontAddCommandList: true
 
     }));
 
-Amazone.addCommand({pattern: 'nleaves ?(.*)', fromMe: am, dontAddCommandList: true}, (async (message, match) => {
+XcriptX.addCommand({pattern: 'nleaves ?(.*)', fromMe: am, dontAddCommandList: true}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
 
@@ -179,7 +175,7 @@ Amazone.addCommand({pattern: 'nleaves ?(.*)', fromMe: am, dontAddCommandList: tr
 
     }));
 
-Amazone.addCommand({pattern: 'nsky ?(.*)', fromMe: am, dontAddCommandList: true}, (async (message, match) => {
+XcriptX.addCommand({pattern: 'nsky ?(.*)', fromMe: am, dontAddCommandList: true}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
 
@@ -189,7 +185,7 @@ Amazone.addCommand({pattern: 'nsky ?(.*)', fromMe: am, dontAddCommandList: true}
 
     }));
 
-Amazone.addCommand({pattern: 'buttonyt ?(.*)', fromMe: am, dontAddCommandList: true}, (async (message, match) => {
+XcriptX.addCommand({pattern: 'buttonyt ?(.*)', fromMe: am, dontAddCommandList: true}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
 
@@ -199,7 +195,7 @@ Amazone.addCommand({pattern: 'buttonyt ?(.*)', fromMe: am, dontAddCommandList: t
 
     }));
 
-Amazone.addCommand({pattern: 'bcwall ?(.*)', fromMe: am, dontAddCommandList: true}, (async (message, match) => {
+XcriptX.addCommand({pattern: 'bcwall ?(.*)', fromMe: am, dontAddCommandList: true}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
 
@@ -209,7 +205,7 @@ Amazone.addCommand({pattern: 'bcwall ?(.*)', fromMe: am, dontAddCommandList: tru
 
     }));
 
-Amazone.addCommand({pattern: 'vtext ?(.*)', fromMe: am, dontAddCommandList: true}, (async (message, match) => {
+XcriptX.addCommand({pattern: 'vtext ?(.*)', fromMe: am, dontAddCommandList: true}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
 
@@ -219,7 +215,7 @@ Amazone.addCommand({pattern: 'vtext ?(.*)', fromMe: am, dontAddCommandList: true
 
     }));
 
-    Amazone.addCommand({pattern: 'ptext ?(.*)', fromMe: am, dontAddCommandList: true}, (async (message, match) => {
+    XcriptX.addCommand({pattern: 'ptext ?(.*)', fromMe: am, dontAddCommandList: true}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
 
@@ -229,7 +225,7 @@ Amazone.addCommand({pattern: 'vtext ?(.*)', fromMe: am, dontAddCommandList: true
 
     }));
 
-    Amazone.addCommand({pattern: 'colortext ?(.*)', fromMe: am, dontAddCommandList: true}, (async (message, match) => {
+    XcriptX.addCommand({pattern: 'colortext ?(.*)', fromMe: am, dontAddCommandList: true}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
 
@@ -239,7 +235,7 @@ Amazone.addCommand({pattern: 'vtext ?(.*)', fromMe: am, dontAddCommandList: true
 
     }));
 
-Amazone.addCommand({pattern: 'emoji ?(.*)', fromMe: am, dontAddCommandList: true}, (async (message, match) => {
+XcriptX.addCommand({pattern: 'emoji ?(.*)', fromMe: am, dontAddCommandList: true}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
         

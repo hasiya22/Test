@@ -9,7 +9,7 @@ const {WAConnection, MessageOptions, MessageType} = require('@adiwajshing/bailey
 const {StringSession} = require('./XScript/');
 const fs = require('fs');
 
-async function Amazone () {
+async function XcriptX () {
     const conn = new WAConnection();
     const Session = new StringSession();  
     conn.version = [2, 2140, 12]
@@ -17,8 +17,8 @@ async function Amazone () {
     conn.regenerateQRIntervalMs = 50000;
     
     conn.on('connecting', async () => {
-        console.log(`${chalk.green.bold('Amazone')}${chalk.blue.bold('Alexa')}
-${chalk.white.italic('Amazone QR session')}
+        console.log(`${chalk.green.bold('XcriptX')}${chalk.blue.bold('Alexa')}
+${chalk.white.italic('XcriptX QR session')}
 
 ${chalk.blue.italic('ℹ️  Connecting to Whatsapp... Please Wait.')}`);
     });
@@ -54,4 +54,4 @@ ${chalk.blue.italic('ℹ️  Connecting to Whatsapp... Please Wait.')}`);
     await conn.connect();
 }
 
-Amazone()
+XcriptX()

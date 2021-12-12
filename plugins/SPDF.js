@@ -12,7 +12,7 @@ let request = require('request');
 let got = require("got");
 let Config = require('../config');
 let Language = require('../language');
-let Lang = Language.getString('amazone');
+let Lang = Language.getString('XcriptX');
 let td = Config.WORKTYPE == 'public' ? false : true
 
    Neotro.addCommand({pattern: 'spdf ?(.*)', fromMe: td, desc: Lang.SPDF }, (async (message, match) => {

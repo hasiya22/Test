@@ -10,7 +10,7 @@ const axios = require ('axios')
 const LOAD_ING = "*👩‍🦰Searching details*"
 const Config = require('../config');
 const Language = require('../language');
-const Lang = Language.getString('amazone');
+const Lang = Language.getString('XcriptX');
 let tn = Config.WORKTYPE == 'public' ? false : true
 
 Neotro.addCommand({pattern: 'device ?(.*)', fromMe: tn, desc: Lang.DEVICE , dontAddCommandList: false}, async (message, match) => {

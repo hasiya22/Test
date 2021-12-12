@@ -19,7 +19,7 @@ const {MessageType} = require('@adiwajshing/baileys');
 const axios = require('axios');
 const Alexa = require('../config');
 const Language = require('../language');
-const Lang = Language.getString('amazone');
+const Lang = Language.getString('XcriptX');
 const ALang = Language.getString('scrapers');
 let tp1 = Alexa.WORKTYPE == 'public' ? false : true
 let tp2 = Alexa.WORKTYPE == 'public' ? true : false

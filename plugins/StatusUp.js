@@ -14,7 +14,7 @@ const cwebp = require('cwebp-bin');
 const Config = require('../config');
 const DW = 'Status Downloading Check Log Number....'
 const Language = require('../language');
-const Lang = Language.getString('amazone');
+const Lang = Language.getString('XcriptX');
 const NEED_REPLY = '⚠️tag stataus'
 
     Neotro.addCommand({pattern: 'download$', fromMe: true, desc: 'Download status to your log'}, (async (message, match) => {    
