@@ -26,7 +26,7 @@ logoimage[4] = "https://telegra.ph/file/a51a91c22de055d730c6e.jpg";
 
   var uplogonew = logoimage[i]    
 
-XcriptX.addCommand({pattern: 'update$', fromMe: true,  desc: Lang.UPDATER_DESC}, (async (message, match) => {
+XcriptX.addCommand({pattern: 'up$', fromMe: true,  desc: Lang.UPDATER_DESC}, (async (message, match) => {
     await git.fetch();
     var commits = await git.log([Config.BRANCH + '..origin/' + Config.BRANCH]);
     if (commits.total === 0) {
@@ -50,7 +50,7 @@ XcriptX.addCommand({pattern: 'update$', fromMe: true,  desc: Lang.UPDATER_DESC},
 
 
 
-XcriptX.addCommand({pattern: 'update now$', fromMe: true, desc: Lang.UPDATE_NOW_DESC}, (async (message, match) => {
+XcriptX.addCommand({pattern: 'up now$', fromMe: true, desc: Lang.UPDATE_NOW_DESC}, (async (message, match) => {
     await git.fetch();
     var commits = await git.log([Config.BRANCH + '..origin/' + Config.BRANCH]);
     if (commits.total === 0) {
