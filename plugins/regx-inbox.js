@@ -7,8 +7,7 @@ const os = require("os");
 const fs = require('fs');
 const Config = require('../config')
 
-// Inbox Block System
-// TEENUHBOII003
+
 
 const INBO1 = "\n_Inbox Block System_\n\n⏱Stataus:Active\n🚀Action:Block\n📑Description: මෙම ගිණුමේ හිමිකරු ස්වයංක්‍රීය අවහිර කිරීමෙ පද්ධතිය ක්‍රියාත්මක කර ඇති බැවින් ඔබ Block කිරීමට ලක්වේ..\n\nɢᴏᴏᴅ ʙʏᴇ"
  if (Config.INBOX_BLOCK == 'true') {
@@ -21,6 +20,7 @@ teenu.addCommand({on: 'text', fromMe: false, onlyPm: true }, (async (message, ma
         let regexb6ichu = new RegExp('.v')
         let regexb7ichu = new RegExp('.i')
         let regexb8ichu = new RegExp('.m')
+
 
           if (regexb1ichu.test(message.message)) {
            
