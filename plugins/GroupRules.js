@@ -1,27 +1,22 @@
-/* Copyright (C) 2021 RAMIYA-ALEXA TEAM.
-Licensed under the  GPL-3.0 License;
-you may not use this file except in compliance with the License.
-ALEXA TEAM - RAMIYA
-*/
 
 const XcriptX = require('../events');
 const {MessageType} = require('@adiwajshing/baileys');
 const sql = require('./sql/greetings');
 const Language = require('../language');
 const Lang = Language.getString('greetings');
-const hd = "*◄ ●●● Group Rules ●●●►* \n\n"
-const pw = "◄●👩‍🦰 *ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴀʟᴇxᴀ* ●►"
+const hed = "*🔰 Group Rules 🔰* \n\n"
+const pw = "◄XCript Protection►"
 
 XcriptX.addCommand({pattern: 'rules', fromMe: true, desc: Lang.RULE_DESC}, (async (message, match) => {
     var rg = await sql.getMessage(message.jid, 'rule');
     if (rg === false) {
         await message.client.sendMessage(message.jid,Lang.NOT_SET_RULE,MessageType.text)
     } else {
-        await message.client.sendMessage(message.jid,hd + rg.message + '\n\n' + pw,MessageType.text);
+        await message.client.sendMessage(message.jid,hed + rg.message + '\n\n' + pw,MessageType.text);
     }
 }));
 
-XcriptX.addCommand({pattern: 'setrules (.*)', fromMe: true, desc: Lang.SETRULE_DESC}, (async (message, match) => {
+XcriptX.addCommand({pattern: 'newrules (.*)', fromMe: true, desc: Lang.SETRULE_DESC}, (async (message, match) => {
     if (match[1] === '') {
         return await message.client.sendMessage(message.jid,Lang.NEED_RULE_TEXT,MessageType.text);
     } else {
@@ -36,10 +31,10 @@ XcriptX.addCommand({pattern: 'rules', fromMe: false, dontAddCommandList: true}, 
     if (rg === false) {
         await message.client.sendMessage(message.jid,Lang.NOT_SET_RULE,MessageType.text)
     } else {
-        await message.client.sendMessage(message.jid,hd + rg.message + '\n\n' + pw,MessageType.text);
+        await message.client.sendMessage(message.jid,hed + rg.message + '\n\n' + pw,MessageType.text);
     }
 }));
 
-XcriptX.addCommand({pattern: 'setrules (.*)', fromMe: false, dontAddCommandList: true}, (async (message, match) => {
+XcriptX.addCommand({pattern: 'newrules (.*)', fromMe: false, dontAddCommandList: true}, (async (message, match) => {
 	await message.sendMessage("Only Admins can Set Rules in this Group.")
 }));

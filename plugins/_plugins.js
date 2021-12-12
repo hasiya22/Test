@@ -22,7 +22,7 @@ const heroku = new Heroku({
 let baseURI = '/apps/' + Config.HEROKU.APP_NAME;
 
 XcriptX.addCommand({pattern: 'install ?(.*)', fromMe: true, desc: Lang.INSTALL_DESC, warn: Lang.WARN}, (async (message, match) => {
-    if (match[1] === '') return await message.sendMessage(Lang.NEED_URL + '.install https://gist.github.com/Neotro23/4232b1c8c4734e1f06c3d991149c6fbd')
+    if (match[1] === '') return await message.sendMessage(Lang.NEED_URL + '.install https://gist.github.com/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx')
     try {
         var url = new URL(match[1]);
     } catch {
@@ -71,7 +71,7 @@ XcriptX.addCommand({pattern: 'pluglist', fromMe: true, desc: Lang.PLUGIN_DESC },
     } else {
         plugins.map(
             (plugin) => {
-                let vf = plugin.dataValues.url.includes('Neotro23') ? msg : inmsg
+                let vf = plugin.dataValues.url.includes('lasiyawa') ? msg : inmsg
                 mesaj += '```' + plugin.dataValues.name + '```: ' + '🧚‍♂️ \n' + vf + '\n\n';
             }
         );
