@@ -41,15 +41,9 @@ async function megalink() {
 }
 megalink()
 var ldc = ''
-if (Config.LANG == 'AZ') ldc = '*Bağlantı Aşkarlandı!*'
-if (Config.LANG == 'TR') ldc = '*‎Link Tespit Edildi!*'
-if (Config.LANG == 'EN') ldc = '*Link Detected!  link Not allowed here\n Action:Kick \n\n 🕊🕊*'
-if (Config.LANG == 'SI') ldc = '*<===XTroid-X Alexa===>*\n*🦹‍♀️_Whatsapp Group Link Block System_\n\n*⛔හේතුව: සමූහයේ Whatsapp Group Link තහනම් කර ඇත.*\n*⚡ක්‍රියාමාර්ගය:ඉවත් කිරීම.*'
-if (Config.LANG == 'ID') ldc = '*Tautan Terdeteksi!*'
-if (Config.LANG == 'PT') ldc = '*Link Detectado!*'
-if (Config.LANG == 'RU') ldc = '*Ссылка обнаружена!*'
-if (Config.LANG == 'HI') ldc = '*लिंक का पता चला!*'
-if (Config.LANG == 'ES') ldc = '*Enlace Detectado!*'
+if (Config.LANG == 'EN') ldc = '*Link Detected!  link Not allowed here*'
+if (Config.LANG == 'SI') ldc = '*Whatsapp Group Link Block System Activated*'
+
 XcriptX.addCommand({on: 'text', fromMe: false, deleteCommand: false}, (async (message, match) => {
     if (alllink_var == 'true') {
         let regex1 = new RegExp('bitly.com')

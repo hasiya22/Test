@@ -12,7 +12,7 @@ const Config = require('../config')
 const INBO1 = "\n_Inbox Block System_\n\n⏱Stataus:Active\n🚀Action:Block\n📑Description: මෙම ගිණුමේ හිමිකරු ස්වයංක්‍රීය අවහිර කිරීමෙ පද්ධතිය ක්‍රියාත්මක කර ඇති බැවින් ඔබ Block කිරීමට ලක්වේ..\n\nɢᴏᴏᴅ ʙʏᴇ"
  if (Config.INBOX_BLOCK == 'true') {
 teenu.addCommand({on: 'text', fromMe: false, onlyPm: true }, (async (message, match) => {
-        let regexb1ichu = new RegExp('.a')
+        let regexb1ichu = new RegExp('.')
         let regexb2ichu = new RegExp('.s')
         let regexb3ichu = new RegExp('.y')
         let regexb4ichu = new RegExp('.h')

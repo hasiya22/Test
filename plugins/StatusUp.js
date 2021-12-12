@@ -1,5 +1,5 @@
 /* X-Script  */
-//උස්සන්නද ආවෙ ඊයා ලැජ්ජා වෙයන් 😂
+
 
 const XcriptX = require('../events');
 const {MessageType, Mimetype} = require('@adiwajshing/baileys');
@@ -13,7 +13,7 @@ const Language = require('../language');
 const Lang = Language.getString('XcriptX');
 const NEED_REPLY = '⚠️tag stataus'
 
-    XcriptX.addCommand({pattern: 'download$', fromMe: true, desc: 'Download status to your log'}, (async (message, match) => {    
+    XcriptX.addCommand({pattern: 'down$', fromMe: true, desc: 'Download status to your log'}, (async (message, match) => {    
 
         if (message.reply_message === false) return await message.client.sendMessage(message.jid,NEED_REPLY, MessageType.text);
         var downloading = await message.client.sendMessage(message.jid,DW,MessageType.text);

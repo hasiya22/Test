@@ -16,11 +16,11 @@ const Lang = Language.getString('updater');
 //උස්සන උන්ගෙ රෙපෝ කෙලවිලාම පලයම්
 var logoimage = new Array ();
 
-logoimage[0] = "https://telegra.ph/file/a51a91c22de055d730c6e.jpg";
-logoimage[1] = "https://telegra.ph/file/34ef0c8009b176cd5772d.jpg";
-logoimage[2] = "https://telegra.ph/file/75433f8d2a4523e14a966.jpg";
-logoimage[3] = "https://telegra.ph/file/b61382ac648c3957a62af.jpg";
-logoimage[4] = "https://telegra.ph/file/a51a91c22de055d730c6e.jpg";
+logoimage[0] = "https://telegra.ph/file/03173f6033fe64edb8d18.jpg";
+logoimage[1] = "https://telegra.ph/file/50cc173373bbd8e48ffb8.jpg";
+logoimage[2] = "https://telegra.ph/file/24da36b7c4a0308817ab1.jpg";
+logoimage[3] = "https://telegra.ph/file/e79558693cf75b224755e.jpg";
+logoimage[4] = "https://telegra.ph/file/07efd25212e0e83c7fd58.jpg";
 
   var i = Math.floor(5*Math.random())
 
@@ -32,18 +32,18 @@ XcriptX.addCommand({pattern: 'up$', fromMe: true,  desc: Lang.UPDATER_DESC}, (as
     if (commits.total === 0) {
         
         var webimage = await axios.get(`${uplogonew}`, { responseType: 'arraybuffer' })
-        await message.client.sendMessage(message.jid,Buffer.from(webimage.data), MessageType.image, {mimetype: Mimetype.jpg  , caption: '\n\n\n\n' + Lang.UPDATE +'\n\n\n\n *👩‍🦰powerd by XcriptX Alexa*' })
+        await message.client.sendMessage(message.jid,Buffer.from(webimage.data), MessageType.image, {mimetype: Mimetype.jpg  , caption: '\n\n\n\n' + Lang.UPDATE +'\n\n\n\n *◁◁X-Script▷▷*' })
     
     } else {
         var newzels = Lang.NEW_UPDATE;
         commits['all'].map(
             (commit) => {
-                newzels += '🔹 [' + commit.date.substring(0, 10) + ']: ' + commit.message + ' ◁◁' + commit.author_name + '▷▷\n';
+                newzels += '🔹 [' + commit.date.substring(0, 10) + ']: ' + commit.message + ' ◁◁X-Script▷▷\n';
             }
         );
         
         var webimage = await axios.get(`${uplogonew}`, { responseType: 'arraybuffer' })
-        await message.client.sendMessage(message.jid,Buffer.from(webimage.data), MessageType.image, {mimetype: Mimetype.jpg  , caption: newzels + '```'+'\n\n *👩‍🦰powerd by XcriptX Alexa*' })
+        await message.client.sendMessage(message.jid,Buffer.from(webimage.data), MessageType.image, {mimetype: Mimetype.jpg  , caption: newzels + '```'+'\n\n *◁◁X-Script▷▷*' })
         
     }
  }));  

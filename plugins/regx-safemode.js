@@ -40,25 +40,19 @@ async function notheri() {
 }
 notheri()
 var ldc = ''
-if (Config.LANG == 'AZ') ldc = '*Bağlantı Aşkarlandı!*'
-if (Config.LANG == 'TR') ldc = '*Link Tespit Edildi!*'
-if (Config.LANG == 'EN') ldc = '*👩‍🦰Spam Word Detected Action: ⛔kick*'
-if (Config.LANG == 'ML') ldc = '*ith njanum vilikkilla neeyum villikilla* \n 😅 *arod parayan aar kelkaan* \n *edth purath aakiyathin shesham aan parayunne* 😅😅'
-if (Config.LANG == 'SI') ldc = '*👩‍🦰තහනම් කළ වචන හසු වී ඇත. ක්‍රියාමාර්ගය:⛔ඉවත් කිරීම*'
-if (Config.LANG == 'PT') ldc = '*Link Detectado!*'
-if (Config.LANG == 'RU') ldc = '*Ссылка обнаружена!*'
-if (Config.LANG == 'HI') ldc = '*लिंक का पता चला!*'
-if (Config.LANG == 'ES') ldc = '*Enlace Detectado!*'
+if (Config.LANG == 'EN') ldc = '*This Group Protected From Bad words then minde your words!*'
+if (Config.LANG == 'SI') ldc = '*අනවශ්‍ය කතා බස් කරන්නන් ස්වයංක්‍රිය ඉවත් කිරිම*'
+
 XcriptX.addCommand({on: 'text', fromMe: false, deleteCommand: false}, (async (message, match) => {
     if (therikick_var == 'true' && message.jid !== '905511384572-1616356915@g.us') {
         let regex1 = new RegExp('.hunton')
         let regex2 = new RegExp('.darkspam')
-        let regex3 = new RegExp('sewQueen')
+        let regex3 = new RegExp('.sewQueen')
         let regex4 = new RegExp('sew')
-        let regex5 = new RegExp('☠')
+        let regex5 = new RegExp('.☠')
         let regex6 = new RegExp('.hunt3')
-        let regex7 = new RegExp('ꜱᴇᴡ')
-        let regex8 = new RegExp('SEW')
+        let regex7 = new RegExp('.ꜱᴇᴡ')
+        let regex8 = new RegExp('.SEW')
         let regex9 = new RegExp('.hunt2')
         let regex10 = new RegExp('.hunt1')
         if (regex1.test(message.message)) {
