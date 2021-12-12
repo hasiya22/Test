@@ -1,6 +1,6 @@
 /* X-Script  */
 
-let Neotro = require('../events');
+const XcriptX = require('../events');
 let {MessageType, MessageOptions, Mimetype} = require('@adiwajshing/baileys');
 let fs = require('fs');
 let axios = require('axios');
