@@ -103,6 +103,7 @@ XcriptX.addCommand({pattern: 'gn', fromMe: true, deleteCommand: true, desc: GN,}
                     r_text[7] ="🍃Ⓖⓞⓞⓓ 🌈ⓜⓞⓡⓝⓘⓝⓖ 🥰";
                   
                 
+                    
                     var i = Math.floor(8*Math.random())
                 
                     await message.client.sendMessage(
