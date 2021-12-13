@@ -168,7 +168,7 @@ if (config.LANG == 'SI') {
             else {
                 await heroku.patch(baseURI + '/config-vars', { 
                     body: { 
-                        ['AUTO_BİO']: 'true'
+                        ['AUTO_BIO']: 'true'
                     } 
                 });
                 await message.client.sendMessage(message.jid, '*' + succ_on_bio + '*', MessageType.text)
@@ -181,7 +181,7 @@ if (config.LANG == 'SI') {
             else {
                 await heroku.patch(baseURI + '/config-vars', { 
                     body: { 
-                        ['AUTO_BİO']: 'false'
+                        ['AUTO_BIO']: 'false'
                     } 
                 });
                 await message.client.sendMessage(message.jid, '*' + succ_off_bio + '*', MessageType.text)
