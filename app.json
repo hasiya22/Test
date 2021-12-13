@@ -31,11 +31,6 @@
             "required": false,
             "value": "Liza-X"
         },
-        "FULL_ALEXA": {
-            "description": "Activate alexa chat bot",
-            "required": false,
-            "value": "false"
-        },
         "SONGD": {
             "description": "Customizable Song Download message",
             "required": false,
@@ -104,7 +99,7 @@
             "required": true,
             "value": "false"
         },
-        "WHATS_LINK_BLOCK": {
+        "WLINK_BLOCK": {
             "description": "Activate Whatsapp link block for your groups. And protect your groups by bug bots.(Use true or false)",
             "required": true,
             "value": "false"
@@ -154,7 +149,7 @@
             "required": true,
             "value": "💰"
         },
-        "EMOJI_WARNING": {
+        "EMOJI_WARN": {
             "description": "You can change command list emojis.)",
             "required": true,
             "value": "🚫"
@@ -164,7 +159,7 @@
             "required": true,
             "value": "false"
         },
-        "PANEL_COMMAND": {
+        "MENU_COMMAND": {
             "description": "Customizeable commands list request command. Keep alexa if you don't want to change.",
             "required": true,
             "value": "alexa"
@@ -217,11 +212,6 @@
             "description": "Give it up. We give you this.",
             "required": false,
             "value": "true"
-        },
-        "BUG_COMMAND": {
-            "description": "Bug Command",
-            "required": false,
-            "value": "bug"
         },
         "TIME_ZONE": {
             "description": "type your time zone (pass this sri lankan users) ",

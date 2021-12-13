@@ -33,14 +33,14 @@ let baseURI = '/apps/' + config.HEROKU.APP_NAME;
         if (match[1] == 'off') {
                 await heroku.patch(baseURI + '/config-vars', { 
                     body: { 
-                        ['WHATS_LINK_BLOCK']: 'false'
+                        ['WLINK_BLOCK']: 'false'
                     } 
                 });
                 await message.sendMessage(LINKT_off)
         } else if (match[1] == 'on') {
                 await heroku.patch(baseURI + '/config-vars', { 
                     body: { 
-                        ['WHATS_LINK_BLOCK']: 'true'
+                        ['WLINK_BLOCK']: 'true'
                     } 
                 });
                 await message.sendMessage(LINKT_on)

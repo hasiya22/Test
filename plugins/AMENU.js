@@ -28,7 +28,7 @@ if (hrs >= 19 && hrs <= 24) wish = '*ɢᴏᴏᴅ ɴɪɢʜᴛ 🌙*'
 
  *╭─「 ᴄᴏᴍᴍᴀɴᴅꜱ ᴘᴀɴᴇʟ」*
  │
- *│ᴛʏᴘᴇ: .`+Config.PANEL_COMMAND+` get full Command list*
+ *│ᴛʏᴘᴇ: .`+Config.MENU_COMMAND+` get full Command list*
  ├─────────●●►
  *│🌼HEY,*  `+wish+`
  *│👤Name:* `+Config.BOT_NAME+`
@@ -45,7 +45,7 @@ if (hrs >= 19 && hrs <= 24) wish = '*ɢᴏᴏᴅ ɴɪɢʜᴛ 🌙*'
 *│🛡️BOT COMMANDS*
  │   ───────
  │
- │► .`+Config.PANEL_COMMAND+` [All command list]
+ │► .`+Config.MENU_COMMAND+` [All command list]
  │► .alive [Check bot status]
  │► .bot [chat with bot]
  │► .Admin [ for owner ]
