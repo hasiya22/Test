@@ -11,6 +11,7 @@ DATABASE_URL = process.env.DATABASE_URL === undefined ? './x.db' : process.env.D
 DEBUG = process.env.DEBUG === undefined ? false : convertToBool(process.env.DEBUG);
 module.exports = {
     VERSION: 'v8.1.0 Global Stable',
+    BRANCH: 'main',
     DEVELOPE_ERROR: process.env.DEVELOPE_ERROR === undefined ? '' : process.env.DEVELOPE_ERROR,
     DEVELOPER_TAG: process.env.DEVELOPE_TAG === undefined ? 'XTroid-X' : process.env.DEVELOPE_TAG,
     DEVELOPER_STATUS : process.env.DEVELOPER_STATUS === undefined ? 'XCript' : process.env.DEVELOPER_STATUS,
