@@ -8,7 +8,6 @@ const {MessageType, MessageOptions, Mimetype} = require('@adiwajshing/baileys');
 const axios = require('axios');
 const { errorMessage, infoMessage } = require('../helpers');
 const Config = require('../config');
-const tenu = require('../SCript');
 const Language = require('../language');
 const Lang = Language.getString('XcriptX');
 const YTV_DESC = "Youtube Video Downloader V2 ."

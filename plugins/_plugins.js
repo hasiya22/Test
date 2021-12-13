@@ -56,7 +56,7 @@ XcriptX.addCommand({pattern: 'install ?(.*)', fromMe: true, desc: Lang.INSTALL_D
 
         await Db.installPlugin(url, plugin_name);
         await message.client.sendMessage(message.jid, Lang.INSTALLED, MessageType.text);
-        if (!match[1].includes('Neotro23')) {
+        if (!match[1].includes('lasiyaWa')) {
             await new Promise(r => setTimeout(r, 400));
             await message.client.sendMessage(message.jid, Lang.UNOFF, MessageType.text);
         }

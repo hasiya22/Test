@@ -1,11 +1,11 @@
-const tenu = require('../events');
+const XcriptX = require('../events');
 const { MessageType } = require('@adiwajshing/baileys');
 const axios = require('axios');
 const Config = require('../config');
 const { errorMessage, infoMessage } = require('../helpers');
 const Language = require('../language');
 const Glang = Language.getString('github');
-
+ 
 const PHONEDE_DESC = "It Send Github User Data."
 const NEED_WORDC = "කරුණාකර නමක් ඇතුළත් කරන්න"
 const USAGE = "..."
@@ -27,7 +27,7 @@ const NOT_FOUND = "*Can't Find Anything!.*"
 
 if (Config.WORKTYPE == 'private') {
 
-tenu.addCommand({ pattern: 'github ?(.*)', fromMe: true, desc: Glang.GİTHUB_DESC}, async (message, match) => {
+XcriptX.addCommand({ pattern: 'github ?(.*)', fromMe: true, desc: Glang.GİTHUB_DESC}, async (message, match) => {
 
     const pname = match[1]
 
@@ -71,7 +71,7 @@ tenu.addCommand({ pattern: 'github ?(.*)', fromMe: true, desc: Glang.GİTHUB_DES
         `*${PHN_CREAT}* ${created_at}`
         
         await message.sendMessage(Buffer.from(profileBuffer.data), MessageType.image, {
-          caption: msg +'\n'+'*XTroid-X Alexa*'
+          caption: msg +'\n'+'*XTroid-X*'
         })
       })
       .catch(
@@ -84,7 +84,7 @@ tenu.addCommand({ pattern: 'github ?(.*)', fromMe: true, desc: Glang.GİTHUB_DES
 
 if (Config.WORKTYPE == 'public') {
 
-tenu.addCommand({ pattern: 'github ?(.*)', fromMe: false, desc: Glang.GİTHUB_DESC}, async (message, match) => {
+XcriptX.addCommand({ pattern: 'github ?(.*)', fromMe: false, desc: Glang.GİTHUB_DESC}, async (message, match) => {
 
     const pname = match[1]
 
@@ -127,7 +127,7 @@ tenu.addCommand({ pattern: 'github ?(.*)', fromMe: false, desc: Glang.GİTHUB_DE
         `*${PHN_CREAT}* ${created_at}`
         
         await message.sendMessage(Buffer.from(profileBuffer.data), MessageType.image, {
-          caption: msg +'\n'+'*XTroid-X Alexa*'
+          caption: msg +'\n'+'*XTroid-X*'
         })
       })
       .catch(

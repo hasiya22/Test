@@ -3,7 +3,7 @@
 const XcriptX = require('../events');
 const {MessageType,Mimetype} = require('@adiwajshing/baileys');
 const translatte = require('translatte');
-const Tenu = require('apk-downloader');
+
 const config = require('../config');
 const Config = require('../config');
 let tn = Config.WORKTYPE == 'public' ? false : true
@@ -376,7 +376,7 @@ if (config.LANG == 'SI') {
             return await message.client.sendMessage(message.jid,Lang.NOT_FOUND,MessageType.text);
         }
     
-        var mesaj = '*◄━━━━━━⦁⦁◯⦁⦁━━━━━━►*\n  👩‍🦰 *Alexa YT SEARCH* 🚀\n◄━━━━━━⦁⦁◯⦁⦁━━━━━━► \n\n ';
+        var mesaj = '*◄━━━━━━ ━━━━━━► \n\n ';
         arama.all.map((video) => {
             mesaj += '*🦹 ' + video.title + '* - \n⏰ Duration :- ' + video.duration + '\n' + video.url +'\n\n'
         });
