@@ -31,11 +31,6 @@
             "required": false,
             "value": "Liza-X"
         },
-        "FULL_ALEXA": {
-            "description": "Activate alexa chat bot",
-            "required": false,
-            "value": "false"
-        },
         "SONGD": {
             "description": "Customizable Song Download message",
             "required": false,
@@ -104,7 +99,7 @@
             "required": true,
             "value": "false"
         },
-        "WHATS_LINK_BLOCK": {
+        "WLINK_BLOCK": {
             "description": "Activate Whatsapp link block for your groups. And protect your groups by bug bots.(Use true or false)",
             "required": true,
             "value": "false"
@@ -164,7 +159,7 @@
             "required": true,
             "value": "false"
         },
-        "PANEL_COMMAND": {
+        "MENU_COMMAND": {
             "description": "Customizeable commands list request command. Keep alexa if you don't want to change.",
             "required": true,
             "value": "alexa"

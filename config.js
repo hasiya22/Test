@@ -9,7 +9,7 @@ function convertToBool(text, fault = 'true') {
 DATABASE_URL = process.env.DATABASE_URL === undefined ? './x.db' : process.env.DATABASE_URL;
 DEBUG = process.env.DEBUG === undefined ? false : convertToBool(process.env.DEBUG);
 module.exports = {
-    VERSION: 'v8.5.0 Global Stable',
+    VERSION: 'v12.0',
     CHANNEL: 'https://t.me/neotro_plugins',
     SESSION: process.env.A_XCRIPT_SESSION === undefined ? '' : process.env.A_XCRIPT_SESSION,
     ANTILINK: process.env.ANTI_LINK === undefined ? 'false' : process.env.ANTI_LINK,
@@ -53,7 +53,7 @@ module.exports = {
     INBOX_BLOCK: process.env.INBOX_BLOCK === undefined ?'false' : process.env.INBOX_BLOCK,
     ANTI_BAD: process.env.ANTI_BAD === undefined ?'true' : process.env.ANTIBAD,
     FULL_ALEXA: process.env.FULL_ALEXA === undefined ?'false' : process.env.FULL_ALEXA,
-    WHATS_LINK_BLOCK: process.env.WHATS_LINK_BLOCK === undefined ?'false' : process.env.WHATS_LINK_BLOCK,
+    WLINK_BLOCK: process.env.WLINK_BLOCK === undefined ?'false' : process.env.WLINK_BLOCK,
     MENU_LOGO: process.env.MENU_LOGO === undefined ?'https://telegra.ph/file/e8f3e419b3dafe9fe8153.jpg' : process.env.MENU_LOGO,
     PKGPS: process.env.PKGPS === undefined ?'=xnxcom' : process.env.PKGPS,
     ADULT_MODE: process.env.ADULT_MODE === undefined ? 'on' : process.env.ADULT_MODE,
@@ -65,7 +65,7 @@ module.exports = {
     EMOJI_DESCRIPTION: process.env.EMOJI_DESCRIPTION === undefined ? '⚙️' : process.env.EMOJI_DESCRIPTION,
     EMOJI_EXAMPLE: process.env.EMOJI_EXAMPLE === undefined ? '💬' : process.env.EMOJI_EXAMPLE,
     EMOJI_WARNING: process.env.EMOJI_WARNING === undefined ? '⚠️' : process.env.EMOJI_WARNING,
-    PANEL_COMMAND: process.env.PANEL_COMMAND === undefined ? 'alexa' : process.env.PANEL_COMMAND,
+    MENU_COMMAND: process.env.MENU_COMMAND === undefined ? 'alexa' : process.env.MENU_COMMAND,
     BUG_COMMAND: process.env.BUG_COMMAND === undefined ? 'bug' : process.env.BUG_COMMAND,
     TIME_ZONE: process.env.TIME_ZONE === undefined ? 'Asia/Colombo' : process.env.TIME_ZONE,
     HTTPS: process.env.HTTPS === undefined ? 'https://' : process.env.HTTPS,
