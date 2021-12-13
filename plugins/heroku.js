@@ -183,7 +183,7 @@ XcriptX.addCommand({pattern: 'customize ?(.*)', fromMe: true, dontAddCommandList
         await message.client.sendMessage(message.jid, Lang.SUCC_AF, MessageType.text);
         await heroku.patch(baseURI + '/config-vars', { 
             body: { 
-                ['EMOJI_WARNING']: message.reply_message.text
+                ['EMOJI_WARN']: message.reply_message.text
             } 
         });
     }

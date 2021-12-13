@@ -36,7 +36,7 @@ async function checkImAdmin(message, user = message.client.user.jid) {
 var alllink_var = ''
 async function megalink() {
     await heroku.get(baseURI + '/config-vars').then(async (vars) => {
-        alllink_var = vars.WHATS_LINK_BLOCK
+        alllink_var = vars.WLINK_BLOCK
     });
 }
 megalink()
