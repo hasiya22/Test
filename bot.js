@@ -98,7 +98,10 @@ setInterval(async () => {
 
 // ======================ANNOUNCEMENT ================
 
-
+var biography_var = ''
+await heroku.get(baseURI + '/config-vars').then(async (vars) => {
+    biography_var = vars.AUTO_BIO
+});
 
 
 
