@@ -102,13 +102,7 @@ var biography_var = ''
 await heroku.get(baseURI + '/config-vars').then(async (vars) => {
     biography_var = vars.AUTO_BIO
 });
-<<<<<<< HEAD
 
-
-
-
-
-=======
 setInterval(async () => { 
     if (biography_var == 'true') {
         if (conn.user.jid.startsWith('90')) { // Turkey
@@ -244,7 +238,7 @@ var biography_var = ''
 await heroku.get(baseURI + '/config-vars').then(async (vars) => {
     biography_var = vars.AUTO_BIO
 });
->>>>>>> parent of d7f783f (Update bot.js)
+
 
 // ===================AUTO-BIO===================
 
