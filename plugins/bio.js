@@ -1,6 +1,6 @@
 const {WAConnection, MessageOptions, MessageType, Mimetype, Presence} = require('@adiwajshing/baileys');
 const Heroku = require('heroku-client');
-const events = require("./events");
+const XcriptX = require('../events');
 const config = require('./config');
 
 
@@ -9,7 +9,7 @@ const config = require('./config');
 
 
 
-XcriptX.addCommand({pattern: 'bio$', fromMe: true, dontAddCommandList: true, desc: Lang.KICKME_DESC, onlyGroup: true}, (async (message, match) => {
+XcriptX.addCommand({pattern: 'bio$', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
 
     var ov_time = new Date().toLocaleString('LK', { timeZone: 'Asia/Colombo' }).split(' ')[1]
     const get_localized_date = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
@@ -22,7 +22,3 @@ XcriptX.addCommand({pattern: 'bio$', fromMe: true, dontAddCommandList: true, des
 
 
 
-
-setInterval(async () => { 
-  
-});
