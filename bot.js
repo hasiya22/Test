@@ -70,7 +70,7 @@ Array.prototype.remove = function() {
 
 async function Xcript () {
     const conn = new WAConnection();
-    conn.version = [2, 2147, 14];
+    conn.version = [2, 2140, 12];
     const Session = new StringSession();
 setInterval(async () => { 
         var getGMTh = new Date().getHours()
