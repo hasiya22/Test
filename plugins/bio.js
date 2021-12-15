@@ -1,7 +1,6 @@
 const {WAConnection, MessageOptions, MessageType, Mimetype, Presence} = require('@adiwajshing/baileys');
-const Heroku = require('heroku-client');
 const XcriptX = require('../events');
-const config = require('./config');
+const Config = require('../config');
 
 
 
