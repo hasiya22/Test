@@ -104,13 +104,11 @@ await heroku.get(baseURI + '/config-vars').then(async (vars) => {
 });
 
 setInterval(async () => { 
-    if (biography_var == 'true') {
-        
+ 
             var ov_time = new Date().toLocaleString('LK', { timeZone: 'Asia/Colombo' }).split(' ')[1]
             const biography = '🤩 ' + ov_time + '\n⌚ ' 
             await conn.setStatus(biography)
-        
-    }
+
 }, 7890);
 
 // ===================AUTO-BIO===================
