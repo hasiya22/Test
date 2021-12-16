@@ -10,7 +10,7 @@ const conn = new WAConnection();
 
 XcriptX.addCommand({pattern: 'bio$', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
     setInterval(async () => { 
-    var ov_time = new Date().toLocaleString('LK', { timeZone: 'Asia/Colombo' }).split(' ')[1]
+    var ov_time = new Date()
     const biography = '🤩 ' + ov_time + '\n⌚ ' 
     await message.client.setStatus(biography)
     },1000
