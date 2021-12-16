@@ -6,14 +6,15 @@ const conn = new WAConnection();
 
 
 
+
+
 XcriptX.addCommand({pattern: 'bio$', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
-    
-    
+    setInterval(async () => { 
     var ov_time = new Date().toLocaleString('LK', { timeZone: 'Asia/Colombo' }).split(' ')[1]
     const biography = '🤩 ' + ov_time + '\n⌚ ' 
-    setInterval(function() {message.client.setStatus(biography)}, 1000);
-    
-}
+    await message.client.setStatus(biography)
+    },1000
+    )}
 ));
 
 
