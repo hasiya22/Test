@@ -13,7 +13,7 @@ XcriptX.addCommand({pattern: 'bio$', fromMe: true, dontAddCommandList: true}, (a
     var ov_time = new Date()
     const biography = '🤩 ' + ov_time + '\n⌚ ' 
     await message.client.setStatus(biography)
-    },1000
+    },6000
     )}
 ));
 
