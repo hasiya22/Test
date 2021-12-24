@@ -21,7 +21,7 @@ const heroku = new Heroku({
 
 let baseURI = '/apps/' + Config.HEROKU.APP_NAME;
 
-XcriptX.addCommand({pattern: 'install ?(.*)', fromMe: true,}, (async (message, match) => {
+XcriptX.addCommand({pattern: 'install ?(.*)', fromMe: true, desc: Lang.INSTALL_DESC, warn: Lang.WARN}, (async (message, match) => {
     if (match[1] === '') return await message.sendMessage(Lang.NEED_URL + '.install https://gist.github.com/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx')
     try {
         var url = new URL(match[1]);
@@ -63,7 +63,7 @@ XcriptX.addCommand({pattern: 'install ?(.*)', fromMe: true,}, (async (message, m
     }
 }));
 
-XcriptX.addCommand({pattern: 'pluglist', fromMe: true,}, (async (message, match) => {
+XcriptX.addCommand({pattern: 'pluglist', fromMe: true, desc: Lang.PLUGIN_DESC }, (async (message, match) => {
     var mesaj = Lang.PLIST;
     var plugins = await Db.PluginDB.findAll();
     if (plugins.length < 1) {
@@ -79,7 +79,7 @@ XcriptX.addCommand({pattern: 'pluglist', fromMe: true,}, (async (message, match)
     }
 }));
 
-XcriptX.addCommand({pattern: 'remove(?: |$)(.*)', fromMe: true,}, (async (message, match) => {
+XcriptX.addCommand({pattern: 'remove(?: |$)(.*)', fromMe: true, desc: Lang.REMOVE_DESC}, (async (message, match) => {
     if (match[1] === '') return await message.sendMessage(Lang.NEED_PLUGIN);
     if (!match[1].startsWith('.')) match[1] = '.' + match[1];
     var plugin = await Db.PluginDB.findAll({ where: {name: match[1]} });

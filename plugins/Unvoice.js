@@ -12,7 +12,7 @@ const Lang = Language.getString('unvoice');
 let tn = Config.WORKTYPE == 'public' ? false : true
 
 
-  XcriptX.addCommand({pattern: 'unvoice ?(.*)', fromMe: tn,}, (async (message, match) => {    
+  XcriptX.addCommand({pattern: 'unvoice ?(.*)', fromMe: tn, desc: Lang.UV_DESC}, (async (message, match) => {    
     if (message.reply_message === false);
     var location = await message.client.downloadAndSaveMediaMessage({
         key: {

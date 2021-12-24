@@ -60,7 +60,7 @@ function webp2mp4File(path) {
 }
 
 
-    XcriptX.addCommand({pattern: 'mp3$', fromMe: tn,}, (async (message, match) => {    
+    XcriptX.addCommand({pattern: 'mp3$', fromMe: tn, desc: Lang.MP4TOAUDİO_DESC}, (async (message, match) => {    
         const mid = message.jid
         if (message.reply_message === false) return await message.client.sendMessage(mid, Lang.MP4TOAUDİO_NEEDREPLY, MessageType.text);
         var downloading = await message.client.sendMessage(mid,Lang.MP4TOAUDİO,MessageType.text);
@@ -80,7 +80,7 @@ function webp2mp4File(path) {
         return await message.client.deleteMessage(mid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
     }));
 
-    XcriptX.addCommand({pattern: 'photo$', fromMe: tn,}, (async (message, match) => {   
+    XcriptX.addCommand({pattern: 'photo$', fromMe: tn, desc: Lang.STİCKER_DESC}, (async (message, match) => {   
         const mid = message.jid
         if (message.reply_message === false) return await message.client.sendMessage(mid, Lang.STİCKER_NEEDREPLY, MessageType.text);
         var downloading = await message.client.sendMessage(mid,Lang.STİCKER,MessageType.text);

@@ -11,7 +11,7 @@ const Lang = Language.getString('filters');
 
 if (Config.WORKTYPE == 'private') {
 
-XcriptX.addCommand({pattern: 'filter ?(.*)', fromMe: true,dontAddCommandList: true}, (async (message, match) => {
+XcriptX.addCommand({pattern: 'filter ?(.*)', fromMe: true, desc: Lang.FILTER_DESC, dontAddCommandList: true}, (async (message, match) => {
     match = match[1].match(/[\'\"\“](.*?)[\'\"\“]/gsm);
 
     if (match === null) {
@@ -31,7 +31,7 @@ XcriptX.addCommand({pattern: 'filter ?(.*)', fromMe: true,dontAddCommandList: tr
         await message.client.sendMessage(message.jid,Lang.FILTERED.format(match[0].replace(/['"]+/g, '')),MessageType.text);
     }
 }));
-XcriptX.addCommand({pattern: 'stop ?(.*)', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
+XcriptX.addCommand({pattern: 'stop ?(.*)', fromMe: true, desc: Lang.STOP_DESC, dontAddCommandList: true}, (async (message, match) => {
     match = match[1].match(/[\'\"\“](.*?)[\'\"\“]/gsm);
     if (match === null) {
         return await message.client.sendMessage(message.jid,Lang.NEED_REPLY + '\n*Example:* ```.stop "hello"```',MessageType.text)
@@ -80,7 +80,7 @@ if(pattern.test(message.message)){
 
 else if (Config.WORKTYPE == 'public') {
 
-XcriptX.addCommand({pattern: 'filter ?(.*)', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
+XcriptX.addCommand({pattern: 'filter ?(.*)', fromMe: true, desc: Lang.FILTER_DESC, dontAddCommandList: true}, (async (message, match) => {
     match = match[1].match(/[\'\"\“](.*?)[\'\"\“]/gsm);
 
     if (match === null) {
@@ -100,7 +100,7 @@ XcriptX.addCommand({pattern: 'filter ?(.*)', fromMe: true, dontAddCommandList: t
         await message.client.sendMessage(message.jid,Lang.FILTERED.format(match[0].replace(/['"]+/g, '')),MessageType.text);
     }
 }));
-XcriptX.addCommand({pattern: 'stop ?(.*)', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
+XcriptX.addCommand({pattern: 'stop ?(.*)', fromMe: true, desc: Lang.STOP_DESC, dontAddCommandList: true}, (async (message, match) => {
     match = match[1].match(/[\'\"\“](.*?)[\'\"\“]/gsm);
     if (match === null) {
         return await message.client.sendMessage(message.jid,Lang.NEED_REPLY + '\n*Example:* ```.stop "hello"```',MessageType.text)

@@ -86,7 +86,7 @@ XcriptX.addCommand({on: 'text', fromMe: true, deleteCommand: false}, (async (mes
     }
 }));
 
-XcriptX.addCommand({pattern: 'afk ?(.*)', fromMe: true, dontAddCommandList: true, deleteCommand: false,}, (async (message, match) => {     
+XcriptX.addCommand({pattern: 'afk ?(.*)', fromMe: true, dontAddCommandList: true, deleteCommand: false, desc: Lang.AFK_DESC}, (async (message, match) => {     
     if (!AFK.isAfk) {
         AFK.lastseen = Math.round((new Date()).getTime() / 1000);
         if (match[1] !== '') { AFK.reason = match[1]; }

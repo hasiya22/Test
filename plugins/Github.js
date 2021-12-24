@@ -27,11 +27,7 @@ const NOT_FOUND = "*Can't Find Anything!.*"
 
 if (Config.WORKTYPE == 'private') {
 
-<<<<<<< Updated upstream
 XcriptX.addCommand({ pattern: 'github ?(.*)', fromMe: true, desc: Glang.GİTHUB_DESC}, async (message, match) => {
-=======
-tenu.addCommand({ pattern: 'github ?(.*)', fromMe: true,}, async (message, match) => {
->>>>>>> Stashed changes
 
     const pname = match[1]
 
@@ -88,11 +84,7 @@ tenu.addCommand({ pattern: 'github ?(.*)', fromMe: true,}, async (message, match
 
 if (Config.WORKTYPE == 'public') {
 
-<<<<<<< Updated upstream
 XcriptX.addCommand({ pattern: 'github ?(.*)', fromMe: false, desc: Glang.GİTHUB_DESC}, async (message, match) => {
-=======
-tenu.addCommand({ pattern: 'github ?(.*)', fromMe: false,}, async (message, match) => {
->>>>>>> Stashed changes
 
     const pname = match[1]
 

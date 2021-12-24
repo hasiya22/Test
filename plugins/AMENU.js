@@ -7,47 +7,52 @@ const Language = require('../language');
 const Lang = Language.getString('XcriptX');
 const tk = Config.WORKTYPE == 'public' ? false : true
 
-XcriptX.addCommand({pattern: `${Config.MENU_COMMAND} ?(.*)`, fromMe: tk,}, (async (message, match) => {
+XcriptX.addCommand({pattern: 'menu', fromMe: tk, desc: Lang.MENU}, (async (message, match) => {
     var time = new Date().toLocaleString('SI', { timeZone: Config.TIME_ZONE }).split(' ')[1]
 
-    var greet = ''
-    
+    var wish = ''
+     
+    var eva = ''
 
-if (hrs < 12) greet = '*ᴳᴼᴼᴰ ᴹᴼᴿᴺᴵᴺᴳ 🌈⛅*'
-if (hrs >= 12 && hrs <= 17) greet = '*ɢᴏᴏᴅ ᴀғᴛᴇʀɴᴏᴏɴ ☁️🌞*'
-if (hrs >= 17 && hrs <= 19) greet = '*ɢᴏᴏᴅ ᴇᴠᴇɴɪɴɢ 🌤🍃*'
-if (hrs >= 19 && hrs <= 24) greet = '*ɢᴏᴏᴅ ɴɪɢʜᴛ 🌔🌛*'
+    var auto_bio = ''
+
+    var language = ''
+
+if (hrs < 12) wish = '*ᴳᴼᴼᴰ ᴹᴼᴿᴺᴵᴺᴳ ⛅*'
+if (hrs >= 12 && hrs <= 17) wish = '*ɢᴏᴏᴅ ᴀғᴛᴇʀɴᴏᴏɴ 🌞*'
+if (hrs >= 17 && hrs <= 19) wish = '*ɢᴏᴏᴅ ᴇᴠᴇɴɪɴɢ 🌥*'
+if (hrs >= 19 && hrs <= 24) wish = '*ɢᴏᴏᴅ ɴɪɢʜᴛ 🌙*'
 
     var respoimage = await axios.get(`${Config.MENU_LOGO}`, { responseType: 'arraybuffer' })
     await message.sendMessage (Buffer.from (respoimage.data), MessageType.image, {mimetype: Mimetype.png, caption: `        
 
- ╭─ *「 ᴄᴏᴍᴍᴀɴᴅꜱ ᴘᴀɴᴇʟ」*
+ *╭─「 ᴄᴏᴍᴍᴀɴᴅꜱ ᴘᴀɴᴇʟ」*
  │
- │ᴛʏᴘᴇ: .${Config.MENU_COMMAND} get full Command list*
+ *│ᴛʏᴘᴇ: .`+Config.MENU_COMMAND+` get full Command list*
  ├─────────●●►
- │ * Hi,*  ${greet}
- │ *👤Name:* ${Config.BOT_NAME}
- │ *💎Role:* Developer
- │ *⌚Time:* ${time}
- │ *📡Server: DO
- │
- │☬Working As*
- │ ${Config.WORKTYPE}*
- │   _x-Script_
+ *│🌼HEY,*  `+wish+`
+ *│👤Name:* `+Config.BOT_NAME+`
+ *│💎Role:* Developer
+ *│Time⌚:* `+time+`
+ *│📡Server:* Digital Ocean
+ *│📦Frameworks:* Nodejs
+ *│☬Working As*
+ *│🛡️ `+Config.WORKTYPE+`*
+ │ _©️ᴀᴍᴀᴢᴏɴᴇ-ᴛᴇᴇɴᴜ_
  ╰──────────●●►
 
  ╭──────────●●►
- │BOT COMMANDS*
+*│🛡️BOT COMMANDS*
  │   ───────
  │
- │► .${Config.MENU_COMMAND} [All command list]
+ │► .`+Config.MENU_COMMAND+` [All command list]
  │► .alive [Check bot status]
  │► .bot [chat with bot]
  │► .Admin [ for owner ]
  │► .version [check Version 
- │► .update [check Update]
- │► .update now [get update ]
- │► .restart 
+ │►.update [check Update]
+ │►.update now [get update ]
+ │►.restart 
  ╰───────────●●►
 
  

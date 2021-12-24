@@ -29,7 +29,7 @@ let baseURI = '/apps/' + config.HEROKU.APP_NAME;
       W_PRI = '👩‍🦰ඔබේ Bot පෞද්ගලික ආකාරයට ක්‍රියාකරයි.'
     }
 
- XcriptX.addCommand({pattern: 'work ?(.*)', fromMe: true, dontAddCommandList: false,}, (async (message, match) => {
+ XcriptX.addCommand({pattern: 'work ?(.*)', fromMe: true, dontAddCommandList: false, desc: Lang.WORK}, (async (message, match) => {
         if (match[1] == 'public') {
                 await heroku.patch(baseURI + '/config-vars', { 
                     body: { 

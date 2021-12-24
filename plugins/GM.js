@@ -7,7 +7,7 @@ const Config = require('../config');
 
 
 if (Config.WORKTYPE == 'private') {
-XcriptX.addCommand({pattern: 'gm', fromMe: true, deleteCommand: true,}, (async (message, match) => {
+XcriptX.addCommand({pattern: 'gm', fromMe: true, deleteCommand: true, desc: GM,}, (async (message, match) => {
 
     var r_text = new Array ();
 
@@ -28,7 +28,7 @@ XcriptX.addCommand({pattern: 'gm', fromMe: true, deleteCommand: true,}, (async (
     }));
 
 
-XcriptX.addCommand({pattern: 'gn', fromMe: true, deleteCommand: true,}, (async (message, match) => {
+XcriptX.addCommand({pattern: 'gn', fromMe: true, deleteCommand: true, desc: GN,}, (async (message, match) => {
 
         var r_text = new Array ();
     
@@ -51,7 +51,7 @@ XcriptX.addCommand({pattern: 'gn', fromMe: true, deleteCommand: true,}, (async (
     
 
     if (Config.WORKTYPE == 'public') {
-        XcriptX.addCommand({pattern: 'gm', fromMe: false, deleteCommand: true,}, (async (message, match) => {
+        XcriptX.addCommand({pattern: 'gm', fromMe: false, deleteCommand: true, desc: GM,}, (async (message, match) => {
         
             var r_text = new Array ();
         
@@ -72,7 +72,7 @@ XcriptX.addCommand({pattern: 'gn', fromMe: true, deleteCommand: true,}, (async (
             }));
         
         
-        XcriptX.addCommand({pattern: 'gn', fromMe: false, deleteCommand: true,}, (async (message, match) => {
+        XcriptX.addCommand({pattern: 'gn', fromMe: false, deleteCommand: true, desc: GN,}, (async (message, match) => {
         
                 var r_text = new Array ();
             

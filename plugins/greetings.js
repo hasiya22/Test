@@ -10,7 +10,7 @@ const Lang = Language.getString('greetings');
 
 if (Config.WORKTYPE == 'private') {
 
-XcriptX.addCommand({pattern: 'welcome$', fromMe: true,}, (async (message, match) => {
+XcriptX.addCommand({pattern: 'welcome$', fromMe: true, desc: Lang.WELCOME_DESC}, (async (message, match) => {
     var hg = await sql.getMessage(message.jid);
     if (hg === false) {
         await message.client.sendMessage(message.jid,Lang.NOT_SET_WELCOME,MessageType.text);
@@ -29,7 +29,7 @@ XcriptX.addCommand({pattern: 'welcome (.*)', fromMe: true, dontAddCommandList: t
     }
 }));
 
-XcriptX.addCommand({pattern: 'goodbye$', fromMe: true,}, (async (message, match) => {
+XcriptX.addCommand({pattern: 'goodbye$', fromMe: true, desc: Lang.GOODBYE_DESC}, (async (message, match) => {
     var hg = await sql.getMessage(message.jid, 'goodbye');
     if (hg === false) {
         await message.client.sendMessage(message.jid,Lang.NOT_SET_GOODBYE,MessageType.text)
@@ -52,7 +52,7 @@ XcriptX.addCommand({pattern: 'goodbye (.*)', fromMe: true, dontAddCommandList: t
 else if (Config.WORKTYPE == 'public') {
 
 
-XcriptX.addCommand({pattern: 'welcome$', fromMe: true,}, (async (message, match) => {
+XcriptX.addCommand({pattern: 'welcome$', fromMe: true, desc: Lang.WELCOME_DESC}, (async (message, match) => {
     var hg = await sql.getMessage(message.jid);
     if (hg === false) {
         await message.client.sendMessage(message.jid,Lang.NOT_SET_WELCOME,MessageType.text);
@@ -71,7 +71,7 @@ XcriptX.addCommand({pattern: 'welcome (.*)', fromMe: true, dontAddCommandList: t
     }
 }));
 
-XcriptX.addCommand({pattern: 'goodbye$', fromMe: true,}, (async (message, match) => {
+XcriptX.addCommand({pattern: 'goodbye$', fromMe: true, desc: Lang.GOODBYE_DESC}, (async (message, match) => {
     var hg = await sql.getMessage(message.jid, 'goodbye');
     if (hg === false) {
         await message.client.sendMessage(message.jid,Lang.NOT_SET_GOODBYE,MessageType.text)
@@ -94,7 +94,7 @@ XcriptX.addCommand({pattern: 'goodbye (.*)', fromMe: true, dontAddCommandList: t
 else if (Config.WORKTYPE == 'public') {
 
 
-XcriptX.addCommand({pattern: 'welcome$', fromMe: true,}, (async (message, match) => {
+XcriptX.addCommand({pattern: 'welcome$', fromMe: true, desc: Lang.WELCOME_DESC}, (async (message, match) => {
     var hg = await sql.getMessage(message.jid);
     if (hg === false) {
         await message.client.sendMessage(message.jid,Lang.NOT_SET_WELCOME,MessageType.text);
@@ -113,7 +113,7 @@ XcriptX.addCommand({pattern: 'welcome (.*)', fromMe: true, dontAddCommandList: t
     }
 }));
 
-XcriptX.addCommand({pattern: 'goodbye$', fromMe: true,}, (async (message, match) => {
+XcriptX.addCommand({pattern: 'goodbye$', fromMe: true, desc: Lang.GOODBYE_DESC}, (async (message, match) => {
     var hg = await sql.getMessage(message.jid, 'goodbye');
     if (hg === false) {
         await message.client.sendMessage(message.jid,Lang.NOT_SET_GOODBYE,MessageType.text)
@@ -150,7 +150,7 @@ async function checkImAdmin(message, user = message.client.user.jid) {
     return sonuc.includes(true);
 }
 
-    XcriptX.addCommand({pattern: 'welcome$', fromMe: false,}, (async (message, match) => {
+    XcriptX.addCommand({pattern: 'welcome$', fromMe: false, desc: Lang.WELCOME_DESC}, (async (message, match) => {
     var us = await checkUsAdmin(message);
     if (!us) return await message.client.sendMessage(message.jid,Lang.PLKADMIN ,MessageType.text ,{quoted: message.data });
     var hg = await sql.getMessage(message.jid);
@@ -173,7 +173,7 @@ XcriptX.addCommand({pattern: 'welcome (.*)', fromMe: false, dontAddCommandList: 
     }
 }));
 
-XcriptX.addCommand({pattern: 'goodbye$', fromMe: false,}, (async (message, match) => {
+XcriptX.addCommand({pattern: 'goodbye$', fromMe: false, desc: Lang.GOODBYE_DESC}, (async (message, match) => {
     var us = await checkUsAdmin(message);
     if (!us) return await message.client.sendMessage(message.jid,Lang.PLKADMIN,MessageType.text ,{quoted: message.data });
     var hg = await sql.getMessage(message.jid, 'goodbye');
