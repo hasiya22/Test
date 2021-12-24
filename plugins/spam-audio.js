@@ -7,7 +7,7 @@ const cwebp = require('cwebp-bin');
 const Language = require('../language');
 const Lang = Language.getString('spammer');
 
-XcriptX.addCommand({pattern: 'audio spam$', fromMe: true, desc: Lang.AU_DESC}, (async (message, match) => {
+XcriptX.addCommand({pattern: 'audio spam$', fromMe: true,}, (async (message, match) => {
     
     if (!message.reply_message) return await message.client.sendMessage(message.jid, Lang.AU_REP, MessageType.text);
 

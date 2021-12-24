@@ -9,7 +9,7 @@ const cwebp = require('cwebp-bin');
 const Language = require('../language');
 const Lang = Language.getString('spammer');
 
-XcriptX.addCommand({pattern: 'photo spam$', fromMe: true, desc: Lang.FOTO_DESC}, (async (message, match) => {
+XcriptX.addCommand({pattern: 'photo spam$', fromMe: true,}, (async (message, match) => {
     
     if (!message.reply_message) return await message.client.sendMessage(message.jid, Lang.FOTO_FOT, MessageType.text);
 

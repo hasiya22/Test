@@ -7,7 +7,7 @@ const Language = require('../language');
 const Lang = Language.getString('tagall');
 
 if (Config.WORKTYPE == 'private') {
-    XcriptX.addCommand({ pattern: 'scan ?(.*)', fromMe: true, desc: Lang.SCAN}, (async (message, match) => { 
+    XcriptX.addCommand({ pattern: 'scan ?(.*)', fromMe: true,}, (async (message, match) => { 
 
         if (match[1] == '') return await message.client.sendMessage(message.jid, Lang.NO, MessageType.text);
 
@@ -21,7 +21,7 @@ if (Config.WORKTYPE == 'private') {
     }));
 }
 else if (Config.WORKTYPE == 'public') {
-    XcriptX.addCommand({ pattern: 'scan ?(.*)', fromMe: false, desc: Lang.SCAN}, (async (message, match) => { 
+    XcriptX.addCommand({ pattern: 'scan ?(.*)', fromMe: false,}, (async (message, match) => { 
 
         if (match[1] == '') return await message.client.sendMessage(message.jid, Lang.NO, MessageType.text);
 

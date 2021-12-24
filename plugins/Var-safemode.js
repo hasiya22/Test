@@ -37,7 +37,7 @@ let baseURI = '/apps/' + config.HEROKU.APP_NAME;
         THERI_off = '*👩‍🦰* \n\n'
     }
    
-    XcriptX.addCommand({pattern: 'safemode ?(.*)', fromMe: true, desc: l_dsc, usage: '.safemode on / off' }, (async (message, match) => {
+    XcriptX.addCommand({pattern: 'safemode ?(.*)', fromMe: true,usage: '.safemode on / off' }, (async (message, match) => {
         if (match[1] == 'off') {
                 await heroku.patch(baseURI + '/config-vars', { 
                     body: { 
