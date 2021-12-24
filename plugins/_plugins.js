@@ -22,11 +22,11 @@ const heroku = new Heroku({
 let baseURI = '/apps/' + Config.HEROKU.APP_NAME;
 
 XcriptX.addCommand({pattern: 'install ?(.*)', fromMe: true,}, (async (message, match) => {
-    if (match[1] === '') return await message.sendMessage(Lang.NEED_URL + '.install https://gist.github.com/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx')
+    if (match[1] === '') return await message.sendMessage('Need url .install https://gist.github.com/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx')
     try {
         var url = new URL(match[1]);
     } catch {
-        return await message.sendMessage(Lang.INVALID_URL);
+        return await message.sendMessage('Invalid url');
     }
     
     if (url.host === 'gist.github.com') {
@@ -51,23 +51,23 @@ XcriptX.addCommand({pattern: 'install ?(.*)', fromMe: true,}, (async (message, m
             require('./' + plugin_name);
         } catch (e) {
             fs.unlinkSync('/root/Test/lugins/' + plugin_name + '.js')
-            return await message.sendMessage(Lang.INVALID_PLUGIN + ' ```' + e + '```');
+            return await message.sendMessage('Invalid plugin' + ' ```' + e + '```');
         }
 
         await Db.installPlugin(url, plugin_name);
-        await message.client.sendMessage(message.jid, Lang.INSTALLED, MessageType.text);
+        await message.client.sendMessage(message.jid, 'Instaled', MessageType.text);
         if (!match[1].includes('lasiyaWa')) {
             await new Promise(r => setTimeout(r, 400));
-            await message.client.sendMessage(message.jid, Lang.UNOFF, MessageType.text);
+            await message.client.sendMessage(message.jid, 'Unofficial Plugin detected', MessageType.text);
         }
     }
 }));
 
 XcriptX.addCommand({pattern: 'pluglist', fromMe: true,}, (async (message, match) => {
-    var mesaj = Lang.PLIST;
+    var mesaj = 'Plugin list';
     var plugins = await Db.PluginDB.findAll();
     if (plugins.length < 1) {
-        return await message.sendMessage(Lang.NO_PLUGIN);
+        return await message.sendMessage('No plugin found');
     } else {
         plugins.map(
             (plugin) => {
@@ -80,16 +80,16 @@ XcriptX.addCommand({pattern: 'pluglist', fromMe: true,}, (async (message, match)
 }));
 
 XcriptX.addCommand({pattern: 'remove(?: |$)(.*)', fromMe: true,}, (async (message, match) => {
-    if (match[1] === '') return await message.sendMessage(Lang.NEED_PLUGIN);
+    if (match[1] === '') return await message.sendMessage('need plugin');
     if (!match[1].startsWith('.')) match[1] = '.' + match[1];
     var plugin = await Db.PluginDB.findAll({ where: {name: match[1]} });
     if (plugin.length < 1) {
-        return await message.sendMessage(message.jid, Lang.NOT_FOUND_PLUGIN, MessageType.text);
+        return await message.sendMessage(message.jid, 'No plugin', MessageType.text);
     } else {
         await plugin[0].destroy();
         delete require.cache[require.resolve('./' + match[1] + '.js')]
         fs.unlinkSync('./plugins/' + match[1] + '.js');
-        await message.client.sendMessage(message.jid, Lang.DELETED, MessageType.text);
+        await message.client.sendMessage(message.jid, 'Deleted', MessageType.text);
         
         await new Promise(r => setTimeout(r, 1000));
     
