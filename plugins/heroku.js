@@ -19,7 +19,7 @@ const heroku = new Heroku({
 
 let baseURI = '/apps/' + Config.HEROKU.APP_NAME;
 
-XcriptX.addCommand({pattern: 'customize ?(.*)', fromMe: true, dontAddCommandList: true, desc: Lang.DEGİS_DESC}, (async (message, match) => {
+XcriptX.addCommand({pattern: 'customize ?(.*)', fromMe: true, dontAddCommandList: true,}, (async (message, match) => {
 
     if (match[1] == '') {
         return await message.client.sendMessage(message.jid, Lang.DEGİS_NONE, MessageType.text); 
@@ -253,7 +253,7 @@ XcriptX.addCommand({pattern: 'customize ?(.*)', fromMe: true, dontAddCommandList
 }));
 
 
-XcriptX.addCommand({pattern: 'restart$', fromMe: true, dontAddCommandList: true, desc: Lang.RESTART_DESC}, (async (message, match) => {
+XcriptX.addCommand({pattern: 'restart$', fromMe: true, dontAddCommandList: true,}, (async (message, match) => {
 
     await message.client.sendMessage(message.jid,Lang.RESTART_MSG, MessageType.text);
     console.log(baseURI);
@@ -262,7 +262,7 @@ XcriptX.addCommand({pattern: 'restart$', fromMe: true, dontAddCommandList: true,
     });
 }));
 
-XcriptX.addCommand({pattern: 'shutdown$', fromMe: true, dontAddCommandList: true, desc: Lang.SHUTDOWN_DESC}, (async(message, match) => {
+XcriptX.addCommand({pattern: 'shutdown$', fromMe: true, dontAddCommandList: true,}, (async(message, match) => {
 
     await heroku.get(baseURI + '/formation').then(async (formation) => {
         forID = formation[0].id;
@@ -280,7 +280,7 @@ XcriptX.addCommand({pattern: 'shutdown$', fromMe: true, dontAddCommandList: true
 
 if (Config.WORKTYPE == 'private') {
 
-    XcriptX.addCommand({pattern: 'dyno$', fromMe: true, dontAddCommandList: true, desc: Lang.DYNO_DESC}, (async (message, match) => {
+    XcriptX.addCommand({pattern: 'dyno$', fromMe: true, dontAddCommandList: true,}, (async (message, match) => {
 
         heroku.get('/account').then(async (account) => {
             url = "https://api.heroku.com/accounts/" + account.id + "/actions/get-quota"
@@ -311,7 +311,7 @@ if (Config.WORKTYPE == 'private') {
 }
 else if (Config.WORKTYPE == 'public') {
 
-    XcriptX.addCommand({pattern: 'dyno$', fromMe: false, dontAddCommandList: true, desc: Lang.DYNO_DESC}, (async (message, match) => {
+    XcriptX.addCommand({pattern: 'dyno$', fromMe: false, dontAddCommandList: true,}, (async (message, match) => {
 
         heroku.get('/account').then(async (account) => {
             url = "https://api.heroku.com/accounts/" + account.id + "/actions/get-quota"
@@ -341,7 +341,7 @@ else if (Config.WORKTYPE == 'public') {
     }));
 }
 
-XcriptX.addCommand({pattern: 'setvar ?(.*)', fromMe: true, dontAddCommandList: true, desc: Lang.SETVAR_DESC}, (async(message, match) => {
+XcriptX.addCommand({pattern: 'setvar ?(.*)', fromMe: true, dontAddCommandList: true,}, (async(message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.KEY_VAL_MISSING, MessageType.text);
 
@@ -757,7 +757,7 @@ XcriptX.addCommand({pattern: 'setvar ?(.*)', fromMe: true, dontAddCommandList: t
 }));
 
 
-XcriptX.addCommand({pattern: 'delvar ?(.*)', fromMe: true, dontAddCommandList: true, desc: Lang.DELVAR_DESC}, (async (message, match) => {
+XcriptX.addCommand({pattern: 'delvar ?(.*)', fromMe: true, dontAddCommandList: true,}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.KEY_VAL_MISSING, MessageType.text);
     await heroku.get(baseURI + '/config-vars').then(async (vars) => {
@@ -779,7 +779,7 @@ XcriptX.addCommand({pattern: 'delvar ?(.*)', fromMe: true, dontAddCommandList: t
 
 }));
 
-XcriptX.addCommand({pattern: 'getvar ?(.*)', fromMe: true, dontAddCommandList: true, desc: Lang.GETVAR_DESC}, (async (message, match) => {
+XcriptX.addCommand({pattern: 'getvar ?(.*)', fromMe: true, dontAddCommandList: true,}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.KEY_VAL_MISSING, MessageType.text);
     await heroku.get(baseURI + '/config-vars').then(async (vars) => {

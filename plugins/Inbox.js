@@ -27,7 +27,8 @@ let baseURI = '/apps/' + config.HEROKU.APP_NAME;
         BGM_on = '*inbox block ක්‍රියාත්මයි.*'
         BGM_off = '*inbox block අක්‍රියයි.*'
     }
-    XcriptX.addCommand({pattern: 'inblock ?(.*)', fromMe: true, desc: l_dsc, usage: '.inblock on / off' }, (async (message, match) => {
+    XcriptX.addCommand({pattern: 'inblock ?(.*)', fromMe: true,
+ }, (async (message, match) => {
         if (match[1] == 'off') {
                 await heroku.patch(baseURI + '/config-vars', { 
                     body: { 

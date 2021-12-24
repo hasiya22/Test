@@ -9,7 +9,7 @@ const NotesDB = require('./sql/notes');
 const Language = require('../language')
 const Lang = Language.getString('notes')
 
-XcriptX.addCommand({ pattern: 'notes', fromMe: true, desc: Lang.NOTES_USAGE }, async (message, match) => {
+XcriptX.addCommand({ pattern: 'notes', fromMe: true,}, async (message, match) => {
 
 
     const _notes = await NotesDB.getNotes()
@@ -38,7 +38,7 @@ XcriptX.addCommand({ pattern: 'notes', fromMe: true, desc: Lang.NOTES_USAGE }, a
 
 
 
-XcriptX.addCommand({ pattern: 'save ?(.*)', fromMe: true, desc: Lang.SAVE_USAGE }, async (message, match) => {
+XcriptX.addCommand({ pattern: 'save ?(.*)', fromMe: true,}, async (message, match) => {
 
     const userNote = match[1]
 
@@ -86,7 +86,7 @@ XcriptX.addCommand({ pattern: 'save ?(.*)', fromMe: true, desc: Lang.SAVE_USAGE 
     }
 })
 
-XcriptX.addCommand({ pattern: 'deleteNotes', fromMe: true, desc: Lang.DELETE_USAGE }, async (message, match) => {
+XcriptX.addCommand({ pattern: 'deleteNotes', fromMe: true,}, async (message, match) => {
 
     await NotesDB.deleteAllNotes()
 

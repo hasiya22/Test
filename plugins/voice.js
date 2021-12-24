@@ -9,7 +9,7 @@ const Language = require('../language');
 const Lang = Language.getString('unvoice'); // Language support
 let tk = Config.WORKTYPE == 'public' ? false : true
 
-XcriptX.addCommand({pattern: 'voice ?(.*)', fromMe: tk, desc: Lang.UV_DESC}, (async (message, match) => {    
+XcriptX.addCommand({pattern: 'voice ?(.*)', fromMe: tk, }, (async (message, match) => {    
     if (message.reply_message === false);
     var location = await message.client.downloadAndSaveMediaMessage({
         key: {

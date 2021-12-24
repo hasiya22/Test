@@ -17,7 +17,7 @@ async function checkImAdmin(message, user = message.client.user.jid) {
     return sonuc.includes(true);
 }
 
-XcriptX.addCommand({pattern: 'clear', fromMe: true, desc: Lang.CLEAR, dontAddCommandList: false}, (async (message, match) => {
+XcriptX.addCommand({pattern: 'clear', fromMe: true,dontAddCommandList: false}, (async (message, match) => {
 
     await message.sendMessage('```cleaning chat...```');
     await message.client.modifyChat (message.jid, ChatModification.delete);

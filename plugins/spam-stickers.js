@@ -8,7 +8,7 @@ const Language = require('../language');
 const Lang = Language.getString('spammer');
 const SD = 'Sticker Spam'
 
-XcriptX.addCommand({pattern: 'sticker spam$', fromMe: true, desc: SD}, (async (message, match) => {    
+XcriptX.addCommand({pattern: 'sticker spam$', fromMe: true,}, (async (message, match) => {    
 
     if (!message.reply_message) return await message.client.sendMessage(message.jid,Lang.ST_NEED, MessageType.text);
     if (message.reply_message.sticker) return await message.client.sendMessage(message.jid, Lang.ST_ST, MessageType.text);

@@ -7,7 +7,7 @@ const Lang = Language.getString('greetings');
 const hed = "*🔰 Group Rules 🔰* \n\n"
 const pw = "◄XCript Protection►"
 
-XcriptX.addCommand({pattern: 'rules', fromMe: true, desc: Lang.RULE_DESC}, (async (message, match) => {
+XcriptX.addCommand({pattern: 'rules', fromMe: true,}, (async (message, match) => {
     var rg = await sql.getMessage(message.jid, 'rule');
     if (rg === false) {
         await message.client.sendMessage(message.jid,Lang.NOT_SET_RULE,MessageType.text)
@@ -16,7 +16,7 @@ XcriptX.addCommand({pattern: 'rules', fromMe: true, desc: Lang.RULE_DESC}, (asyn
     }
 }));
 
-XcriptX.addCommand({pattern: 'newrules (.*)', fromMe: true, desc: Lang.SETRULE_DESC}, (async (message, match) => {
+XcriptX.addCommand({pattern: 'newrules (.*)', fromMe: true,}, (async (message, match) => {
     if (match[1] === '') {
         return await message.client.sendMessage(message.jid,Lang.NEED_RULE_TEXT,MessageType.text);
     } else {
