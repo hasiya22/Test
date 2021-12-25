@@ -4,6 +4,7 @@ const {MessageType,GroupSettingChange,Mimetype,MessageOptions} = require('@adiwa
 const yts = require('yt-search')
 let fetch = require('node-fetch')
 const { servers, yta, ytv } = require('../XScript/y2mate')
+const XcriptX = require('../events');
 XcriptX.addCommand({pattern: 'yv ?(.*)', fromMe: true,}, (async (message, match) => { 
     if (match[1] === '') return await message.client.sendMessage(message.jid,'need word',MessageType.text);  
     let results = await yts(match[1])
