@@ -30,11 +30,10 @@ else if (Config.WORKTYPE == 'public') {
         var ttinullimage = await axios.get('https://api.xteam.xyz/ttp?file&text=' + uri, { responseType: 'arraybuffer' })
         await message.client.sendMessage(message.jid,Buffer.from(ttinullimage.data), MessageType.image, { mimetype: Mimetype.jpg, caption: Config.BOT_NAME })
     }));
-<<<<<<< Updated upstream
+
     XcriptX.addCommand({ pattern: 'attp ?(.*)', fromMe: false, desc: Lang.ATTP_DESC }, (async (message, match) => {
-=======
-    Neotro .addCommand({ pattern: 'attp ?(.*)', fromMe: false, }, (async (message, match) => {
->>>>>>> Stashed changes
+
+ 
         if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.NEED_WORD, MessageType.text);
         var uri = encodeURI(match[1])
         var ttinullimage = await axios.get('https://api.xteam.xyz/attp?file&text=' + uri, { responseType: 'arraybuffer' })
