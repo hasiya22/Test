@@ -27,7 +27,7 @@ const NOT_FOUND = "*Can't Find Anything!.*"
 if (Config.WORKTYPE == 'private') {
 
 
-tenu.addCommand({ pattern: 'github ?(.*)', fromMe: true,}, async (message, match) => {
+  XcriptX.addCommand({ pattern: 'github ?(.*)', fromMe: true,}, async (message, match) => {
 
 
     const pname = match[1]
@@ -86,7 +86,7 @@ tenu.addCommand({ pattern: 'github ?(.*)', fromMe: true,}, async (message, match
 if (Config.WORKTYPE == 'public') {
 
 
-tenu.addCommand({ pattern: 'github ?(.*)', fromMe: false,}, async (message, match) => {
+  XcriptX.addCommand({ pattern: 'github ?(.*)', fromMe: false,}, async (message, match) => {
 
 
     const pname = match[1]
