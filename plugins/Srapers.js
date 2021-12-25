@@ -376,7 +376,7 @@ if (config.LANG == 'SI') {
             return await message.client.sendMessage(message.jid,Lang.NOT_FOUND,MessageType.text);
         }
     
-        var mesaj = '*◄━━━━━━ ━━━━━━► \n\n ';
+        var mesaj = '◄━━━━━━ ━━━━━━► \n\n ';
         arama.all.map((video) => {
             mesaj += '*🦹 ' + video.title + '* - \n⏰ Duration :- ' + video.duration + '\n' + video.url +'\n\n'
         });
