@@ -1,6 +1,6 @@
 let fetch = require('node-fetch')
 let { JSDOM } = require('jsdom')
-
+const XcriptX = require('../events');
 function post(url, formdata) {
     return fetch(url, {
         method: 'POST',
