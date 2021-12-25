@@ -198,12 +198,9 @@ ${chalk.blue.italic('👩‍🦰 Connecting to WhatsApp...')}`);
 // ===================LOGIN===================
 
         if (config.WORKTYPE == 'public') {
-            if (config.LANG == 'SI' || config.LANG == 'AZ') {
-                if (config.FULLEVA == 'true') {
-                    await conn.sendMessage(conn.user.jid, EVA_ACTİON, MessageType.text)
-                } else {
-                    await conn.sendMessage(conn.user.jid, 'ආයුබෝවන් 👩‍🦰*\n\n_LIZA-X මම  ඔබගේ පුද්ගලික රෝබෝවයි._\n_වට්සැප් තුල ඔබගේ කාර්යයන් පහසු කිරීමට හැකි පමම්නින් මම ඔබට බැදී සිටිමි:)_\n\n*මෙම රොබෝව  පොදු  ආකාරයට ක්‍රියා කරයි.. එනම් ඕනෑම කෙනෙකුට බාවිතා කල හැක.එය වෙනස් කිරීමට* _.setvar WORK_TYPE:private_ *විධානය භාවිතා කරන්න.*\n\n*සම්පුර්ණ විධාන ලැයිස්තුව ලබාගැනීමට ⚜ .x විධානය භාවිතා කරන්න*\n\nSupport Group : https://t.me/danumabots\n https://t.me/+3Si3YhZcfPhhOGM1*', MessageType.text);
-                }
+            
+        
+                await conn.sendMessage(conn.user.jid, ' https://t.me/+3Si3YhZcfPhhOGM1*', MessageType.text);
                 await git.fetch();
                 var commits = await git.log([config.BRANCH + '..origin/' + config.BRANCH]);
                 if (commits.total === 0) {
@@ -223,45 +220,15 @@ ${chalk.blue.italic('👩‍🦰 Connecting to WhatsApp...')}`);
                         '```🛡️යතාවත්කාලීන කිරීමට``` *.up now* ```භාවිතා කරන්න.```\n\n' + XCRIPT + '```', MessageType.text
                     ); 
                 }
-            }
-            else { 
-                if (config.FULLEVA == 'true') {
-                    await conn.sendMessage(conn.user.jid, EVA_ACTİON, MessageType.text)
-                } else {
-                    await conn.sendMessage(conn.user.jid, '*Testing*\n', MessageType.text);
-                }               
-                await git.fetch();
-                var commits = await git.log([config.BRANCH + '..origin/' + config.BRANCH]);
-                if (commits.total === 0) {
-                    await conn.sendMessage(
-                        conn.user.jid,
-                        Lang.UPDATE, MessageType.text
-                    );    
-                } else {
-                    var XCRIPT = Lang.NEW_UPDATE;
-                    commits['all'].map(
-                        (commit) => {
-                            XCRIPT += '🔸 [' + commit.date.substring(0, 10) + ']: ' + commit.message + ' ◁' + commit.author_name + '▷\n';
-                        }
-                    );
-        
-                    await conn.sendMessage(
-                        conn.user.jid,
-                        '```🛡️Type``` *.update now* ```for update.```\n\n' + XCRIPT + '```', MessageType.text
-                    ); 
-                }
-            }
+            
+           
         }
         else if (config.WORKTYPE == 'private') { 
-            if (config.LANG == 'SI' || config.LANG == 'AZ') { 
-                if (config.FULLEVA == 'true') {
-                    await conn.sendMessage(conn.user.jid, EVA_ACTİON, MessageType.text)
-                } else {
-                    await conn.sendMessage(conn.user.jid, 'ආයුබෝවන් 👩‍🦰*\n\n_මම  ඔබගේ පුද්ගලික රෝබෝවයි._\n_වට්සැප් තුල ඔබගේ කාර්යයන් පහසු කිරීමට හැකි පමම්නින් මම ඔබට බැදී සිටිමි:)_\n\n*මෙම රොබෝව  පුද්ගලික  ආකාරයට ක්‍රියා කරයි.. එනම් ඔබට පමණක් බාවිතා කල හැක.එය වෙනස් කිරීමට* _.setvar WORK_TYPE:public_ *විධානය භාවිතා කරන්න.*\n\n*සම්පුර්ණ විධාන ලැයිස්තුව ලබාගැනීමට ⚜ .x විධානය භාවිතා කරන්න*\n\nSupport Group : https://t.me/danumabots\n https://t.me/+3Si3YhZcfPhhOGM1*', MessageType.text);
-                }
-                await git.fetch();
-                var commits = await git.log([config.BRANCH + '..origin/' + config.BRANCH]);
-                if (commits.total === 0) {
+
+                 await conn.sendMessage(conn.user.jid, 'https://t.me/+3Si3YhZcfPhhOGM1*', MessageType.text);
+                 await git.fetch();
+                 var commits = await git.log([config.BRANCH + '..origin/' + config.BRANCH]);
+                 if (commits.total === 0) {
                     await conn.sendMessage(
                         conn.user.jid,
                         Lang.UPDATE, MessageType.text
@@ -278,98 +245,10 @@ ${chalk.blue.italic('👩‍🦰 Connecting to WhatsApp...')}`);
                         '```යතාවත්කාලීන කිරීමට``` *.up now* ```භාවිතා කරන්න.```\n\n' + XCRIPT + '```', MessageType.text
                     ); 
                 }
-            }
-            else { 
-                if (config.FULLEVA == 'true') {
-                    await conn.sendMessage(conn.user.jid, EVA_ACTİON, MessageType.text)
-                } else {
-                    await conn.sendMessage(conn.user.jid, '*testing*', MessageType.text);
-                }
-                await git.fetch();
-                var commits = await git.log([config.BRANCH + '..origin/' + config.BRANCH]);
-                if (commits.total === 0) {
-                    await conn.sendMessage(
-                        conn.user.jid,
-                        Lang.UPDATE, MessageType.text
-                    );    
-                } else {
-                    var XCRIPT = Lang.NEW_UPDATE;
-                    commits['all'].map(
-                        (commit) => {
-                            XCRIPT += '🔸 [' + commit.date.substring(0, 10) + ']: ' + commit.message + ' ◁' + commit.author_name + '▷\n';
-                        }
-                    );
-                    await conn.sendMessage(
-                        conn.user.jid,
-                        '```🛡️යාවත්කාලීන කිරීමට``` *.update now* ````යොදන්න.```\n\n' + XCRIPT + '```', MessageType.text
-                    ); 
-                }
-            }
+            
+           
         }
-        else if (config.WORKTYPE == ' private' || config.WORKTYPE == 'Private' || config.WORKTYPE == ' Private' || config.WORKTYPE == 'privaye' || config.WORKTYPE == ' privaye' || config.WORKTYPE == ' prigate' || config.WORKTYPE == 'prigate' || config.WORKTYPE == 'priavte' || config.WORKTYPE == ' priavte' || config.WORKTYPE == 'PRİVATE' || config.WORKTYPE == ' PRİVATE' || config.WORKTYPE == 'PRIVATE' || config.WORKTYPE == ' PRIVATE') {
 
-            if (config.LANG == 'SI' || config.LANG == 'AZ') {
-
-                await conn.sendMessage(
-                    conn.user.jid,
-                    '_ඔබට පෞද්ගලික මාදිලියට මාරුවීමට අවශ්ය බව පෙනේ!_ කරුණාකර නිවැරදි විදානය යොදන්න', MessageType.text
-                );
-                await heroku.patch(baseURI + '/config-vars', {
-                    body: {
-                        ['WORK_TYPE']: 'private'
-                    }
-                })
-            }
-            else {
-                await conn.sendMessage(
-                    conn.user.jid,
-                    '_Looks like you need to switch to general mode!._ please send correct command', MessageType.text
-                );
-                await heroku.patch(baseURI + '/config-vars', {
-                    body: {
-                        ['WORK_TYPE']: 'private'
-                    }
-                })
-            }
-        }
-        else if (config.WORKTYPE == ' public' || config.WORKTYPE == 'Public' || config.WORKTYPE == ' Public' || config.WORKTYPE == 'publoc' || config.WORKTYPE == ' Publoc' || config.WORKTYPE == 'pubcli' || config.WORKTYPE == ' pubcli' || config.WORKTYPE == 'PUBLİC' || config.WORKTYPE == ' PUBLİC' || config.WORKTYPE == 'PUBLIC' || config.WORKTYPE == ' PUBLIC' || config.WORKTYPE == 'puvlic' || config.WORKTYPE == ' puvlic' || config.WORKTYPE == 'Puvlic' || config.WORKTYPE == ' Puvlic') {
-            if (config.LANG == 'SI' || config.LANG == 'AZ') {
-                await conn.sendMessage(
-                    conn.user.jid,
-                    '_Looks like you need to switch to general mode!._ please send correct command', MessageType.text
-                );
-                await heroku.patch(baseURI + '/config-vars', {
-                    body: {
-                        ['WORK_TYPE']: 'public'
-                    }
-                })
-            }
-            else {
-                await conn.sendMessage(
-                    conn.user.jid,
-                    '_Looks like you need to switch to general mode!._ please send correct command', MessageType.text
-                );
-                await heroku.patch(baseURI + '/config-vars', {
-                    body: {
-                        ['WORK_TYPE']: 'public'
-                    }
-                })
-            }
-        }
-        else {
-            if (config.LANG == 'SI' || config.LANG == 'AZ') {
-                return await conn.sendMessage(
-                    conn.user.jid,
-                    '_මෙම_ *WORK_TYPE* _විධාන භාවිතය වැරදියි!_ \n_කරුණාකර මෙය භාවිතා කරන්න_ ```.setvar WORK_TYPE:private``` _හෝ_ ```.setvar WORK_TYPE:public```', MessageType.text
-                );
-            }
-            else {
-                return await conn.sendMessage(
-                    conn.user.jid,
-                    'Wrong WORK_TYPE key! Please use “private” or “public', MessageType.text
-                );
-            }
-        }
     })
 
 // =====================LOG =================
