@@ -4,10 +4,7 @@ const exec = require('child_process').exec;
 const os = require("os");
 const fs = require('fs');
 const Config = require('../config')
-const Language = require('../language');
-const Lang = Language.getString('evaluators');
-const SLang = Language.getString('conventer');
-const NLang = Language.getString('scrapers');
+
 const googleTTS = require('google-translate-tts');
 const Heroku = require('heroku-client');
 const heroku = new Heroku({

@@ -11,17 +11,16 @@ const {promisify} = require('util');
 
 const pipeline = promisify(stream.pipeline);
 
-const Language = require('../language');
-const Lang = Language.getString('removebg');
+
 
 if (Config.WORKTYPE == 'private') {
 
     XcriptX.addCommand({pattern: 'rmbg ?(.*)', fromMe: true,}, (async (message, match) => {    
 
-        if (message.reply_message === false || message.reply_message.image === false) return await message.client.sendMessage(message.jid,Lang.NEED_PHOTO,MessageType.text);
-        if (Config.RBG_API_KEY === false) return await message.client.sendMessage(message.jid,Lang.NO_API_KEY.replace('remove.bg', 'remove.bg'),MessageType.text);
+        if (message.reply_message === false || message.reply_message.image === false) return await message.client.sendMessage(message.jid,"*Give me a photo!*",MessageType.text);
+        if (Config.RBG_API_KEY === false) return await message.client.sendMessage(message.jid,"*You don't have an API key!*\nYou can get it here: remove.bg.".replace('remove.bg', 'remove.bg'),MessageType.text);
     
-        var load = await message.reply(Lang.RBGING);
+        var load = await message.reply("Removing background...");
         var location = await message.client.downloadAndSaveMediaMessage({
             key: {
                 remoteJid: message.reply_message.jid,
@@ -53,11 +52,10 @@ if (Config.WORKTYPE == 'private') {
 else if (Config.WORKTYPE == 'public') {
 
     XcriptX.addCommand({pattern: 'rmbg ?(.*)', fromMe: false,}, (async (message, match) => {    
-
-        if (message.reply_message === false || message.reply_message.image === false) return await message.client.sendMessage(message.jid,Lang.NEED_PHOTO,MessageType.text);
-        if (Config.RBG_API_KEY === false) return await message.client.sendMessage(message.jid,Lang.NO_API_KEY.replace('remove.bg', 'remove.bg'),MessageType.text);
+        if (message.reply_message === false || message.reply_message.image === false) return await message.client.sendMessage(message.jid,"*Give me a photo!*",MessageType.text);
+        if (Config.RBG_API_KEY === false) return await message.client.sendMessage(message.jid,"*You don't have an API key!*\nYou can get it here: remove.bg.".replace('remove.bg', 'remove.bg'),MessageType.text);
     
-        var load = await message.reply(Lang.RBGING);
+        var load = await message.reply("Removing background...");
         var location = await message.client.downloadAndSaveMediaMessage({
             key: {
                 remoteJid: message.reply_message.jid,

@@ -4,9 +4,6 @@
 const {MessageType, GroupSettingChange, ChatModification, WAConnectionTest} = require('@adiwajshing/baileys');
 const XcriptX = require('../events');
 const Config = require('../config');
-const Language = require('../language');
-const Lang = Language.getString('XcriptX');
-const mut = Language.getString('mute');
 const END = "clear all messages"
 
 async function checkImAdmin(message, user = message.client.user.jid) {

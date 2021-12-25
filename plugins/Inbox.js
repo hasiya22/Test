@@ -15,17 +15,10 @@ let baseURI = '/apps/' + config.HEROKU.APP_NAME;
     var BGM_off = ''
     if (config.LANG == 'EN') {
         l_dsc = 'turn on Inbox Command block. -bot owner command'
-        alr_on = 'inblock is already open!'
+        alr_on = 'inbox block is already running!'
         alr_off = 'inbox block is currently closed!'
         BGM_on = 'inbox block option turned on!'
         BGM_off = 'imbox block option turned off'
-    }
-    if (config.LANG == 'SI') {
-        l_dsc = 'INBOX BLOCK system  ක්‍රියාත්මක කිරීම.'
-        alr_on = 'කලින්ම ක්‍රියාත්මකයි!'
-        alr_off = 'කලින්ම අක්‍රියයි!'
-        BGM_on = '*inbox block ක්‍රියාත්මයි.*'
-        BGM_off = '*inbox block අක්‍රියයි.*'
     }
     XcriptX.addCommand({pattern: 'inblock ?(.*)', fromMe: true,
  }, (async (message, match) => {

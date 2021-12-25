@@ -6,8 +6,7 @@ const { MessageType } = require('@adiwajshing/baileys')
 const XcriptX = require('../events');
 const { successfullMessage, errorMessage, infoMessage } = require('../helpers');
 const NotesDB = require('./sql/notes');
-const Language = require('../language')
-const Lang = Language.getString('notes')
+
 
 XcriptX.addCommand({ pattern: 'notes', fromMe: true,}, async (message, match) => {
 
@@ -21,10 +20,10 @@ XcriptX.addCommand({ pattern: 'notes', fromMe: true,}, async (message, match) =>
     })
 
     if (notes.length < 1) {
-        return await message.sendMessage(infoMessage(Lang.NO_SAVED))
+        return await message.sendMessage(infoMessage("No saved notes"))
     }
 
-    await message.sendMessage(infoMessage(Lang.SAVED))
+    await message.sendMessage(infoMessage("Note saved"))
 
     await message.sendMessage(notes.join('\n\n'))
     _notes.filter(note => note.note.includes('IMG;;;')).forEach(async (note) => {
@@ -43,14 +42,14 @@ XcriptX.addCommand({ pattern: 'save ?(.*)', fromMe: true,}, async (message, matc
     const userNote = match[1]
 
     if (!userNote && !message.reply_message) {
-        await message.sendMessage(errorMessage(Lang.REPLY))
+        await message.sendMessage(errorMessage("Please provide a note or reply to a message."))
 
         return
     }
 
     if (userNote) {
         await NotesDB.saveNote(userNote)
-        await message.sendMessage(successfullMessage(Lang.SUCCESSFULLY_ADDED), MessageType.text)
+        await message.sendMessage(successfullMessage("Successfully added new note, check your notes with .notes."), MessageType.text)
 
         return
 
@@ -69,18 +68,18 @@ XcriptX.addCommand({ pattern: 'save ?(.*)', fromMe: true,}, async (message, matc
                 const randomFileName = savedFileName.split('.')[0] + Math.floor(Math.random() * 50) + path.extname(savedFileName)
                 await fs.copyFile(savedFileName, path.resolve('media', randomFileName))
                 await NotesDB.saveNote("IMG;;;" + randomFileName)
-                await message.sendMessage(successfullMessage(Lang.SUCCESSFULLY_ADDED), MessageType.text)
+                await message.sendMessage(successfullMessage("Saved"), MessageType.text)
 
 
             }
 
             await NotesDB.saveNote(message.reply_message.text)
-            await message.sendMessage(successfullMessage(Lang.SUCCESSFULLY_ADDED), MessageType.text)
+            await message.sendMessage(successfullMessage("Saved"), MessageType.text)
 
             return
         }
     } else {
-        await message.sendMessage(errorMessage(Lang.UNSUCCESSFUL))
+        await message.sendMessage(errorMessage("Cant Save this"))
 
         return
     }
@@ -96,5 +95,5 @@ XcriptX.addCommand({ pattern: 'deleteNotes', fromMe: true,}, async (message, mat
         await fs.unlink(path.resolve('media', file))
     })
 
-    return await message.sendMessage(successfullMessage(Lang.SUCCESSFULLY_DELETED))
+    return await message.sendMessage(successfullMessage("Notes deleted successfully"))
 })

@@ -11,8 +11,6 @@ const cheerio = require('cheerio')
 let tn = Config.WORKTYPE == 'public' ? false : true
 const FormData = require('form-data')
 const Axios = require('axios');
-const Language = require('../language');
-const Lang = Language.getString('conventer');
 function webp2mp4File(path) {
     return new Promise(async (resolve, reject) => {
         const bodyForm = new FormData()
@@ -62,8 +60,8 @@ function webp2mp4File(path) {
 
     XcriptX.addCommand({pattern: 'mp3$', fromMe: tn,}, (async (message, match) => {    
         const mid = message.jid
-        if (message.reply_message === false) return await message.client.sendMessage(mid, Lang.MP4TOAUDİO_NEEDREPLY, MessageType.text);
-        var downloading = await message.client.sendMessage(mid,Lang.MP4TOAUDİO,MessageType.text);
+        if (message.reply_message === false) return await message.client.sendMessage(mid, 'Mention some video..', MessageType.text);
+        var downloading = await message.client.sendMessage(mid,'Converting to audio...',MessageType.text);
         var location = await message.client.downloadAndSaveMediaMessage({
             key: {
                 remoteJid: message.reply_message.jid,
@@ -82,8 +80,8 @@ function webp2mp4File(path) {
 
     XcriptX.addCommand({pattern: 'photo$', fromMe: tn,}, (async (message, match) => {   
         const mid = message.jid
-        if (message.reply_message === false) return await message.client.sendMessage(mid, Lang.STİCKER_NEEDREPLY, MessageType.text);
-        var downloading = await message.client.sendMessage(mid,Lang.STİCKER,MessageType.text);
+        if (message.reply_message === false) return await message.client.sendMessage(mid, 'Mention to stiker', MessageType.text);
+        var downloading = await message.client.sendMessage(mid,'Converting stiker to img',MessageType.text);
         var location = await message.client.downloadAndSaveMediaMessage({
             key: {
                 remoteJid: message.reply_message.jid,

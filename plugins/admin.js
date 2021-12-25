@@ -3,9 +3,6 @@
 const {MessageType, GroupSettingChange} = require('@adiwajshing/baileys');
 const XcriptX = require('../events');
 const Config = require('../config');
-const Language = require('../language');
-const Lang = Language.getString('admin');
-const mut = Language.getString('mute');
 const fs = require('fs');
 
 async function checkImAdmin(message, user = message.client.user.jid) {
@@ -23,7 +20,7 @@ XcriptX.addCommand({pattern: 'ban ?(.*)', fromMe: true, dontAddCommandList: true
 
     if (Config.BANMSG == 'default') {
         if (message.reply_message !== false) {
-            await message.client.sendMessage(message.jid,'@' + message.reply_message.data.participant.split('@')[0] + '```, ' + Lang.BANNED + '```', MessageType.text, {contextInfo: {mentionedJid: [message.reply_message.data.participant]}});
+            await message.client.sendMessage(message.jid,'@' + message.reply_message.data.participant.split('@')[0] + '```, Baned ```', MessageType.text, {contextInfo: {mentionedJid: [message.reply_message.data.participant]}});
             await message.client.groupRemove(message.jid, [message.reply_message.data.participant]);
         } else if (message.reply_message === false && message.mention !== false) {
             var etiketler = '';
@@ -611,7 +608,7 @@ XcriptX.addCommand({pattern: 'mute ?(.*)', fromMe: true, dontAddCommandList: tru
         }
         else if (match[1] == '48m') {
             await message.client.groupSettingChange(message.jid, GroupSettingChange.messageSend, true);
-            await message.client.sendMessage(message.jid,mut.KIRKSEKİZMUTE,MessageType.text);
+            await message.client.sendMessage(message.jid,'*The group was silenced for 48 minute!*',MessageType.text);
 
             await new Promise(r => setTimeout(r, 2880000));
     
@@ -620,7 +617,7 @@ XcriptX.addCommand({pattern: 'mute ?(.*)', fromMe: true, dontAddCommandList: tru
         }
         else if (match[1] == '49m') {
             await message.client.groupSettingChange(message.jid, GroupSettingChange.messageSend, true);
-            await message.client.sendMessage(message.jid,mut.KIRKDOKUZMUTE,MessageType.text);
+            await message.client.sendMessage(message.jid,'*The group was silenced for 49 minute!*',MessageType.text);
 
             await new Promise(r => setTimeout(r, 2940000));
     
@@ -629,7 +626,7 @@ XcriptX.addCommand({pattern: 'mute ?(.*)', fromMe: true, dontAddCommandList: tru
         }
         else if (match[1] == '50m') {
             await message.client.groupSettingChange(message.jid, GroupSettingChange.messageSend, true);
-            await message.client.sendMessage(message.jid,mut.ELLİMUTE,MessageType.text);
+            await message.client.sendMessage(message.jid,'*The group was silenced for 50 minute!*',MessageType.text);
 
             await new Promise(r => setTimeout(r, 3000000));
     
@@ -638,7 +635,7 @@ XcriptX.addCommand({pattern: 'mute ?(.*)', fromMe: true, dontAddCommandList: tru
         }
         else if (match[1] == '51m') {
             await message.client.groupSettingChange(message.jid, GroupSettingChange.messageSend, true);
-            await message.client.sendMessage(message.jid,mut.ELLİBİRMUTE,MessageType.text);
+            await message.client.sendMessage(message.jid,'*The group was silenced for 51 minute!*',MessageType.text);
 
             await new Promise(r => setTimeout(r, 3060000));
     
@@ -647,7 +644,7 @@ XcriptX.addCommand({pattern: 'mute ?(.*)', fromMe: true, dontAddCommandList: tru
         }
         else if (match[1] == '52m') {
             await message.client.groupSettingChange(message.jid, GroupSettingChange.messageSend, true);
-            await message.client.sendMessage(message.jid,mut.ELLİİKİMUTE,MessageType.text);
+            await message.client.sendMessage(message.jid,'*The group was silenced for 52 minute!*',MessageType.text);
 
             await new Promise(r => setTimeout(r, 3120000));
     
@@ -656,7 +653,7 @@ XcriptX.addCommand({pattern: 'mute ?(.*)', fromMe: true, dontAddCommandList: tru
         }
         else if (match[1] == '53m') {
             await message.client.groupSettingChange(message.jid, GroupSettingChange.messageSend, true);
-            await message.client.sendMessage(message.jid,mut.ELLİÜÇMUTE,MessageType.text);
+            await message.client.sendMessage(message.jid,'*The group was silenced for 53 minute!*',MessageType.text);
 
             await new Promise(r => setTimeout(r, 3180000));
     
@@ -665,7 +662,7 @@ XcriptX.addCommand({pattern: 'mute ?(.*)', fromMe: true, dontAddCommandList: tru
         }
         else if (match[1] == '54m') {
             await message.client.groupSettingChange(message.jid, GroupSettingChange.messageSend, true);
-            await message.client.sendMessage(message.jid,mut.ELLİDÖRTMUTE,MessageType.text);
+            await message.client.sendMessage(message.jid,'*The group was silenced for 54 minute!*',MessageType.text);
 
             await new Promise(r => setTimeout(r, 3240000));
     
@@ -674,7 +671,7 @@ XcriptX.addCommand({pattern: 'mute ?(.*)', fromMe: true, dontAddCommandList: tru
         }
         else if (match[1] == '55m') {
             await message.client.groupSettingChange(message.jid, GroupSettingChange.messageSend, true);
-            await message.client.sendMessage(message.jid,mut.ELLİBEŞMUTE,MessageType.text);
+            await message.client.sendMessage(message.jid,'*The group was silenced for 55 minute!*',MessageType.text);
 
             await new Promise(r => setTimeout(r, 3300000));
     
@@ -683,7 +680,7 @@ XcriptX.addCommand({pattern: 'mute ?(.*)', fromMe: true, dontAddCommandList: tru
         }
         else if (match[1] == '56m') {
             await message.client.groupSettingChange(message.jid, GroupSettingChange.messageSend, true);
-            await message.client.sendMessage(message.jid,mut.ELLİALTIMUTE,MessageType.text);
+            await message.client.sendMessage(message.jid,'*The group was silenced for 56 minute!*',MessageType.text);
 
             await new Promise(r => setTimeout(r, 3360000));
     
@@ -692,7 +689,7 @@ XcriptX.addCommand({pattern: 'mute ?(.*)', fromMe: true, dontAddCommandList: tru
         }
         else if (match[1] == '57m') {
             await message.client.groupSettingChange(message.jid, GroupSettingChange.messageSend, true);
-            await message.client.sendMessage(message.jid,mut.ELLİYEDİMUTE,MessageType.text);
+            await message.client.sendMessage(message.jid,'*The group was silenced for 57 minute!*',MessageType.text);
 
             await new Promise(r => setTimeout(r, 3420000));
     
@@ -701,7 +698,7 @@ XcriptX.addCommand({pattern: 'mute ?(.*)', fromMe: true, dontAddCommandList: tru
         }
         else if (match[1] == '58m') {
             await message.client.groupSettingChange(message.jid, GroupSettingChange.messageSend, true);
-            await message.client.sendMessage(message.jid,mut.ELLİSEKİZMUTE,MessageType.text);
+            await message.client.sendMessage(message.jid,'*The group was silenced for 58 minute!*',MessageType.text);
 
             await new Promise(r => setTimeout(r, 3480000));
     
@@ -710,7 +707,7 @@ XcriptX.addCommand({pattern: 'mute ?(.*)', fromMe: true, dontAddCommandList: tru
         }
         else if (match[1] == '59m') {
             await message.client.groupSettingChange(message.jid, GroupSettingChange.messageSend, true);
-            await message.client.sendMessage(message.jid,mut.ELLİDOKUZMUTE,MessageType.text);
+            await message.client.sendMessage(message.jid,'*The group was silenced for 59 minute!*',MessageType.text);
 
             await new Promise(r => setTimeout(r, 3540000));
     
@@ -719,7 +716,7 @@ XcriptX.addCommand({pattern: 'mute ?(.*)', fromMe: true, dontAddCommandList: tru
         }
         else if (match[1] == '1h') {
             await message.client.groupSettingChange(message.jid, GroupSettingChange.messageSend, true);
-            await message.client.sendMessage(message.jid,mut.SAATBİRMUTE,MessageType.text);
+            await message.client.sendMessage(message.jid,'*The group was silenced for 1h!*',MessageType.text);
 
             await new Promise(r => setTimeout(r, 3600000));
     
@@ -728,7 +725,7 @@ XcriptX.addCommand({pattern: 'mute ?(.*)', fromMe: true, dontAddCommandList: tru
         }
         else if (match[1] == '2h') {
             await message.client.groupSettingChange(message.jid, GroupSettingChange.messageSend, true);
-            await message.client.sendMessage(message.jid,mut.SAATİKİMUTE,MessageType.text);
+            await message.client.sendMessage(message.jid,'*The group was silenced for 2h!*',MessageType.text);
 
             await new Promise(r => setTimeout(r, 7200000));
     
@@ -737,7 +734,7 @@ XcriptX.addCommand({pattern: 'mute ?(.*)', fromMe: true, dontAddCommandList: tru
         }
         else if (match[1] == '3h') {
             await message.client.groupSettingChange(message.jid, GroupSettingChange.messageSend, true);
-            await message.client.sendMessage(message.jid,mut.SAATÜÇMUTE,MessageType.text);
+            await message.client.sendMessage(message.jid,'*The group was silenced for 3h!*',MessageType.text);
 
             await new Promise(r => setTimeout(r, 10800000));
     
@@ -746,7 +743,7 @@ XcriptX.addCommand({pattern: 'mute ?(.*)', fromMe: true, dontAddCommandList: tru
         }
         else if (match[1] == '4h') {
             await message.client.groupSettingChange(message.jid, GroupSettingChange.messageSend, true);
-            await message.client.sendMessage(message.jid,mut.SAATDÖRTMUTE,MessageType.text);
+            await message.client.sendMessage(message.jid,'*The group was silenced for 4h!*',MessageType.text);
 
             await new Promise(r => setTimeout(r, 14400000));
     
@@ -755,7 +752,7 @@ XcriptX.addCommand({pattern: 'mute ?(.*)', fromMe: true, dontAddCommandList: tru
         }
         else if (match[1] == '5h') {
             await message.client.groupSettingChange(message.jid, GroupSettingChange.messageSend, true);
-            await message.client.sendMessage(message.jid,mut.SAATBEŞMUTE,MessageType.text);
+            await message.client.sendMessage(message.jid,'*The group was silenced for 5h!*',MessageType.text);
 
             await new Promise(r => setTimeout(r, 18000000));
     
@@ -764,7 +761,7 @@ XcriptX.addCommand({pattern: 'mute ?(.*)', fromMe: true, dontAddCommandList: tru
         }
         else if (match[1] == '6h') {
             await message.client.groupSettingChange(message.jid, GroupSettingChange.messageSend, true);
-            await message.client.sendMessage(message.jid,mut.SAATALTIMUTE,MessageType.text);
+            await message.client.sendMessage(message.jid,'*The group was silenced for 6h!*',MessageType.text);
 
             await new Promise(r => setTimeout(r, 21600000));
     
@@ -773,7 +770,7 @@ XcriptX.addCommand({pattern: 'mute ?(.*)', fromMe: true, dontAddCommandList: tru
         }
         else if (match[1] == '7h') {
             await message.client.groupSettingChange(message.jid, GroupSettingChange.messageSend, true);
-            await message.client.sendMessage(message.jid,mut.SAATYEDİMUTE,MessageType.text);
+            await message.client.sendMessage(message.jid,'*The group was silenced for 7h!*',MessageType.text);
 
             await new Promise(r => setTimeout(r, 25200000));
     
@@ -782,7 +779,7 @@ XcriptX.addCommand({pattern: 'mute ?(.*)', fromMe: true, dontAddCommandList: tru
         }
         else if (match[1] == '8h') {
             await message.client.groupSettingChange(message.jid, GroupSettingChange.messageSend, true);
-            await message.client.sendMessage(message.jid,mut.SAATSEKİZMUTE,MessageType.text);
+            await message.client.sendMessage(message.jid,'*The group was silenced for 8h!*',MessageType.text);
 
             await new Promise(r => setTimeout(r, 28800000));
     
@@ -791,7 +788,7 @@ XcriptX.addCommand({pattern: 'mute ?(.*)', fromMe: true, dontAddCommandList: tru
         }
         else if (match[1] == '9h') {
             await message.client.groupSettingChange(message.jid, GroupSettingChange.messageSend, true);
-            await message.client.sendMessage(message.jid,mut.SAATDOKUZMUTE,MessageType.text);
+            await message.client.sendMessage(message.jid,'*The group was silenced for 9h!*',MessageType.text);
 
             await new Promise(r => setTimeout(r, 32400000));
     
@@ -800,7 +797,7 @@ XcriptX.addCommand({pattern: 'mute ?(.*)', fromMe: true, dontAddCommandList: tru
         }
         else if (match[1] == '10h') {
             await message.client.groupSettingChange(message.jid, GroupSettingChange.messageSend, true);
-            await message.client.sendMessage(message.jid,mut.SAATONMUTE,MessageType.text);
+            await message.client.sendMessage(message.jid,'*The group was silenced for 10h!*',MessageType.text);
 
             await new Promise(r => setTimeout(r, 36000000));
     
@@ -809,7 +806,7 @@ XcriptX.addCommand({pattern: 'mute ?(.*)', fromMe: true, dontAddCommandList: tru
         }
         else if (match[1] == '11h') {
             await message.client.groupSettingChange(message.jid, GroupSettingChange.messageSend, true);
-            await message.client.sendMessage(message.jid,mut.SAATONBİRMUTE,MessageType.text);
+            await message.client.sendMessage(message.jid,'*The group was silenced for 11h!*',MessageType.text);
 
             await new Promise(r => setTimeout(r, 39600000));
     
@@ -818,7 +815,7 @@ XcriptX.addCommand({pattern: 'mute ?(.*)', fromMe: true, dontAddCommandList: tru
         }
         else if (match[1] == '12h') {
             await message.client.groupSettingChange(message.jid, GroupSettingChange.messageSend, true);
-            await message.client.sendMessage(message.jid,mut.SAATONİKİMUTE,MessageType.text);
+            await message.client.sendMessage(message.jid,'*The group was silenced for 12h!*',MessageType.text);
 
             await new Promise(r => setTimeout(r, 43200000));
     
@@ -827,7 +824,7 @@ XcriptX.addCommand({pattern: 'mute ?(.*)', fromMe: true, dontAddCommandList: tru
         }
         else if (match[1] == '1d') {
             await message.client.groupSettingChange(message.jid, GroupSettingChange.messageSend, true);
-            await message.client.sendMessage(message.jid,mut.GÜNBİRMUTE,MessageType.text);
+            await message.client.sendMessage(message.jid,'*The group was silenced for 1 day!*',MessageType.text);
 
             await new Promise(r => setTimeout(r, 86400000));
     
@@ -836,7 +833,7 @@ XcriptX.addCommand({pattern: 'mute ?(.*)', fromMe: true, dontAddCommandList: tru
         }
         else if (match[1] == '2d') {
             await message.client.groupSettingChange(message.jid, GroupSettingChange.messageSend, true);
-            await message.client.sendMessage(message.jid,mut.GÜNİKİMUTE,MessageType.text);
+            await message.client.sendMessage(message.jid,'*The group was silenced for 2 day!*',MessageType.text);
 
             await new Promise(r => setTimeout(r, 172800000));
     
@@ -845,7 +842,7 @@ XcriptX.addCommand({pattern: 'mute ?(.*)', fromMe: true, dontAddCommandList: tru
         }
         else if (match[1] == '3d') {
             await message.client.groupSettingChange(message.jid, GroupSettingChange.messageSend, true);
-            await message.client.sendMessage(message.jid,mut.GÜNÜÇMUTE,MessageType.text);
+            await message.client.sendMessage(message.jid,'*The group was silenced for 2 day!*',MessageType.text);
 
             await new Promise(r => setTimeout(r, 259200000));
     
@@ -853,7 +850,7 @@ XcriptX.addCommand({pattern: 'mute ?(.*)', fromMe: true, dontAddCommandList: tru
             await message.client.sendMessage(message.jid,"Group Unmuted",MessageType.text);
         }
         else if (match[1] !== '1m' || match[1] !== '2m' || match[1] !== '3m' || match[1] !== '4m' || match[1] !== '5m' || match[1] !== '6m' || match[1] !== '7m' || match[1] !== '8m' || match[1] !== '9m' || match[1] !== '10m' || match[1] !== '11m' || match[1] !== '12m' || match[1] !== '13m' || match[1] !== '14m' || match[1] !== '15m' || match[1] !== '16m' || match[1] !== '17m' || match[1] !== '18m' || match[1] !== '19m' || match[1] !== '20m' || match[1] !== '21m' || match[1] !== '22m' || match[1] !== '23m' || match[1] !== '24m' || match[1] !== '25m' || match[1] !== '26m' || match[1] !== '27m' || match[1] !== '28m' || match[1] !== '29m' || match[1] !== '30m' || match[1] !== '31m' || match[1] !== '32m' || match[1] !== '33m' || match[1] !== '34m' || match[1] !== '35m' || match[1] !== '36m' || match[1] !== '37m' || match[1] !== '38m' || match[1] !== '39m' || match[1] !== '40m' || match[1] !== '41m' || match[1] !== '42m' || match[1] !== '43m' || match[1] !== '44m' || match[1] !== '45m' || match[1] !== '46m' || match[1] !== '47m' || match[1] !== '48m' || match[1] !== '49m' || match[1] !== '50m' || match[1] !== '51m' || match[1] !== '52m' || match[1] !== '53m' || match[1] !== '54m' || match[1] !== '55m' || match[1] !== '56m' || match[1] !== '57m' || match[1] !== '58m' || match[1] !== '59m' || match[1] !== '1h' || match[1] !== '2h' || match[1] !== '3h' || match[1] !== '4h' || match[1] !== '5h' || match[1] !== '6h' || match[1] !== '7h' || match[1] !== '8h' || match[1] !== '9h' || match[1] !== '10h' || match[1] !== '11h' || match[1] !== '12h' || match[1] !== '1d' || match[1] !== '2d' || match[1] !== '3d') {
-            return await message.client.sendMessage(message.jid, mut.TÜR, MessageType.text);
+            return await message.client.sendMessage(message.jid, 'invalid format', MessageType.text);
         }
     }
     else {
@@ -1528,7 +1525,7 @@ XcriptX.addCommand({pattern: 'mute ?(.*)', fromMe: true, dontAddCommandList: tru
             await message.client.sendMessage(message.jid,Config.UNMUTEMSG,MessageType.text);
         }
         else if (match[1] !== '1m' || match[1] !== '2m' || match[1] !== '3m' || match[1] !== '4m' || match[1] !== '5m' || match[1] !== '6m' || match[1] !== '7m' || match[1] !== '8m' || match[1] !== '9m' || match[1] !== '10m' || match[1] !== '11m' || match[1] !== '12m' || match[1] !== '13m' || match[1] !== '14m' || match[1] !== '15m' || match[1] !== '16m' || match[1] !== '17m' || match[1] !== '18m' || match[1] !== '19m' || match[1] !== '20m' || match[1] !== '21m' || match[1] !== '22m' || match[1] !== '23m' || match[1] !== '24m' || match[1] !== '25m' || match[1] !== '26m' || match[1] !== '27m' || match[1] !== '28m' || match[1] !== '29m' || match[1] !== '30m' || match[1] !== '31m' || match[1] !== '32m' || match[1] !== '33m' || match[1] !== '34m' || match[1] !== '35m' || match[1] !== '36m' || match[1] !== '37m' || match[1] !== '38m' || match[1] !== '39m' || match[1] !== '40m' || match[1] !== '41m' || match[1] !== '42m' || match[1] !== '43m' || match[1] !== '44m' || match[1] !== '45m' || match[1] !== '46m' || match[1] !== '47m' || match[1] !== '48m' || match[1] !== '49m' || match[1] !== '50m' || match[1] !== '51m' || match[1] !== '52m' || match[1] !== '53m' || match[1] !== '54m' || match[1] !== '55m' || match[1] !== '56m' || match[1] !== '57m' || match[1] !== '58m' || match[1] !== '59m' || match[1] !== '1h' || match[1] !== '2h' || match[1] !== '3h' || match[1] !== '4h' || match[1] !== '5h' || match[1] !== '6h' || match[1] !== '7h' || match[1] !== '8h' || match[1] !== '9h' || match[1] !== '10h' || match[1] !== '11h' || match[1] !== '12h' || match[1] !== '1d' || match[1] !== '2d' || match[1] !== '3d') {
-            return await message.client.sendMessage(message.jid, mut.TÜR, MessageType.text);
+            return await message.client.sendMessage(message.jid, '*Unknown Command!*\n_Minute: 1-59m_\n_Hour: 1-12h_\n_Day: 1d-3d_', MessageType.text);
         }
     }
 }));

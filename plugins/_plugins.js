@@ -93,7 +93,7 @@ XcriptX.addCommand({pattern: 'remove(?: |$)(.*)', fromMe: true,}, (async (messag
         
         await new Promise(r => setTimeout(r, 1000));
     
-        await message.sendMessage(NLang.AFTER_UPDATE);
+        await message.sendMessage('Update Compleate');
 
         console.log(baseURI);
         await heroku.delete(baseURI + '/dynos').catch(async (error) => {
