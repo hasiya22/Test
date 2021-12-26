@@ -11,7 +11,7 @@ const Config = require('../config')
 const axios = require('axios')
 const request = require('request');
 const os = require('os');
-
+const thumb='https://telegra.ph/file/3a5d3e185fed50d94ec63.jpg'
 let tk = Config.WORKTYPE == 'public' ? false: true
 
 XcriptX.addCommand({ pattern: 'ol paper', fromMe: tk,
@@ -72,6 +72,40 @@ XcriptX.addCommand({ pattern: 'ol paper', fromMe: tk,
           footerText: 'Hello World',
           buttons: buttons,
           headerType: 4
+      }
+      
+      await message.client.sendMessage(message.jid, buttonMessage, MessageType.buttonsMessage)
+    }));
+    XcriptX.addCommand({ pattern: 't1', fromMe: tk,
+}, (async (message, match) => {
+    const buttons = [
+        {buttonId: 'id1', buttonText: {displayText: 'Button 1'}, type: 1},
+        {buttonId: 'id2', buttonText: {displayText: 'Button 2'}, type: 1}
+      ]
+      
+      const buttonMessage = {
+        image : thumb,
+          contentText: "Hi it's button message",
+          footerText: 'Hello World',
+          buttons: buttons,
+          headerType: 4
+      }
+      
+      await message.client.sendMessage(message.jid, buttonMessage, MessageType.buttonsMessage)
+    }));
+    XcriptX.addCommand({ pattern: 't2', fromMe: tk,
+}, (async (message, match) => {
+    const buttons = [
+        {buttonId: 'id1', buttonText: {displayText: 'Button 1'}, type: 1},
+        {buttonId: 'id2', buttonText: {displayText: 'Button 2'}, type: 1}
+      ]
+      
+      const buttonMessage = {
+       
+          contentText: "Hi it's button message",
+          footerText: 'Hello World',
+          buttons: buttons,
+          headerType: 2
       }
       
       await message.client.sendMessage(message.jid, buttonMessage, MessageType.buttonsMessage)
