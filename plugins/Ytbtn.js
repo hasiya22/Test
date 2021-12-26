@@ -11,21 +11,23 @@ const vd  = 'lasi'
 XcriptX.addCommand({pattern: 'yv ?(.*)', fromMe: true,}, (async (message, match) => { 
     if (match[1] === '') return await message.client.sendMessage(message.jid,'need word',MessageType.text);  
   
-
-
-    let buttons = [
-        {buttonId: 'lasi'+url, buttonText: {displayText: 'සින්දුව 🎵'}, type: 1},
-        {buttonId: '/ytv '+url, buttonText: {displayText: 'වීඩියෝව 📼'}, type: 1},
-      {buttonId: '/cancel '+vd, buttonText: {displayText: 'ඩිලීට් 🗑️'}, type: 1}
-      ]
-
-
-      const buttonsMessage = {
-        image: {url: thumb},
-        caption:`BOTKI`.trim(),    footerText: 'Filesize : ',
-        buttons: buttons,
-         headerType: 4
+    const buttonsMessage= {
+        image= {
+            url= thumb},
+        caption= 'string',
+        footerText= 'footer',
+        buttons= {
+            buttonId: 2,
+            buttonText: {
+                displayText: 'hutta',
+            },
+            type: 1,
+        },
+        headerType: 4,
     }
+    
+
+
 
 
     let sendMsg =  await message.client.sendMessage(message.jid, buttonsMessage)
