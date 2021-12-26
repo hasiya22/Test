@@ -12,11 +12,10 @@ XcriptX.addCommand({pattern: 'yv ?(.*)', fromMe: true,}, (async (message, match)
     if (match[1] === '') return await message.client.sendMessage(message.jid,'need word',MessageType.text);  
   
     const buttonsMessage= {
-        image= {
-            url= thumb},
-        caption= 'string',
-        footerText= 'footer',
-        buttons= {
+        image = {url : thumb},
+        caption : 'string',
+        footerText: 'footer',
+        buttons = {
             buttonId: 2,
             buttonText: {
                 displayText: 'hutta',
