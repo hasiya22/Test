@@ -63,7 +63,7 @@ XcriptX.addCommand({ pattern: 'ol paper', fromMe: tk,
     XcriptX.addCommand({ pattern: 'tt', fromMe: tk,
 }, (async (message, match) => {
     const buttons = [
-        {buttonId: 'id1', buttonText: {displayText: 'Button 1'}, type: 1},
+        {buttonId: 'id1'+thumb, buttonText: {displayText: 'Button 1'}, type: 1},
         {buttonId: 'id2', buttonText: {displayText: 'Button 2'}, type: 1}
       ]
       
@@ -71,7 +71,7 @@ XcriptX.addCommand({ pattern: 'ol paper', fromMe: tk,
           contentText: "Hi it's button message",
           footerText: 'Hello World',
           buttons: buttons,
-          headerType: 4
+          headerType: 1
       }
       
       await message.client.sendMessage(message.jid, buttonMessage, MessageType.buttonsMessage)
@@ -88,24 +88,7 @@ XcriptX.addCommand({ pattern: 'ol paper', fromMe: tk,
           contentText: "Hi it's button message",
           footerText: 'Hello World',
           buttons: buttons,
-          headerType: 4
-      }
-      
-      await message.client.sendMessage(message.jid, buttonMessage, MessageType.buttonsMessage)
-    }));
-    XcriptX.addCommand({ pattern: 't2', fromMe: tk,
-}, (async (message, match) => {
-    const buttons = [
-        {buttonId: 'id1', buttonText: {displayText: 'Button 1'}, type: 1},
-        {buttonId: 'id2', buttonText: {displayText: 'Button 2'}, type: 1}
-      ]
-      
-      const buttonMessage = {
-       
-          contentText: "Hi it's button message",
-          footerText: 'Hello World',
-          buttons: buttons,
-          headerType: 2
+          headerType: 1
       }
       
       await message.client.sendMessage(message.jid, buttonMessage, MessageType.buttonsMessage)
