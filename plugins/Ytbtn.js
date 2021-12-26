@@ -28,6 +28,6 @@ XcriptX.addCommand({pattern: 'yv ?(.*)', fromMe: true,}, (async (message, match)
     }
 
 
-    let sendMsg =  await conn.sendMessage(m.chat, buttonsMessage)
+    let sendMsg =  await message.client.sendMessage(message.jid, buttonsMessage)
 
 }));
