@@ -66,12 +66,15 @@ XcriptX.addCommand({ pattern: 'ol paper', fromMe: tk,
         {buttonId: 'id1'+thumb, buttonText: {displayText: 'Button 1'}, type: 1},
         {buttonId: 'id2', buttonText: {displayText: 'Button 2'}, type: 1}
       ]
-      
+      var logo = await axios.get (Config.ALIVE_LOGO, {responseType: 'arraybuffer'})
+      var PIC = Buffer.from(logo.data)
+      const media = await message.client.prepareMessage(message.jid, PIC, MessageType.image, { thumbnail: PIC })
       const buttonMessage = {
           contentText: "Hi it's button message",
           footerText: 'Hello World',
           buttons: buttons,
-          headerType: 1
+          headerType: 4,
+          imageMessage: media.message.imageMessage
       }
       
       await message.client.sendMessage(message.jid, buttonMessage, MessageType.buttonsMessage)
