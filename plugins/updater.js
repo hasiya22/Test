@@ -3,7 +3,12 @@
 const simpleGit = require('simple-git');
 const git = simpleGit();
 const XcriptX = require('../events');
-const {MessageType,Mimetype} = require('@adiwajshing/baileys');
+const {
+    MessageType,
+    GroupSettingChange,
+    Mimetype,
+    MessageOptions
+} = require('@adiwajshing/baileys');
 const Config = require('../config');
 const exec = require('child_process').exec;
 const Heroku = require('heroku-client');
