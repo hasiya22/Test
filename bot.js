@@ -215,9 +215,10 @@ ${chalk.blue.italic('👩‍🦰 Connecting to WhatsApp...')}`);
                             XCRIPT += '🔸 [' + commit.date.substring(0, 10) + ']: ' + commit.message + ' ◁' + commit.author_name + '▷\n';
                         }
                     );
+                    var BUTTHANDLE = '.';
                     const buttons = [
-                        {buttonId: 'id1', buttonText: {displayText: '◄Update►'}, type: 1},
-                        {buttonId: 'id2', buttonText: {displayText: '◄Recheck►'}, type: 1}
+                        {buttonId: BUTTHANDLE + 'id1', buttonText: {displayText: '◄Update►'}, type: 1},
+                        {buttonId: BUTTHANDLE + 'id2', buttonText: {displayText: '◄Recheck►'}, type: 1}
                       ]
                       
                       const buttonMessage = {
@@ -248,10 +249,10 @@ ${chalk.blue.italic('👩‍🦰 Connecting to WhatsApp...')}`);
                             XCRIPT += '🔸 [' + commit.date.substring(0, 10) + ']: ' + commit.message + ' ◁' + commit.author_name + '▷\n';
                         }
                     );
-
+                    var BUTTHANDLE = '.';
                     const buttons = [
-                        {buttonId: 'id1', buttonText: {displayText: '◄Update►'}, type: 1},
-                        {buttonId: 'id2', buttonText: {displayText: '◄Recheck►'}, type: 1}
+                        {buttonId: BUTTHANDLE + 'id1', buttonText: {displayText: '◄Update►'}, type: 1},
+                        {buttonId: BUTTHANDLE + 'id2', buttonText: {displayText: '◄Recheck►'}, type: 1}
                       ]
                       
                       const buttonMessage = {

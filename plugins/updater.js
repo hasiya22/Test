@@ -112,8 +112,8 @@ XcriptX.addCommand({pattern: 'up now$', fromMe: true,}, (async (message, match) 
 
 
 
-XcriptX.addCommand({on: 'text',  dontAddCommandList: true}, (async (message, match) => {
-    if (message.message.startsWith('◄Update►') ) { 
+XcriptX.addCommand({pattern: 'id1', fromMe: true,}, (async (message, match) => {
+
         
         await git.fetch();
         var commits = await git.log([Config.BRANCH + '..origin/' + Config.BRANCH]);
@@ -168,12 +168,10 @@ XcriptX.addCommand({on: 'text',  dontAddCommandList: true}, (async (message, mat
             }
         }
     
-      }
+      
 }));
 
-XcriptX.addCommand({on: 'text',  dontAddCommandList: true}, (async (message, match) => {
-    if (message.message.startsWith('◄Recheck►') ) { 
-
+XcriptX.addCommand({pattern: 'id2', fromMe: true,}, (async (message, match) => {
 
         await git.fetch();
         var commits = await git.log([Config.BRANCH + '..origin/' + Config.BRANCH]);
@@ -194,5 +192,5 @@ XcriptX.addCommand({on: 'text',  dontAddCommandList: true}, (async (message, mat
             await message.client.sendMessage(message.jid,Buffer.from(webimage.data), MessageType.image, {mimetype: Mimetype.jpg  , caption: newzels + '```'+'\n\n *◁◁X-Script▷▷*' })
         
         }
-      }
+      
 }));
