@@ -104,9 +104,9 @@ XcriptX.addCommand({ pattern: 'ol paper', fromMe: tk,
     XcriptX.addCommand({ pattern: 't2', fromMe: tk,
 }, (async (message, match) => {
 
-    var BUTTHANDLE = '.';
+  
     const buttons = [
-        {buttonId: BUTTHANDLE + 'update now', buttonText: {displayText: '⬆️ Update now' }, type: 1},
+        {buttonId: '.update now', buttonText: {displayText: '⬆️ Update now' }, type: 1},
     ]
       const buttonMessage = {
           contentText: "Hi it's button message",
