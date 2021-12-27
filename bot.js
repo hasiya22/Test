@@ -215,13 +215,21 @@ ${chalk.blue.italic('👩‍🦰 Connecting to WhatsApp...')}`);
                             XCRIPT += '🔸 [' + commit.date.substring(0, 10) + ']: ' + commit.message + ' ◁' + commit.author_name + '▷\n';
                         }
                     );
-                    await conn.sendMessage(
-                        conn.user.jid,
-                        '```🛡️යතාවත්කාලීන කිරීමට``` *.up now* ```භාවිතා කරන්න.```\n\n' + XCRIPT + '```', MessageType.text
-                    ); 
+                    const buttons = [
+                        {buttonId: 'id1', buttonText: {displayText: '◄Update►'}, type: 1},
+                        {buttonId: 'id2', buttonText: {displayText: '◄Recheck►'}, type: 1}
+                      ]
+                      
+                      const buttonMessage = {
+                          contentText: '```You Have New Update```\n\n' + XCRIPT + '```',
+                          footerText: 'x-troid product',
+                          buttons: buttons,
+                          headerType: 1
+                      }
+                      
+                      await conn.sendMessage(
+                        conn.user.jid, buttonMessage, MessageType.buttonsMessage);
                 }
-            
-           
         }
         else if (config.WORKTYPE == 'private') { 
 
@@ -240,10 +248,23 @@ ${chalk.blue.italic('👩‍🦰 Connecting to WhatsApp...')}`);
                             XCRIPT += '🔸 [' + commit.date.substring(0, 10) + ']: ' + commit.message + ' ◁' + commit.author_name + '▷\n';
                         }
                     );
-                    await conn.sendMessage(
-                        conn.user.jid,
-                        '```යතාවත්කාලීන කිරීමට``` *.up now* ```භාවිතා කරන්න.```\n\n' + XCRIPT + '```', MessageType.text
-                    ); 
+
+                    const buttons = [
+                        {buttonId: 'id1', buttonText: {displayText: '◄Update►'}, type: 1},
+                        {buttonId: 'id2', buttonText: {displayText: '◄Recheck►'}, type: 1}
+                      ]
+                      
+                      const buttonMessage = {
+                          contentText: '```You Have New Update```\n\n' + XCRIPT + '```',
+                          footerText: 'x-troid product',
+                          buttons: buttons,
+                          headerType: 1
+                      }
+                      
+                      await conn.sendMessage(
+                        conn.user.jid, buttonMessage, MessageType.buttonsMessage);
+
+                
                 }
             
            
@@ -373,7 +394,7 @@ ${chalk.blue.italic('👩‍🦰 Connecting to WhatsApp...')}`);
                         if (config.SEND_READ && command.on === undefined) {
                             await conn.chatRead(msg.key.remoteJid);
                         }
-                       
+                        
                         var match = text_msg.match(command.pattern);
                         
                         if (command.on !== undefined && (command.on === 'image' || command.on === 'photo' )
