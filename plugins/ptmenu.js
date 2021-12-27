@@ -106,12 +106,9 @@ XcriptX.addCommand({ pattern: 'ol paper', fromMe: tk,
 
     var BUTTHANDLE = '.';
     const buttons = [
-        {buttonId: BUTTHANDLE + 'fkk', buttonText: {displayText: 'Button fkk'}, type: 1},
-        {buttonId: BUTTHANDLE + 'fkt', buttonText: {displayText: 'Button 2'}, type: 1}
-      ]
-      
+        {buttonId: BUTTHANDLE + 'update now', buttonText: {displayText: '⬆️ Update now' }, type: 1},
+    ]
       const buttonMessage = {
-        image : thumb,
           contentText: "Hi it's button message",
           footerText: 'Hello World',
           buttons: buttons,
@@ -121,8 +118,7 @@ XcriptX.addCommand({ pattern: 'ol paper', fromMe: tk,
       await message.client.sendMessage(message.jid, buttonMessage, MessageType.buttonsMessage)
     }));
 
-    XcriptX.addCommand({ pattern: 'fkk', fromMe: tk,
-}, (async (message, match) => {
+    XcriptX.addCommand({pattern: 'update now', fromMe: true,}, (async (message, match) => {
     await message.client.sendMessage(message.jid,'wada huththo', MessageType.text)
 
 }));
