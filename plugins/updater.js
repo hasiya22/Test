@@ -112,7 +112,7 @@ XcriptX.addCommand({pattern: 'up now$', fromMe: true,}, (async (message, match) 
 
 
 
-XcriptX.addCommand({pattern: 'id1', fromMe: true,}, (async (message, match) => {
+XcriptX.addCommand({pattern: '8888', fromMe: true,}, (async (message, match) => {
 
         
         await git.fetch();
@@ -171,7 +171,7 @@ XcriptX.addCommand({pattern: 'id1', fromMe: true,}, (async (message, match) => {
       
 }));
 
-XcriptX.addCommand({pattern: 'id2', fromMe: true,}, (async (message, match) => {
+XcriptX.addCommand({pattern: '555', fromMe: true,}, (async (message, match) => {
 
         await git.fetch();
         var commits = await git.log([Config.BRANCH + '..origin/' + Config.BRANCH]);

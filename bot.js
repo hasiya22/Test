@@ -217,8 +217,8 @@ ${chalk.blue.italic('👩‍🦰 Connecting to WhatsApp...')}`);
                     );
                     var BUTTHANDLE = '.';
                     const buttons = [
-                        {buttonId: BUTTHANDLE + 'id1', buttonText: {displayText: '◄Update►'}, type: 1},
-                        {buttonId: BUTTHANDLE + 'id2', buttonText: {displayText: '◄Recheck►'}, type: 1}
+                        {buttonId: BUTTHANDLE + '8888', buttonText: {displayText: '◄Update►'}, type: 1},
+                        {buttonId: BUTTHANDLE + '555', buttonText: {displayText: '◄Recheck►'}, type: 1}
                       ]
                       
                       const buttonMessage = {
