@@ -91,8 +91,38 @@ XcriptX.addCommand({ pattern: 'ol paper', fromMe: tk,
           contentText: "Hi it's button message",
           footerText: 'Hello World',
           buttons: buttons,
+          headerType: 3
+      }
+      
+      await message.client.sendMessage(message.jid, buttonMessage, MessageType.buttonsMessage)
+    }));
+
+
+
+
+
+    XcriptX.addCommand({ pattern: 't2', fromMe: tk,
+}, (async (message, match) => {
+
+    var BUTTHANDLE = '.';
+    const buttons = [
+        {buttonId: BUTTHANDLE + 'fkk', buttonText: {displayText: 'Button fkk'}, type: 1},
+        {buttonId: BUTTHANDLE + 'fkt', buttonText: {displayText: 'Button 2'}, type: 1}
+      ]
+      
+      const buttonMessage = {
+        image : thumb,
+          contentText: "Hi it's button message",
+          footerText: 'Hello World',
+          buttons: buttons,
           headerType: 1
       }
       
       await message.client.sendMessage(message.jid, buttonMessage, MessageType.buttonsMessage)
     }));
+
+    XcriptX.addCommand({ pattern: 'fkk', fromMe: tk,
+}, (async (message, match) => {
+    await message.client.sendMessage(message.jid,'wada huththo', MessageType.text)
+
+}));
