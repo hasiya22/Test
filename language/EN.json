@@ -11,7 +11,6 @@
             "NOT_FOUND": "*I couldnt find a command like this*",
             "PLKADMIN": ".report you are not admin \n\n 🇩🇴🇳🇹 🇹🇷🇾 🇦🇬🇦🇮🇳, 🇮🇫 🇾🇴🇺 🇹🇷🇾 🇾🇴🇺 🇼🇮🇱🇱 🇧🇪 🇷🇪🇲🇴🇻🇪🇩 🇧🇾 🇦🇩🇲🇮🇳🇸",
             "WARN": "Warn"
-            
         },
         "_plugin": {
             "INSTALL_DESC": "Install external plugins.",
