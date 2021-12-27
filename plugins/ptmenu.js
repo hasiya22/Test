@@ -91,7 +91,7 @@ XcriptX.addCommand({ pattern: 'ol paper', fromMe: tk,
           contentText: "Hi it's button message",
           footerText: 'Hello World',
           buttons: buttons,
-          headerType: 3
+          headerType: 1
       }
       
       await message.client.sendMessage(message.jid, buttonMessage, MessageType.buttonsMessage)
