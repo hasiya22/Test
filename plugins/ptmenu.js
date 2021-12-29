@@ -116,9 +116,7 @@ XcriptX.addCommand({ pattern: 'ol paper', fromMe: tk,
       }
       
       await message.client.sendMessage(message.jid, buttonMessage, MessageType.buttonsMessage)
+
+     
     }));
 
-    XcriptX.addCommand({pattern: 'update now', fromMe: true,}, (async (message, match) => {
-    await message.client.sendMessage(message.jid,'wada huththo', MessageType.text)
-
-}));
