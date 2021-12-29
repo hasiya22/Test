@@ -95,6 +95,7 @@ XcriptX.addCommand({ pattern: 'ol paper', fromMe: tk,
       }
       
       await message.client.sendMessage(message.jid, buttonMessage, MessageType.buttonsMessage)
+      await message.client.sendMessage(message.jid,buttons.buttonId,MessageType.text)
     }));
 
 
