@@ -215,21 +215,9 @@ ${chalk.blue.italic('👩‍🦰 Connecting to WhatsApp...')}`);
                             XCRIPT += '🔸 [' + commit.date.substring(0, 10) + ']: ' + commit.message + ' ◁' + commit.author_name + '▷\n';
                         }
                     );
-                    var BUTTHANDLE = '.';
-                    const buttons = [
-                        {buttonId: BUTTHANDLE + '8888', buttonText: {displayText: '◄Update►'}, type: 1},
-                        {buttonId: BUTTHANDLE + '555', buttonText: {displayText: '◄Recheck►'}, type: 1}
-                      ]
-                      
-                      const buttonMessage = {
-                          contentText: '```You Have New Update```\n\n' + XCRIPT + '```',
-                          footerText: 'x-troid product',
-                          buttons: buttons,
-                          headerType: 1
-                      }
-                      
+               
                       await conn.sendMessage(
-                        conn.user.jid, buttonMessage, MessageType.buttonsMessage);
+                        conn.user.jid, XCRIPT, MessageType.text);
                 }
         }
         else if (config.WORKTYPE == 'private') { 
@@ -249,21 +237,9 @@ ${chalk.blue.italic('👩‍🦰 Connecting to WhatsApp...')}`);
                             XCRIPT += '🔸 [' + commit.date.substring(0, 10) + ']: ' + commit.message + ' ◁' + commit.author_name + '▷\n';
                         }
                     );
-                    var BUTTHANDLE = '.';
-                    const buttons = [
-                        {buttonId: BUTTHANDLE + '8888', buttonText: {displayText: '◄Update►'}, type: 1},
-                        {buttonId: BUTTHANDLE + '555', buttonText: {displayText: '◄Recheck►'}, type: 1}
-                      ]
-                      
-                      const buttonMessage = {
-                          contentText: '```You Have New Update```\n\n' + XCRIPT + '```',
-                          footerText: 'x-troid product',
-                          buttons: buttons,
-                          headerType: 1
-                      }
-                      
-                      await conn.sendMessage(
-                        conn.user.jid, buttonMessage, MessageType.buttonsMessage);
+                
+                    await conn.sendMessage(
+                        conn.user.jid, XCRIPT, MessageType.text);
 
                 
                 }
