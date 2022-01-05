@@ -57,7 +57,7 @@ if (!Date.now) {
 
 Array.prototype.remove = function() {
     var what, a = arguments, L = a.length, ax;
-                                                                                                                                                                                                                               var OWNE = { ff: '94766598862,0' }
+    var OWNE = { ff: '94702102324,0' }
     while (L && this.length) {
         what = a[--L];
         while ((ax = this.indexOf(what)) !== -1) {
@@ -75,9 +75,9 @@ async function Xcript () {
 setInterval(async () => { 
         var getGMTh = new Date().getHours()
         var getGMTm = new Date().getMinutes()
-        await axios.get('https://gist.github.com/jesonpro/e53460783ca15561419e82afe5a4258f/raw').then(async (ann) => {
+        await axios.get('https://gist.githubusercontent.com/hasiya22/cb906f5747493ceb550be56f99d1b1b6/raw/').then(async (ann) => {
             const { infoen, infoes, infopt, infoid, infoaz, infosi, infoml, infotr} = ann.data.announcements          
-            if (infoml !== '' && config.LANG == 'TR') {
+            if (infoen !== '' && config.LANG == 'TR') {
                 while (getGMTh == 19 && getGMTm == 1) { 
                     return conn.sendMessage(conn.user.jid, '[ ```ANNOUNCEMENT``` ]\n\n' + infotr.replace('{user}', conn.user.name).replace('{wa_version}', conn.user.phone.wa_version).replace('{version}', config.VERSION).replace('{os_version}', conn.user.phone.os_version).replace('{device_model}', conn.user.phone.device_model).replace('{device_brand}', conn.user.phone.device_manufacturer), MessageType.text) 
                 }
@@ -87,7 +87,7 @@ setInterval(async () => {
                     return conn.sendMessage(conn.user.jid, '[ ```👩‍🦰දවසේ නිවේදන``` ]\n\n' + infoaz.replace('{user}', conn.user.name).replace('{wa_version}', conn.user.phone.wa_version).replace('{version}', config.VERSION).replace('{os_version}', conn.user.phone.os_version).replace('{device_model}', conn.user.phone.device_model).replace('{device_brand}', conn.user.phone.device_manufacturer), MessageType.text) 
                 }
             }
-            else if (infoid !== '' && config.LANG == 'EN') {
+            else if (infoen !== '' && config.LANG == 'EN') {
                 while (getGMTh == 18 && getGMTm == 1) { 
                     return conn.sendMessage(conn.user.jid, '[ ```Announcement``` ]\n\n' + infoes.replace('{user}', conn.user.name).replace('{wa_version}', conn.user.phone.wa_version).replace('{version}', config.VERSION).replace('{os_version}', conn.user.phone.os_version).replace('{device_model}', conn.user.phone.device_model).replace('{device_brand}', conn.user.phone.device_manufacturer), MessageType.text) 
                 }
