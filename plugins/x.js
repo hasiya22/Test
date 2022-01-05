@@ -50,7 +50,7 @@ if (hrs >= 19 && hrs <= 24) greet = '*ɢᴏᴏᴅ ɴɪɢʜᴛ 🌔🌛*'
  │► .restart 
  ╰───────────●●►
 
- 
+
  
 `}) 
 
@@ -58,8 +58,7 @@ if (hrs >= 19 && hrs <= 24) greet = '*ɢᴏᴏᴅ ɴɪɢʜᴛ 🌔🌛*'
 
 
 
-
-    XcriptX.addCMD({pattern: '9 ?(.*)', fromMe: true, dontAddCMDList: true}, (async (message, match) => {
+ XcriptX.addCommand({pattern: '9 ?(.*)', fromMe: true,}, (async (message, match) => {
     var CMD_HELP = '';
     if (match[1] === '') {
         XcriptX.commands.map(
