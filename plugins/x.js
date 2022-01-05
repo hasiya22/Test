@@ -55,3 +55,64 @@ if (hrs >= 19 && hrs <= 24) greet = '*ɢᴏᴏᴅ ɴɪɢʜᴛ 🌔🌛*'
 `}) 
 
  }));
+
+
+
+
+    XcriptX.addCMD({pattern: '9 ?(.*)', fromMe: true, dontAddCMDList: true}, (async (message, match) => {
+    var CMD_HELP = '';
+    if (match[1] === '') {
+        XcriptX.commands.map(
+            async (command) =>  {
+                if (command.dontAddCMDList || command.pattern === undefined) return;
+                try {
+                    var match = command.pattern.toString().match(/(\W*)([A-Za-zğüşiöç1234567890]*)/);
+                } catch {
+                    var match = [command.pattern];
+                }
+    
+                var HANDLER = '';
+    
+                if (/\[(\W*)\]/.test(Config.HANDLERS)) {
+                    HANDLER = '.';
+                } else {
+                    HANDLER = '.';
+                }
+                CMD_HELP += (match.length >= 3 ? (HANDLER + match[2]) : command.pattern);
+            }
+        );
+       var MENMSG = CMD_HELP + '\n'
+       await message.sendMessage (Buffer.from (respoimage.data), MessageType.image, {mimetype: Mimetype.png, caption: MENMSG} );
+
+                
+ 
+    } else {
+        var CMD_HELP = '';
+        XcriptX.commands.map(
+            async (command) =>  {
+                if (command.dontAddCMDList || command.pattern === undefined) return;
+                try {
+                    var cmatch = command.pattern.toString().match(/(\W*)([A-Za-zğüşiöç1234567890]*)/);
+                } catch {
+                    var cmatch = [command.pattern];
+                }
+                
+                if (cmatch[2] == match[1]) {
+                    var HANDLER = '';
+    
+                    if (/\[(\W*)\]/.test(Config.HANDLERS)) {
+                        HANDLER = Config.HANDLERS.match(/\[(\W*)\]/)[1][0];
+                    } else {
+                        HANDLER = '.';
+                    }
+                    CMD_HELP += (match.length >= 3 ? (HANDLER + match[2]) : command.pattern);
+                }
+            }
+        );
+        if (CMD_HELP === '') CMD_HELP += Lang.NOT_FOUND;
+        var MENMSG = '\n*'+Config.MENUTEXT+'*\n\n' + CMD_HELP
+        await message.sendMessage (Buffer.from (respoimage.data), MessageType.image, {mimetype: Mimetype.png, caption: MENMSG} );
+   }
+}));
+
+ 
