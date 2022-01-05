@@ -29,7 +29,7 @@ if (hrs >= 19 && hrs <= 24) greet = '*ɢᴏᴏᴅ ɴɪɢʜᴛ 🌔🌛*'
  │ *👤Name:* ${Config.BOT_NAME}
  │ *💎Role:* Developer
  │ *⌚Time:* ${time}
- │ *📡Server: DO
+ │ *📡Server: 
  │
  │☬Working As*
  │ ${Config.WORKTYPE}*
@@ -81,6 +81,7 @@ if (hrs >= 19 && hrs <= 24) greet = '*ɢᴏᴏᴅ ɴɪɢʜᴛ 🌔🌛*'
             }
         );
        var MENMSG = CMD_HELP + '\n'
+        var respoimage = await axios.get(`${Config.MENU_LOGO}`, { responseType: 'arraybuffer' })
        await message.sendMessage (Buffer.from (respoimage.data), MessageType.image, {mimetype: Mimetype.png, caption: MENMSG} );
 
                 
